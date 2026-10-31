@@ -1,0 +1,310 @@
+\begin{table}[!htbp]
+\sbox{\tbox}{\begin{minipage}{183mm}
+\caption{\textbf{Untreated control-well pairs.} Response: a line's difference between a plate's two DMSO wells (H11 minus H12). Same pair: correlation, over the line's genes, with the mean difference of the other lines in the same pair; other plates: with that of the other lines in the control pairs of the other plates, averaged over plates; medians over line $\times$ plate records. Advantage: mean over records of the difference. Permutation: the mean diagonal of the 13 $\times$ 13 table in which each plate's lines are predicted by each plate's pair, against 100,000 random assignments of pairs to plates (the smallest possible $p$ is $10^{-5}$). Plate bootstrap: mean over plates of the plate's diagonal minus its other entries, with a 95\% interval from 5,000 resamples of plates. Profiles: mean over cells of $\log(1+10^4c/n)$ (main text); counts summed over the line's cells in a well, $\log(1+10^6c/N)$; the same after thinning the deeper well's counts to the depth of the other. First-order decontamination: Methods. Plate 13 (not used in the text; its labels are unreliable, and its control wells, inferred from sample numbers, sit at B11 and B12, so the low prediction from other plates may reflect position or plate 13's other problems): its own pair against the pairs of the other plates. Emerald Bay: one later plate of the same platform; its four DMSO wells split into two pairs in three ways; each pair's lines are predicted by the pair's other lines and by those of the other pair of the split; medians over 288 line $\times$ pair records. The splits share wells and are not independent.}\label{tabCtrl}
+\centering\fontsize{7}{8.4}\selectfont\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{58mm}rrrrrr@{}}\toprule
+Pairs and profile & Same pair & Other plates & Advantage & Plates higher & Permutation $p$ & Plate bootstrap \\
+\midrule
+Tahoe-100M, 13 plates, 624 records & & & & & & \\
+\quad mean over cells of log-expression & 0.70 & 0.47 & 0.20 & 13 of 13 & $10^{-5}$ & 0.22 (0.19--0.25) \\
+\quad summed counts, log counts per million & 0.68 & 0.46 & 0.19 & 13 of 13 & $10^{-5}$ & 0.20 (0.16--0.25) \\
+\quad summed counts, matched depth & 0.66 & 0.45 & 0.18 & 13 of 13 & $10^{-5}$ & 0.19 (0.15--0.24) \\
+\quad mean over cells, first-order decontamination & 0.67 & & & & & \\
+Plate 13, its own pair against other plates' pairs (auxiliary) & 0.77 & 0.10 & & & & \\
+\quad summed counts; matched depth & 0.72; 0.66 & 0.10; 0.09 & & & & \\
+\midrule
+ & Same pair & Other pair & & Splits, both pairs higher & & \\
+\midrule
+Emerald Bay, 3 splits of 4 DMSO wells into two pairs, 48 lines & 0.65 & 0.24 & & 3 of 3 & & \\
+\bottomrule\end{tabular}
+\end{minipage}}
+\typeout{TBL tabCtrl \the\wd\tbox\space\the\dimexpr\ht\tbox+\dp\tbox\relax\space\the\textheight}
+\makebox[\textwidth][c]{\usebox{\tbox}}
+\end{table}
+
+\begin{table}[!htbp]
+\sbox{\tbox}{\begin{minipage}{183mm}
+\caption{\textbf{Replicate wells and the label check.} Replicates: wells with the same drug (salt names removed) and dose. Concordant: the partner well ranks in the top 10\% of the partner plate's treated wells in both directions, by the line-averaged response or by the viability readout. Chance: pairs expected to pass if every label of the group were wrong, from 5,000 decoy pairs of two different compounds per class (pass rates: one plate 12\%, of which adjacent wells 25\%; different plates 10\%; plates 6 and 14 at different positions 11\%); for plates 6 and 14 the decoys differ in position, while a shared position also helps a pair pass. No viability effect: both wells' viability spread below the 90th percentile of the spread between two control wells. Partner percentile: rank of the partner by similarity of the line-averaged response among the partner plate's treated wells (50, chance), median over pairs of the mean of both directions. Strong pairs matched: matched / strongly responding pairs, where a pair responds strongly if either well has a response length $\geq$ 3 and is matched if each well ranks the other among the top 10\% of that plate's treated wells by expression; descriptive (pairs of one compound are not independent; plates 6 and 14 share positions). Length ratio: where the first well responds strongly, the partner's response length over the first well's, median (number of pairs); the first well is the one on the other plate for plate 13, the plate-6 well for plates 6 and 14, otherwise the well on the lower-numbered plate or with the lower sample number; descriptive. A compound can appear in more than one row. Plate-13 pairs are not used in any analysis.}\label{tabS1}
+\centering\fontsize{7}{8.4}\selectfont\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{50mm}rrrrrrrr@{}}\toprule
+Replicate wells & Pairs & Compounds & Concordant pairs & Chance & No viability effect & Partner & Strong pairs & Length ratio \\
+ & & & (compounds) & & pairs (compounds) & percentile & matched & (pairs) \\
+\midrule
+Different plates and positions & 65 & 20 & 18 (9) & 6.4 & 24 (15) & 81 & 12 / 24 & \\
+\quad of which different salt names (different plates) & 56 & 18 & 12 (8) & & & 78 & 6 / 17 & 0.79 (14) \\
+\quad of which same names, plates 1--3 and 7--12 & 9 & 3 & 6 (2) & & & 96 & 6 / 7 & 0.77 (6) \\
+Two wells on one plate & 24 & 7 & 6 (4) & 3.0 & 11 (6) & 48 & 0 / 5 & 0.97 (3) \\
+Plates 6 and 14 (same position) & 90 & 87 & 80 (77) & 9.5 & 65 (63) & 100 & 17 / 18 & 0.71 (18) \\
+Adagrasib 0.05\,µM, all pairs of its wells & 91 & 1 & 60 & & 78 & 98 & -- & \\
+Plate 13 against other plates (not used) & 45 & 18 & & & & 44 & 1 / 10 & 0.44 (6) \\
+\bottomrule\end{tabular}
+\end{minipage}}
+\typeout{TBL tabS1 \the\wd\tbox\space\the\dimexpr\ht\tbox+\dp\tbox\relax\space\the\textheight}
+\makebox[\textwidth][c]{\usebox{\tbox}}
+\end{table}
+
+\begin{table}[!htbp]
+\sbox{\tbox}{\begin{minipage}{183mm}
+\caption{\textbf{Same-well against replicate-well prediction.} Treated-well reference unless stated. Same / replicate: correlation of the target line's response with the other lines' mean in its own well and in the replicate well; median over lines within a pair, then median over pairs. Advantage: mean difference over records, with 95\% intervals from 1,000 bootstrap resamples of compounds and of compounds and plates; range when each plate is left out in turn. Compound-weighted: mean over compounds of each compound's mean, with the number of compounds with a positive mean in parentheses (two-sided sign test; for the control-well rows of plates 6 and 14, of the split version). Permutation: the largest of 1,000 values of the mean advantage over pairs after swapping every line's responses between the two wells of a pair at random ($p=1/1{,}001$ in every group); its statistic uses the genes expressed in all lines of a pair, and its observed value lies within 0.02 of the advantage. Restricted: the reference restricted to the plate's treated wells without detectable viability effect. Concordance variants: by viability alone, by expression alone, and cross-fitted (signatures from one half of the cells, scores from the other; two directions, both given). Control-well reference: pooled control wells; one control well subtracted from every line (same noise as the split version, shared term kept); split, one control well subtracted from the target line and the other from the remaining lines, averaged over both assignments. Treated wells in halves: the same two versions with the plate's other treated wells divided into two halves in place of the two control wells.}\label{tabS2}
+\centering\fontsize{7}{8.4}\selectfont\setlength{\tabcolsep}{1.8pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{34mm}rrrrrrrrr@{}}\toprule
+Pairs & Pairs & Same & Replicate & Advantage & Compounds; & Leave one & Compound- & Permutation & Restricted \\
+ & (compounds) & & & & and plates & plate out & weighted & max & reference \\
+\midrule
+Different positions, concordant & 18 (9) & 0.68 & 0.38 & 0.32 & 0.26--0.48; 0.18--0.51 & 0.28--0.35 & 0.38 (9/9) & 0.02 & 0.34 \\
+\quad concordant by viability alone & 9 (6) & & & 0.29 & & & 0.35 (6/6) & & \\
+\quad concordant by expression alone & 16 (7) & & & 0.29 & & & 0.33 (7/7) & & \\
+\quad cross-fitted & 18; 19 (9; 10) & & & 0.30; 0.30 & & & 0.35; 0.36 (all) & & \\
+\quad control wells: pooled; one; split & 18 (9) & & & 0.30; 0.30; 0.26 & & & & & \\
+\quad treated wells in halves: one; split & 18 (9) & & & 0.32; 0.31 & & & 0.39; 0.36 (9/9) & & \\
+Different positions, no viability effect & 24 (15) & 0.73 & 0.08 & 0.60 & 0.54--0.67; 0.45--0.77 & 0.56--0.65 & 0.60 (15/15) & 0.02 & 0.62 \\
+\quad control wells: pooled; one; split & 24 (15) & & & 0.47; 0.45; 0.37 & & & & & \\
+One plate, concordant & 6 (4) & 0.69 & 0.17 & 0.51 & 0.42--0.75; 0.29--0.84 & 0.40--0.56 & 0.56 (4/4) & 0.05 & 0.53 \\
+One plate, no viability effect & 11 (6) & 0.70 & 0.04 & 0.62 & 0.48--0.73; 0.43--0.81 & 0.59--0.64 & 0.63 (6/6) & 0.04 & 0.64 \\
+Plates 6 and 14 & 90 (87) & 0.70 & 0.48 & 0.24 & 0.22--0.27; -- & -- & 0.24 (87/87) & 0.004 & 0.25 \\
+\quad concordant pairs & 80 (77) & 0.71 & 0.50 & 0.21 & 0.19--0.23; -- & -- & 0.21 (77/77) & & \\
+\quad concordant by viability alone & 17 (17) & & & 0.22 & & & 0.22 (17/17) & & \\
+\quad concordant, cross-fitted & 80 (77) & & & 0.19; 0.19 & & & 0.19 (77/77) & & \\
+\quad strongly responding & 18 (18) & & & 0.20 & & & & & \\
+\quad concordant, control wells: pooled; one; split & 80 (77) & & & 0.18; 0.23; 0.08 & & & 0.08 (70/77) & & \\
+\quad concordant, treated wells in halves: one; split & 80 (77) & & & 0.22; 0.19 & & & 0.19 (77/77) & & \\
+Adagrasib 0.05\,µM, 14 wells & & & & 0.37 & & & 14/14 wells & & \\
+\bottomrule\end{tabular}
+\end{minipage}}
+\typeout{TBL tabS2 \the\wd\tbox\space\the\dimexpr\ht\tbox+\dp\tbox\relax\space\the\textheight}
+\makebox[\textwidth][c]{\usebox{\tbox}}
+\end{table}
+
+\begin{table}[!htbp]
+\sbox{\tbox}{\begin{minipage}{183mm}
+\caption{\textbf{Sensitivity to the concordance threshold, and pairs by compound.} Treated-well reference; same-well and replicate-well predictions as in Supplementary Table~\ref{tabS2} (medians over lines for each pair, then medians over pairs). Top: pairs concordant with the partner among the top 5\%, 10\% (main text) or 20\% of the partner plate's treated wells, by expression or by viability, in both directions for the same readout; difference, mean over pairs of the pair's same-well minus replicate-well prediction (the main text's advantage is a mean over lines and pairs). A looser threshold also admits more pairs with wrong labels. Bottom: the concordant and no-viability-effect groups of Supplementary Table~\ref{tabS2} by compound (salt names removed); medians over the compound's pairs. Plates 6 and 14 (87 compounds) are not listed.}\label{tabS6}
+\centering\fontsize{7}{8.4}\selectfont\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}llrrrr@{}}\toprule
+Threshold & Group & Pairs (compounds) & Same & Replicate & Difference \\
+\midrule
+Top 5\% & Different positions & 14 (6) & 0.68 & 0.43 & 0.27 \\
+Top 5\% & One plate & 3 (2) & 0.70 & 0.36 & 0.47 \\
+Top 5\% & Plates 6 and 14 & 77 (75) & 0.71 & 0.50 & 0.21 \\
+Top 10\% & Different positions & 18 (9) & 0.68 & 0.38 & 0.33 \\
+Top 10\% & One plate & 6 (4) & 0.69 & 0.17 & 0.51 \\
+Top 10\% & Plates 6 and 14 & 80 (77) & 0.71 & 0.50 & 0.22 \\
+Top 20\% & Different positions & 36 (16) & 0.68 & 0.24 & 0.44 \\
+Top 20\% & One plate & 11 (7) & 0.70 & 0.14 & 0.56 \\
+Top 20\% & Plates 6 and 14 & 85 (82) & 0.70 & 0.49 & 0.23 \\
+\bottomrule\end{tabular}
+
+\vspace{3mm}
+\begin{tabular}{@{}llrrr@{}}\toprule
+Group & Compound & Pairs & Same & Replicate \\
+\midrule
+Concordant, different positions & berbamine & 1 & 0.74 & 0.38 \\
+ & binimetinib & 3 & 0.68 & 0.29 \\
+ & crizotinib & 1 & 0.73 & -0.13 \\
+ & docetaxel & 1 & 0.64 & 0.22 \\
+ & irinotecan & 1 & 0.80 & 0.44 \\
+ & neratinib & 1 & 0.64 & 0.19 \\
+ & tirabrutinib & 1 & 0.72 & 0.52 \\
+ & tofacitinib & 1 & 0.68 & 0.37 \\
+ & trametinib & 8 & 0.67 & 0.46 \\
+\addlinespace[2pt]
+Concordant, one plate & cytarabine & 1 & 0.67 & 0.16 \\
+ & gallic acid & 1 & 0.71 & -0.14 \\
+ & omeprazole & 1 & 0.70 & 0.18 \\
+ & tofacitinib & 3 & 0.68 & 0.36 \\
+\addlinespace[2pt]
+No viability effect, different positions & afatinib & 1 & 0.76 & 0.24 \\
+ & almonertinib & 2 & 0.73 & 0.10 \\
+ & belumosudil & 2 & 0.72 & 0.15 \\
+ & berbamine & 4 & 0.74 & 0.01 \\
+ & bestatin & 1 & 0.69 & 0.03 \\
+ & canagliflozin & 1 & 0.76 & 0.32 \\
+ & crizotinib & 2 & 0.74 & -0.14 \\
+ & dapagliflozin & 1 & 0.72 & -0.24 \\
+ & docetaxel & 1 & 0.69 & 0.10 \\
+ & fluvoxamine & 1 & 0.72 & 0.09 \\
+ & gallic acid & 2 & 0.72 & 0.03 \\
+ & irinotecan & 1 & 0.73 & -0.06 \\
+ & neratinib & 2 & 0.64 & 0.12 \\
+ & pyridoxine & 1 & 0.74 & 0.26 \\
+ & tofacitinib & 2 & 0.69 & 0.28 \\
+\addlinespace[2pt]
+No viability effect, one plate & cytarabine & 1 & 0.67 & 0.16 \\
+ & gallic acid & 2 & 0.71 & -0.10 \\
+ & gemcitabine & 1 & 0.70 & -0.04 \\
+ & omeprazole & 2 & 0.71 & -0.01 \\
+ & pyridoxine & 2 & 0.70 & -0.01 \\
+ & tofacitinib & 3 & 0.68 & 0.36 \\
+\bottomrule\end{tabular}
+\end{minipage}}
+\typeout{TBL tabS6 \the\wd\tbox\space\the\dimexpr\ht\tbox+\dp\tbox\relax\space\the\textheight}
+\makebox[\textwidth][c]{\usebox{\tbox}}
+\end{table}
+
+\begin{table}[!htbp]
+\sbox{\tbox}{\begin{minipage}{183mm}
+\caption{\textbf{Alternative explanations.} Quality and layout: advantage of the same-well prediction on plates 6 and 14 (90 pairs) with the control-well reference (which includes the shared control-well term, Supplementary Table~\ref{tabS2}), before and after regression on the line's mean counts per cell and cell number in the well and the well's mitochondrial fraction and genes per cell (slopes per line and gene fitted on 0.05\,µM wells of compounds without replicates), and after removal of row and column effects of the plate (median polish). Product and dose: concordant pairs at different positions split by name; advantage before and after removing each line's dose direction (difference between its responses to the compound's other two doses) from its responses in both wells, and the median share of a line's difference between the two wells explained by that direction. Contamination: estimated fraction of a line's counts from other lines (an upper bound for the 3 lines with at least 10 foreign genes, the median of the well for the others; median and 90th percentile over records), and the advantage before and after first-order removal, also with every fraction doubled; control pairs: same-pair prediction. Ambient and composition: median $R^2$ of a line's difference between the two wells of a pair regressed on the ambient direction (the well's average baseline expression minus the line's own; control-well reference), on the baseline weighted by the difference in line composition between the wells (treated-well reference), and on the mean difference of all lines between the wells (the well effect itself, for comparison).}\label{tabS7}
+\centering\fontsize{7}{8.4}\selectfont\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{70mm}rrrr@{}}\toprule
+Quality and layout (plates 6 and 14, control-well reference) & Advantage & & & \\
+\midrule
+None & 0.19 & & & \\
+Regression on quality measures & 0.19 & & & \\
+Removal of row and column effects & 0.18 & & & \\
+\midrule
+Product and dose (treated-well reference) & Pairs (compounds) & Advantage & After dose direction & $R^2$ of dose direction \\
+\midrule
+Different positions, concordant & 18 (9) & 0.32 & 0.36 & 0.02 \\
+\quad same names & 6 (2) & 0.32 & & \\
+\quad different salt names & 12 (8) & 0.32 & & \\
+One plate, concordant & 6 (4) & 0.51 & 0.57 & 0.01 \\
+Plates 6 and 14, concordant & 79 (76) & 0.21 & 0.21 & 0.02 \\
+\midrule
+Contamination (treated-well reference) & Fraction & Advantage & After removal & Fraction doubled \\
+\midrule
+Different positions, concordant & 0.060 / 0.076 & 0.32 & 0.31 & 0.30 \\
+Different positions, no viability effect & 0.064 / 0.086 & 0.60 & 0.58 & 0.56 \\
+One plate, concordant & 0.073 / 0.089 & 0.51 & 0.49 & 0.47 \\
+One plate, no viability effect & 0.073 / 0.088 & 0.62 & 0.59 & 0.56 \\
+Plates 6 and 14, concordant & 0.060 / 0.075 & 0.21 & 0.20 & 0.19 \\
+Control pairs (same-pair prediction) & 0.054 / 0.069 & 0.70 & 0.67 & 0.65 \\
+\midrule
+Ambient direction (control-well reference) & Ambient & Mean difference of lines & & \\
+\midrule
+Different positions, all & 0.042 & 0.47 & & \\
+One plate, all & 0.024 & 0.51 & & \\
+Plates 6 and 14 & 0.020 & 0.35 & & \\
+\midrule
+Composition direction (treated-well reference) & Composition & Mean difference of lines & & \\
+\midrule
+Different positions, concordant & 0.002 & 0.52 & & \\
+Different positions, no viability effect & 0.002 & 0.55 & & \\
+One plate, no viability effect & 0.002 & 0.55 & & \\
+Plates 6 and 14 & 0.003 & 0.37 & & \\
+Control pairs (no reference) & 0.002 & 0.52 & & \\
+\bottomrule\end{tabular}
+\end{minipage}}
+\typeout{TBL tabS7 \the\wd\tbox\space\the\dimexpr\ht\tbox+\dp\tbox\relax\space\the\textheight}
+\makebox[\textwidth][c]{\usebox{\tbox}}
+\end{table}
+
+\begin{table}[!htbp]
+\sbox{\tbox}{\begin{minipage}{183mm}
+\caption{\textbf{What two halves of a well share: the well's share.} Treated-well reference unless stated. Pooled: $1-\Sigma Q/\Sigma W$ over records, which weights records by the size of their responses; 95\% interval from 1,000 bootstrap resamples of compounds and plates (not truncated; on plates 6 and 14 both plates are in every record and only compounds are resampled). Compound-weighted: mean over compounds of each compound's share. Common part: the well effect common to the lines, $\Sigma(S_\mathrm{same}-S_\mathrm{other})/\Sigma W$. Without strength difference: with the geometric instead of the arithmetic mean of the two wells, which removes any contribution of a proportional difference in drug strength between the wells (Methods). Where $W$ is small (no viability effect, and the six concordant pairs on one plate) the intervals reach beyond 1 and the values are descriptive. Strongly responding: response length $\geq$ 3 in either well.}\label{tabS3}
+\centering\fontsize{7}{8.4}\selectfont\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{62mm}rrrrrr@{}}\toprule
+Pairs (pairs, compounds) & \multicolumn{3}{c}{Well's share} & Common part & \multicolumn{2}{c}{Without strength difference} \\ \cmidrule(lr){2-4}\cmidrule(lr){6-7}
+ & Pooled & Interval & Compound-weighted & & Well's share & Common part \\
+\midrule
+Different positions, concordant (18, 9) & 0.35 & 0.22--0.58 & 0.51 & 0.22 & 0.32 & 0.21 \\
+\quad without trametinib (10, 8) & 0.44 & & 0.54 & 0.30 & & \\
+Different positions, no viability effect (24, 15) & 0.79 & 0.59--1.08 & 0.84 & 0.55 & 0.78 & 0.55 \\
+One plate, concordant (6, 4) & 0.56 & 0.30--1.17 & 0.70 & 0.40 & 0.54 & 0.39 \\
+One plate, no viability effect (11, 6) & 0.77 & 0.47--1.10 & 0.84 & 0.51 & 0.76 & 0.52 \\
+Plates 6 and 14 (90, 87) & 0.30 & 0.18--0.49 & 0.45 & 0.16 & 0.25 & 0.14 \\
+\quad concordant pairs (80, 77) & 0.24 & 0.15--0.41 & 0.40 & 0.13 & 0.20 & 0.11 \\
+\quad pairs with a strongly responding well (18, 18) & 0.21 & & & 0.10 & 0.14 & 0.07 \\
+Control-well reference & & & & & & \\
+\quad different positions, concordant & 0.41 & & & 0.25 & 0.38 & 0.23 \\
+\quad different positions, no viability effect & 0.72 & & & 0.43 & 0.71 & 0.43 \\
+\quad one plate, concordant & 0.21 & & & 0.22 & 0.20 & 0.22 \\
+\quad one plate, no viability effect & 0.34 & & & 0.28 & 0.33 & 0.28 \\
+\bottomrule\end{tabular}
+\end{minipage}}
+\typeout{TBL tabS3 \the\wd\tbox\space\the\dimexpr\ht\tbox+\dp\tbox\relax\space\the\textheight}
+\makebox[\textwidth][c]{\usebox{\tbox}}
+\end{table}
+
+\begin{table}[!htbp]
+\sbox{\tbox}{\begin{minipage}{183mm}
+\caption{\textbf{Model evaluation against the well that supplied training data or inputs and against a replicate well.} Top: held-out cell lines. State's five test lines; for each replicated drug--dose (salt names removed) only one well entered training; plate 13 not used; few-shot. Scores: median Pearson correlation over test line $\times$ drug--dose records, against the well whose other lines entered training and against the replicate well; concordant pairs only. Training well: plate 6 for plates 6/14 and otherwise the lowest plate number, or, in the second run, the other well. Agreement of the test lines' own responses between the two wells over the same records (first run, treated wells): 0.54 on plates 6 and 14, 0.66 at different positions. Reference: treated wells (treated-well reference) or control wells (control-well reference; on plates 6 and 14 it shares the control wells between training well and target). For one-plate pairs the first well is the one with the lower sample number. The number of compounds differs between the runs because a record needs the test line measured in both wells and the drug--dose kept out of its training conditions in that direction. Rhaister: its own metric (correlation of predicted and observed differential expression, each plate against its own control wells), on the drugs of plates 6 and 14, against the training plate and the other plate; ceiling, the same metric between the two plates' observed values. Bottom: models whose input is a measured response, on compounds held out from training (all compounds with a replicate well, and their stereoisomers and salts). BioPert: input, A549's response in the target's well (same well) or in the replicate well; 47 target lines; seed 42 (three seeds with the treated-well reference differ by at most 0.02); ECFP model, BioPert's fingerprint model (ECFP6), which uses no well and whose hyperparameters were selected with the control-well reference. Molina--Zhang transfer model (low-rank ridge): the mean response of the other four of State's five lines in a well, scored against the target in the same well and in the replicate well. Both directions of each pair; own replicate, the target line's response in the replicate well (it differs between the two models because their lines, records and genes differ); medians over line $\times$ pair-direction records; genes expressed in the line.}\label{tabS4}
+\centering\fontsize{7}{8.4}\selectfont\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}lllrrrr@{}}\toprule
+ & & & \multicolumn{2}{c}{Additive model} & \multicolumn{2}{c}{Perturbation mean} \\ \cmidrule(lr){4-5}\cmidrule(lr){6-7}
+Pairs & Reference & Training well & Training well & Replicate well & Training well & Replicate well \\
+\midrule
+Plates 6 and 14 (77 compounds) & treated wells & plate 6 & 0.74 & 0.51 & 0.74 & 0.51 \\
+ & treated wells & plate 14 & 0.72 & 0.51 & 0.72 & 0.50 \\
+ & control wells & plate 6 & 0.82 & 0.60 & 0.73 & 0.48 \\
+Different positions (6 compounds) & treated wells & lower plate & 0.70 & 0.35 & 0.70 & 0.36 \\
+ & treated wells & higher plate (9 compounds) & 0.68 & 0.39 & 0.68 & 0.39 \\
+ & control wells & lower plate & 0.75 & 0.42 & 0.71 & 0.37 \\
+One plate (3 compounds) & treated wells & first well & 0.71 & 0.25 & 0.71 & 0.25 \\
+ & treated wells & second well (4 compounds) & 0.72 & 0.10 & 0.72 & 0.10 \\
+ & control wells & first well & 0.73 & 0.47 & 0.68 & 0.43 \\
+\bottomrule\end{tabular}
+
+\vspace{3mm}
+\begin{tabular}{@{}lrrr@{}}\toprule
+Rhaister, plates 6 and 14 (1,588 records) & Training plate & Other plate & Ceiling (the two plates' observations) \\
+\midrule
+Few-shot & 0.93 & 0.65 & 0.67 \\
+Zero-shot & 0.65 & 0.44 & 0.67 \\
+\bottomrule\end{tabular}
+
+\vspace{3mm}\setlength{\tabcolsep}{2.2pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{58mm}lrrrrrrr@{}}\toprule
+ & & \multicolumn{4}{c}{BioPert} & \multicolumn{3}{c}{Transfer} \\ \cmidrule(lr){3-6}\cmidrule(lr){7-9}
+Pairs (pairs, compounds) & Reference & Same & Replicate & Own & ECFP & Same & Replicate & Own \\
+ & & well & well & replicate & model & well & well & replicate \\
+\midrule
+Plates 6 and 14, concordant (80, 77) & treated wells & 0.63 & 0.43 & 0.46 & 0.07 & 0.71 & 0.49 & 0.54 \\
+Different positions, concordant (18, 9) & treated wells & 0.73 & 0.51 & 0.51 & 0.04 & 0.88 & 0.68 & 0.67 \\
+Different positions, no viability effect (24, 15) & treated wells & 0.63 & 0.03 & 0.09 & 0.01 & 0.69 & 0.08 & 0.14 \\
+One plate, no viability effect (11, 6) & treated wells & 0.60 & 0.03 & 0.02 & $-$0.02 & 0.66 & $-$0.01 & 0.09 \\
+Plates 6 and 14, concordant & control wells & 0.75 & 0.58 & 0.55 & 0.33 & 0.79 & 0.62 & 0.63 \\
+Different positions, concordant & control wells & 0.84 & 0.48 & 0.50 & 0.39 & 0.89 & 0.63 & 0.65 \\
+Different positions, no viability effect & control wells & 0.78 & 0.19 & 0.18 & 0.41 & 0.82 & 0.21 & 0.21 \\
+One plate, no viability effect & control wells & 0.76 & 0.48 & 0.50 & 0.38 & 0.80 & 0.43 & 0.51 \\
+\bottomrule\end{tabular}
+\end{minipage}}
+\typeout{TBL tabS4 \the\wd\tbox\space\the\dimexpr\ht\tbox+\dp\tbox\relax\space\the\textheight}
+\makebox[\textwidth][c]{\usebox{\tbox}}
+\end{table}
+
+\begin{table}[!htbp]
+\sbox{\tbox}{\begin{minipage}{183mm}
+\caption{\textbf{Reproducibility ceilings and the cell-cycle test.} Top: agreement of a line's responses between two random halves of one well, Spearman--Brown corrected (mean of the two wells), and between the two whole replicate wells; median over lines within a pair, then median over pairs; treated-well reference; groups as in Supplementary Table~\ref{tabS2}. Bottom: the sign-flip test of the Tahoe-100M cell-cycle analysis (mean over lines of the difference between the log2 odds ratios of the G1 and the G2/M proportions; two-sided $p$ from 10,000 sign flips over lines). Control-well pairs: one control well of a plate against the other (13 plates, plate 13 not used; significant plates have signs in both directions). Original design: each treated well against the plate's two pooled control wells, for wells without detectable viability effect whose drugs' annotated targets and mechanisms involve neither the cell cycle, DNA, mitosis, transcription, chromatin nor major signalling pathways (Methods); the wells of a plate share its control wells and are not independent.}\label{tabCeil}
+\centering\fontsize{7}{8.4}\selectfont\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{70mm}rrr@{}}\toprule
+Pairs & Pairs & Two halves of one well & Two wells \\
+\midrule
+Concordant, different positions & 18 & 0.94 & 0.57 \\
+Concordant, one plate & 6 & 0.84 & 0.35 \\
+No viability effect, different positions & 24 & 0.80 & 0.10 \\
+No viability effect, one plate & 11 & 0.84 & 0.06 \\
+Plates 6 and 14 & 90 & 0.81 & 0.48 \\
+\bottomrule\end{tabular}
+
+\vspace{3mm}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{70mm}rrr@{}}\toprule
+Cell-cycle test & Tests & $p<0.05$ & $p<0.01$ \\
+\midrule
+Control-well pairs, one well against the other & 13 plates & 5 & 4 \\
+Original design, wells of drugs unrelated to the cell cycle (238 compounds) & 599 wells & 68\% & 56\% \\
+\quad range over the 13 plates & & 48--93\% & \\
+\bottomrule\end{tabular}
+\end{minipage}}
+\typeout{TBL tabCeil \the\wd\tbox\space\the\dimexpr\ht\tbox+\dp\tbox\relax\space\the\textheight}
+\makebox[\textwidth][c]{\usebox{\tbox}}
+\end{table}
+
+\begin{table}[!htbp]
+\sbox{\tbox}{\begin{minipage}{183mm}
+\caption{\textbf{Other pooled screens.} OP3: six immune cell types of one donor per well; within each donor, 16 wells each of DMSO, belinostat and dabrafenib; a cell type's response predicted by the mean of the other five types in the same well or in another well of the same donor and compound; replicate agreement, the cell type's own response in two wells; medians over records. sci-Plex3: one cell line per well, 24-hour data, 2,256 pairs of replicate wells at different positions; correlation between two halves of one well against halves of two replicate wells with equal cell numbers (median), difference with 95\% interval over compounds, and the share of pairs in which halves of one well agree more.}\label{tabS5}
+\centering\fontsize{7}{8.4}\selectfont\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}llrrrr@{}}\toprule
+OP3 & Records & Replicate agreement & Same well & Another well & \\
+\midrule
+DMSO & 1,080 & $-$0.05 & 0.27 & 0.00 & \\
+Dabrafenib & 1,080 & 0.13 & 0.18 & 0.05 & \\
+Belinostat & 775 & 0.78 & 0.53 & 0.50 & \\
+\midrule
+sci-Plex3 & Reference & Halves of one well & Halves of two wells & Difference & One well higher \\
+\midrule
+ & control wells & 0.036 & 0.017 & 0.019 (0.017--0.021) & 74\% \\
+ & treated wells & 0.075 & 0.041 & 0.031 (0.028--0.033) & 84\% \\
+\bottomrule\end{tabular}
+\end{minipage}}
+\typeout{TBL tabS5 \the\wd\tbox\space\the\dimexpr\ht\tbox+\dp\tbox\relax\space\the\textheight}
+\makebox[\textwidth][c]{\usebox{\tbox}}
+\end{table}

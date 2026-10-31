@@ -1,0 +1,1767 @@
+{
+ "rules": "Summary of the \u00a791 BioPert runs (samewell/notes.md \u00a791; A100). Joins bp91_train.py records of the BioPert model\n(per seed) with the ECFP model's records of the same reference (same target well, line and gene set) and summarises by\ngroup and label class: medians over records of same, other, fingerprint, copy-A549 (same / other), line centroid and\nceiling; mean over compounds of same - other, same - fingerprint and other - fingerprint with 95% intervals from 1,000\nbootstrap resamples of compounds (seed 0). Output $WORKSPACE/rt/samewell/bp91/summary.json. Usage: bp91_sum.py",
+ "dprime seed 42 standard": {
+  "test_pearson": 0.5496,
+  "best_epoch": 180,
+  "n": [
+   28595,
+   4182,
+   15048
+  ]
+ },
+ "dprime seed 42 expr | G614 all": {
+  "n_records": 8420,
+  "n_pairs": 90,
+  "n_comp": 87,
+  "same": 0.632,
+  "other": 0.401,
+  "fp": 0.058,
+  "copy_same": 0.54,
+  "copy_other": 0.342,
+  "linemean": -0.025,
+  "ceiling": 0.426,
+  "same-other": [
+   0.213,
+   0.187,
+   0.243
+  ],
+  "same-fp": [
+   0.531,
+   0.498,
+   0.565
+  ],
+  "other-fp": [
+   0.318,
+   0.282,
+   0.356
+  ]
+ },
+ "dprime seed 42 expr | G614 confirmed": {
+  "n_records": 7488,
+  "n_pairs": 80,
+  "n_comp": 77,
+  "same": 0.633,
+  "other": 0.43,
+  "fp": 0.069,
+  "copy_same": 0.544,
+  "copy_other": 0.364,
+  "linemean": -0.023,
+  "ceiling": 0.457,
+  "same-other": [
+   0.181,
+   0.159,
+   0.205
+  ],
+  "same-fp": [
+   0.517,
+   0.481,
+   0.552
+  ],
+  "other-fp": [
+   0.336,
+   0.297,
+   0.374
+  ]
+ },
+ "dprime seed 42 expr | diffpos all": {
+  "n_records": 6006,
+  "n_pairs": 65,
+  "n_comp": 20,
+  "same": 0.653,
+  "other": 0.08,
+  "fp": 0.001,
+  "copy_same": 0.527,
+  "copy_other": 0.078,
+  "linemean": -0.147,
+  "ceiling": 0.134,
+  "same-other": [
+   0.548,
+   0.464,
+   0.63
+  ],
+  "same-fp": [
+   0.639,
+   0.585,
+   0.693
+  ],
+  "other-fp": [
+   0.091,
+   0.01,
+   0.191
+  ]
+ },
+ "dprime seed 42 expr | diffpos confirmed": {
+  "n_records": 1670,
+  "n_pairs": 18,
+  "n_comp": 9,
+  "same": 0.733,
+  "other": 0.513,
+  "fp": 0.037,
+  "copy_same": 0.529,
+  "copy_other": 0.3,
+  "linemean": -0.347,
+  "ceiling": 0.514,
+  "same-other": [
+   0.32,
+   0.218,
+   0.461
+  ],
+  "same-fp": [
+   0.603,
+   0.441,
+   0.775
+  ],
+  "other-fp": [
+   0.283,
+   0.097,
+   0.482
+  ]
+ },
+ "dprime seed 42 expr | diffpos nodvia": {
+  "n_records": 2224,
+  "n_pairs": 24,
+  "n_comp": 15,
+  "same": 0.629,
+  "other": 0.03,
+  "fp": 0.014,
+  "copy_same": 0.542,
+  "copy_other": 0.06,
+  "linemean": -0.086,
+  "ceiling": 0.09,
+  "same-other": [
+   0.559,
+   0.486,
+   0.645
+  ],
+  "same-fp": [
+   0.619,
+   0.542,
+   0.698
+  ],
+  "other-fp": [
+   0.059,
+   -0.043,
+   0.175
+  ]
+ },
+ "dprime seed 42 expr | sameplate confirmed": {
+  "n_records": 468,
+  "n_pairs": 5,
+  "n_comp": 3,
+  "same": 0.547,
+  "other": 0.102,
+  "fp": 0.07,
+  "copy_same": 0.523,
+  "copy_other": 0.152,
+  "linemean": 0.021,
+  "ceiling": 0.235,
+  "same-other": [
+   0.471,
+   0.283,
+   0.723
+  ],
+  "same-fp": [
+   0.553,
+   0.376,
+   0.787
+  ],
+  "other-fp": [
+   0.083,
+   0.064,
+   0.094
+  ]
+ },
+ "dprime seed 42 expr | sameplate nodvia": {
+  "n_records": 1020,
+  "n_pairs": 11,
+  "n_comp": 6,
+  "same": 0.599,
+  "other": 0.03,
+  "fp": -0.018,
+  "copy_same": 0.536,
+  "copy_other": 0.034,
+  "linemean": -0.081,
+  "ceiling": 0.024,
+  "same-other": [
+   0.52,
+   0.397,
+   0.641
+  ],
+  "same-fp": [
+   0.613,
+   0.462,
+   0.779
+  ],
+  "other-fp": [
+   0.093,
+   0.039,
+   0.161
+  ]
+ },
+ "dprime seed 42 expr | Ada confirmed": {
+  "n_records": 5566,
+  "n_pairs": 60,
+  "n_comp": 1,
+  "same": 0.448,
+  "other": 0.195,
+  "fp": -0.059,
+  "copy_same": 0.455,
+  "copy_other": 0.267,
+  "linemean": -0.13,
+  "ceiling": 0.403,
+  "same-other": [
+   0.248,
+   0.248,
+   0.248
+  ],
+  "same-fp": [
+   0.495,
+   0.495,
+   0.495
+  ],
+  "other-fp": [
+   0.247,
+   0.247,
+   0.247
+  ]
+ },
+ "dprime seed 42 all | G614 all": {
+  "n_records": 8420,
+  "n_pairs": 90,
+  "n_comp": 87,
+  "same": 0.604,
+  "other": 0.385,
+  "fp": 0.054,
+  "copy_same": 0.496,
+  "copy_other": 0.312,
+  "linemean": -0.026,
+  "ceiling": 0.406,
+  "same-other": [
+   0.202,
+   0.174,
+   0.229
+  ],
+  "same-fp": [
+   0.509,
+   0.477,
+   0.54
+  ],
+  "other-fp": [
+   0.307,
+   0.272,
+   0.344
+  ]
+ },
+ "dprime seed 42 all | G614 confirmed": {
+  "n_records": 7488,
+  "n_pairs": 80,
+  "n_comp": 77,
+  "same": 0.606,
+  "other": 0.412,
+  "fp": 0.065,
+  "copy_same": 0.501,
+  "copy_other": 0.334,
+  "linemean": -0.022,
+  "ceiling": 0.436,
+  "same-other": [
+   0.172,
+   0.15,
+   0.195
+  ],
+  "same-fp": [
+   0.496,
+   0.462,
+   0.529
+  ],
+  "other-fp": [
+   0.324,
+   0.289,
+   0.362
+  ]
+ },
+ "dprime seed 42 all | diffpos all": {
+  "n_records": 6006,
+  "n_pairs": 65,
+  "n_comp": 20,
+  "same": 0.624,
+  "other": 0.076,
+  "fp": 0.002,
+  "copy_same": 0.485,
+  "copy_other": 0.072,
+  "linemean": -0.141,
+  "ceiling": 0.124,
+  "same-other": [
+   0.526,
+   0.444,
+   0.606
+  ],
+  "same-fp": [
+   0.612,
+   0.562,
+   0.668
+  ],
+  "other-fp": [
+   0.086,
+   0.001,
+   0.187
+  ]
+ },
+ "dprime seed 42 all | diffpos confirmed": {
+  "n_records": 1670,
+  "n_pairs": 18,
+  "n_comp": 9,
+  "same": 0.707,
+  "other": 0.49,
+  "fp": 0.035,
+  "copy_same": 0.487,
+  "copy_other": 0.273,
+  "linemean": -0.336,
+  "ceiling": 0.502,
+  "same-other": [
+   0.31,
+   0.213,
+   0.437
+  ],
+  "same-fp": [
+   0.579,
+   0.409,
+   0.746
+  ],
+  "other-fp": [
+   0.269,
+   0.107,
+   0.461
+  ]
+ },
+ "dprime seed 42 all | diffpos nodvia": {
+  "n_records": 2224,
+  "n_pairs": 24,
+  "n_comp": 15,
+  "same": 0.6,
+  "other": 0.028,
+  "fp": 0.015,
+  "copy_same": 0.496,
+  "copy_other": 0.055,
+  "linemean": -0.085,
+  "ceiling": 0.086,
+  "same-other": [
+   0.536,
+   0.456,
+   0.613
+  ],
+  "same-fp": [
+   0.592,
+   0.519,
+   0.677
+  ],
+  "other-fp": [
+   0.056,
+   -0.04,
+   0.175
+  ]
+ },
+ "dprime seed 42 all | sameplate confirmed": {
+  "n_records": 468,
+  "n_pairs": 5,
+  "n_comp": 3,
+  "same": 0.515,
+  "other": 0.093,
+  "fp": 0.068,
+  "copy_same": 0.482,
+  "copy_other": 0.138,
+  "linemean": 0.016,
+  "ceiling": 0.217,
+  "same-other": [
+   0.45,
+   0.268,
+   0.687
+  ],
+  "same-fp": [
+   0.527,
+   0.355,
+   0.749
+  ],
+  "other-fp": [
+   0.077,
+   0.062,
+   0.086
+  ]
+ },
+ "dprime seed 42 all | sameplate nodvia": {
+  "n_records": 1020,
+  "n_pairs": 11,
+  "n_comp": 6,
+  "same": 0.574,
+  "other": 0.029,
+  "fp": -0.015,
+  "copy_same": 0.494,
+  "copy_other": 0.033,
+  "linemean": -0.082,
+  "ceiling": 0.022,
+  "same-other": [
+   0.497,
+   0.379,
+   0.613
+  ],
+  "same-fp": [
+   0.586,
+   0.434,
+   0.733
+  ],
+  "other-fp": [
+   0.089,
+   0.034,
+   0.152
+  ]
+ },
+ "dprime seed 42 all | Ada confirmed": {
+  "n_records": 5566,
+  "n_pairs": 60,
+  "n_comp": 1,
+  "same": 0.426,
+  "other": 0.187,
+  "fp": -0.05,
+  "copy_same": 0.41,
+  "copy_other": 0.241,
+  "linemean": -0.124,
+  "ceiling": 0.379,
+  "same-other": [
+   0.236,
+   0.236,
+   0.236
+  ],
+  "same-fp": [
+   0.468,
+   0.468,
+   0.468
+  ],
+  "other-fp": [
+   0.233,
+   0.233,
+   0.233
+  ]
+ },
+ "dprime seed 1 standard": {
+  "test_pearson": 0.5523,
+  "best_epoch": 180,
+  "n": [
+   28595,
+   4182,
+   15048
+  ]
+ },
+ "dprime seed 1 expr | G614 all": {
+  "n_records": 8420,
+  "n_pairs": 90,
+  "n_comp": 87,
+  "same": 0.629,
+  "other": 0.406,
+  "fp": 0.058,
+  "copy_same": 0.54,
+  "copy_other": 0.342,
+  "linemean": -0.025,
+  "ceiling": 0.426,
+  "same-other": [
+   0.213,
+   0.184,
+   0.245
+  ],
+  "same-fp": [
+   0.531,
+   0.498,
+   0.566
+  ],
+  "other-fp": [
+   0.318,
+   0.281,
+   0.353
+  ]
+ },
+ "dprime seed 1 expr | G614 confirmed": {
+  "n_records": 7488,
+  "n_pairs": 80,
+  "n_comp": 77,
+  "same": 0.63,
+  "other": 0.436,
+  "fp": 0.069,
+  "copy_same": 0.544,
+  "copy_other": 0.364,
+  "linemean": -0.023,
+  "ceiling": 0.457,
+  "same-other": [
+   0.182,
+   0.161,
+   0.208
+  ],
+  "same-fp": [
+   0.516,
+   0.48,
+   0.551
+  ],
+  "other-fp": [
+   0.334,
+   0.295,
+   0.371
+  ]
+ },
+ "dprime seed 1 expr | diffpos all": {
+  "n_records": 6006,
+  "n_pairs": 65,
+  "n_comp": 20,
+  "same": 0.656,
+  "other": 0.077,
+  "fp": 0.001,
+  "copy_same": 0.527,
+  "copy_other": 0.078,
+  "linemean": -0.147,
+  "ceiling": 0.134,
+  "same-other": [
+   0.551,
+   0.463,
+   0.631
+  ],
+  "same-fp": [
+   0.642,
+   0.584,
+   0.7
+  ],
+  "other-fp": [
+   0.092,
+   -0.004,
+   0.183
+  ]
+ },
+ "dprime seed 1 expr | diffpos confirmed": {
+  "n_records": 1670,
+  "n_pairs": 18,
+  "n_comp": 9,
+  "same": 0.749,
+  "other": 0.513,
+  "fp": 0.037,
+  "copy_same": 0.529,
+  "copy_other": 0.3,
+  "linemean": -0.347,
+  "ceiling": 0.514,
+  "same-other": [
+   0.314,
+   0.214,
+   0.453
+  ],
+  "same-fp": [
+   0.597,
+   0.429,
+   0.773
+  ],
+  "other-fp": [
+   0.283,
+   0.086,
+   0.483
+  ]
+ },
+ "dprime seed 1 expr | diffpos nodvia": {
+  "n_records": 2224,
+  "n_pairs": 24,
+  "n_comp": 15,
+  "same": 0.631,
+  "other": 0.031,
+  "fp": 0.014,
+  "copy_same": 0.542,
+  "copy_other": 0.06,
+  "linemean": -0.086,
+  "ceiling": 0.09,
+  "same-other": [
+   0.565,
+   0.488,
+   0.648
+  ],
+  "same-fp": [
+   0.624,
+   0.545,
+   0.72
+  ],
+  "other-fp": [
+   0.059,
+   -0.04,
+   0.17
+  ]
+ },
+ "dprime seed 1 expr | sameplate confirmed": {
+  "n_records": 468,
+  "n_pairs": 5,
+  "n_comp": 3,
+  "same": 0.54,
+  "other": 0.095,
+  "fp": 0.07,
+  "copy_same": 0.523,
+  "copy_other": 0.152,
+  "linemean": 0.021,
+  "ceiling": 0.235,
+  "same-other": [
+   0.48,
+   0.289,
+   0.739
+  ],
+  "same-fp": [
+   0.545,
+   0.374,
+   0.776
+  ],
+  "other-fp": [
+   0.065,
+   0.037,
+   0.085
+  ]
+ },
+ "dprime seed 1 expr | sameplate nodvia": {
+  "n_records": 1020,
+  "n_pairs": 11,
+  "n_comp": 6,
+  "same": 0.608,
+  "other": 0.021,
+  "fp": -0.018,
+  "copy_same": 0.536,
+  "copy_other": 0.034,
+  "linemean": -0.081,
+  "ceiling": 0.024,
+  "same-other": [
+   0.539,
+   0.417,
+   0.658
+  ],
+  "same-fp": [
+   0.619,
+   0.468,
+   0.775
+  ],
+  "other-fp": [
+   0.081,
+   0.02,
+   0.152
+  ]
+ },
+ "dprime seed 1 expr | Ada confirmed": {
+  "n_records": 5566,
+  "n_pairs": 60,
+  "n_comp": 1,
+  "same": 0.427,
+  "other": 0.174,
+  "fp": -0.059,
+  "copy_same": 0.455,
+  "copy_other": 0.267,
+  "linemean": -0.13,
+  "ceiling": 0.403,
+  "same-other": [
+   0.248,
+   0.248,
+   0.248
+  ],
+  "same-fp": [
+   0.474,
+   0.474,
+   0.474
+  ],
+  "other-fp": [
+   0.226,
+   0.226,
+   0.226
+  ]
+ },
+ "dprime seed 1 all | G614 all": {
+  "n_records": 8420,
+  "n_pairs": 90,
+  "n_comp": 87,
+  "same": 0.602,
+  "other": 0.389,
+  "fp": 0.054,
+  "copy_same": 0.496,
+  "copy_other": 0.312,
+  "linemean": -0.026,
+  "ceiling": 0.406,
+  "same-other": [
+   0.202,
+   0.176,
+   0.232
+  ],
+  "same-fp": [
+   0.509,
+   0.476,
+   0.538
+  ],
+  "other-fp": [
+   0.308,
+   0.271,
+   0.346
+  ]
+ },
+ "dprime seed 1 all | G614 confirmed": {
+  "n_records": 7488,
+  "n_pairs": 80,
+  "n_comp": 77,
+  "same": 0.603,
+  "other": 0.419,
+  "fp": 0.065,
+  "copy_same": 0.501,
+  "copy_other": 0.334,
+  "linemean": -0.022,
+  "ceiling": 0.436,
+  "same-other": [
+   0.173,
+   0.15,
+   0.198
+  ],
+  "same-fp": [
+   0.495,
+   0.461,
+   0.531
+  ],
+  "other-fp": [
+   0.323,
+   0.286,
+   0.359
+  ]
+ },
+ "dprime seed 1 all | diffpos all": {
+  "n_records": 6006,
+  "n_pairs": 65,
+  "n_comp": 20,
+  "same": 0.628,
+  "other": 0.071,
+  "fp": 0.002,
+  "copy_same": 0.485,
+  "copy_other": 0.072,
+  "linemean": -0.141,
+  "ceiling": 0.124,
+  "same-other": [
+   0.529,
+   0.45,
+   0.604
+  ],
+  "same-fp": [
+   0.616,
+   0.565,
+   0.669
+  ],
+  "other-fp": [
+   0.087,
+   -0.001,
+   0.183
+  ]
+ },
+ "dprime seed 1 all | diffpos confirmed": {
+  "n_records": 1670,
+  "n_pairs": 18,
+  "n_comp": 9,
+  "same": 0.724,
+  "other": 0.489,
+  "fp": 0.035,
+  "copy_same": 0.487,
+  "copy_other": 0.273,
+  "linemean": -0.336,
+  "ceiling": 0.502,
+  "same-other": [
+   0.305,
+   0.208,
+   0.44
+  ],
+  "same-fp": [
+   0.575,
+   0.401,
+   0.737
+  ],
+  "other-fp": [
+   0.27,
+   0.08,
+   0.463
+  ]
+ },
+ "dprime seed 1 all | diffpos nodvia": {
+  "n_records": 2224,
+  "n_pairs": 24,
+  "n_comp": 15,
+  "same": 0.603,
+  "other": 0.031,
+  "fp": 0.015,
+  "copy_same": 0.496,
+  "copy_other": 0.055,
+  "linemean": -0.085,
+  "ceiling": 0.086,
+  "same-other": [
+   0.542,
+   0.467,
+   0.625
+  ],
+  "same-fp": [
+   0.597,
+   0.516,
+   0.683
+  ],
+  "other-fp": [
+   0.055,
+   -0.041,
+   0.173
+  ]
+ },
+ "dprime seed 1 all | sameplate confirmed": {
+  "n_records": 468,
+  "n_pairs": 5,
+  "n_comp": 3,
+  "same": 0.515,
+  "other": 0.088,
+  "fp": 0.068,
+  "copy_same": 0.482,
+  "copy_other": 0.138,
+  "linemean": 0.016,
+  "ceiling": 0.217,
+  "same-other": [
+   0.46,
+   0.277,
+   0.703
+  ],
+  "same-fp": [
+   0.52,
+   0.357,
+   0.738
+  ],
+  "other-fp": [
+   0.06,
+   0.035,
+   0.08
+  ]
+ },
+ "dprime seed 1 all | sameplate nodvia": {
+  "n_records": 1020,
+  "n_pairs": 11,
+  "n_comp": 6,
+  "same": 0.582,
+  "other": 0.023,
+  "fp": -0.015,
+  "copy_same": 0.494,
+  "copy_other": 0.033,
+  "linemean": -0.082,
+  "ceiling": 0.022,
+  "same-other": [
+   0.516,
+   0.389,
+   0.625
+  ],
+  "same-fp": [
+   0.593,
+   0.454,
+   0.743
+  ],
+  "other-fp": [
+   0.077,
+   0.014,
+   0.149
+  ]
+ },
+ "dprime seed 1 all | Ada confirmed": {
+  "n_records": 5566,
+  "n_pairs": 60,
+  "n_comp": 1,
+  "same": 0.407,
+  "other": 0.167,
+  "fp": -0.05,
+  "copy_same": 0.41,
+  "copy_other": 0.241,
+  "linemean": -0.124,
+  "ceiling": 0.379,
+  "same-other": [
+   0.236,
+   0.236,
+   0.236
+  ],
+  "same-fp": [
+   0.45,
+   0.45,
+   0.45
+  ],
+  "other-fp": [
+   0.213,
+   0.213,
+   0.213
+  ]
+ },
+ "dprime seed 2 standard": {
+  "test_pearson": 0.5581,
+  "best_epoch": 190,
+  "n": [
+   28595,
+   4182,
+   15048
+  ]
+ },
+ "dprime seed 2 expr | G614 all": {
+  "n_records": 8420,
+  "n_pairs": 90,
+  "n_comp": 87,
+  "same": 0.636,
+  "other": 0.417,
+  "fp": 0.058,
+  "copy_same": 0.54,
+  "copy_other": 0.342,
+  "linemean": -0.025,
+  "ceiling": 0.426,
+  "same-other": [
+   0.209,
+   0.181,
+   0.238
+  ],
+  "same-fp": [
+   0.538,
+   0.505,
+   0.572
+  ],
+  "other-fp": [
+   0.329,
+   0.29,
+   0.364
+  ]
+ },
+ "dprime seed 2 expr | G614 confirmed": {
+  "n_records": 7488,
+  "n_pairs": 80,
+  "n_comp": 77,
+  "same": 0.638,
+  "other": 0.446,
+  "fp": 0.069,
+  "copy_same": 0.544,
+  "copy_other": 0.364,
+  "linemean": -0.023,
+  "ceiling": 0.457,
+  "same-other": [
+   0.178,
+   0.155,
+   0.203
+  ],
+  "same-fp": [
+   0.523,
+   0.49,
+   0.557
+  ],
+  "other-fp": [
+   0.346,
+   0.309,
+   0.382
+  ]
+ },
+ "dprime seed 2 expr | diffpos all": {
+  "n_records": 6006,
+  "n_pairs": 65,
+  "n_comp": 20,
+  "same": 0.657,
+  "other": 0.078,
+  "fp": 0.001,
+  "copy_same": 0.527,
+  "copy_other": 0.078,
+  "linemean": -0.147,
+  "ceiling": 0.134,
+  "same-other": [
+   0.554,
+   0.471,
+   0.638
+  ],
+  "same-fp": [
+   0.645,
+   0.59,
+   0.701
+  ],
+  "other-fp": [
+   0.091,
+   -0.003,
+   0.188
+  ]
+ },
+ "dprime seed 2 expr | diffpos confirmed": {
+  "n_records": 1670,
+  "n_pairs": 18,
+  "n_comp": 9,
+  "same": 0.732,
+  "other": 0.506,
+  "fp": 0.037,
+  "copy_same": 0.529,
+  "copy_other": 0.3,
+  "linemean": -0.347,
+  "ceiling": 0.514,
+  "same-other": [
+   0.309,
+   0.202,
+   0.434
+  ],
+  "same-fp": [
+   0.604,
+   0.429,
+   0.78
+  ],
+  "other-fp": [
+   0.295,
+   0.105,
+   0.49
+  ]
+ },
+ "dprime seed 2 expr | diffpos nodvia": {
+  "n_records": 2224,
+  "n_pairs": 24,
+  "n_comp": 15,
+  "same": 0.637,
+  "other": 0.031,
+  "fp": 0.014,
+  "copy_same": 0.542,
+  "copy_other": 0.06,
+  "linemean": -0.086,
+  "ceiling": 0.09,
+  "same-other": [
+   0.567,
+   0.488,
+   0.653
+  ],
+  "same-fp": [
+   0.626,
+   0.552,
+   0.707
+  ],
+  "other-fp": [
+   0.059,
+   -0.033,
+   0.181
+  ]
+ },
+ "dprime seed 2 expr | sameplate confirmed": {
+  "n_records": 468,
+  "n_pairs": 5,
+  "n_comp": 3,
+  "same": 0.559,
+  "other": 0.106,
+  "fp": 0.07,
+  "copy_same": 0.523,
+  "copy_other": 0.152,
+  "linemean": 0.021,
+  "ceiling": 0.235,
+  "same-other": [
+   0.487,
+   0.291,
+   0.742
+  ],
+  "same-fp": [
+   0.554,
+   0.396,
+   0.763
+  ],
+  "other-fp": [
+   0.067,
+   0.021,
+   0.105
+  ]
+ },
+ "dprime seed 2 expr | sameplate nodvia": {
+  "n_records": 1020,
+  "n_pairs": 11,
+  "n_comp": 6,
+  "same": 0.606,
+  "other": 0.028,
+  "fp": -0.018,
+  "copy_same": 0.536,
+  "copy_other": 0.034,
+  "linemean": -0.081,
+  "ceiling": 0.024,
+  "same-other": [
+   0.532,
+   0.414,
+   0.652
+  ],
+  "same-fp": [
+   0.62,
+   0.475,
+   0.786
+  ],
+  "other-fp": [
+   0.088,
+   0.018,
+   0.158
+  ]
+ },
+ "dprime seed 2 expr | Ada confirmed": {
+  "n_records": 5566,
+  "n_pairs": 60,
+  "n_comp": 1,
+  "same": 0.434,
+  "other": 0.175,
+  "fp": -0.059,
+  "copy_same": 0.455,
+  "copy_other": 0.267,
+  "linemean": -0.13,
+  "ceiling": 0.403,
+  "same-other": [
+   0.252,
+   0.252,
+   0.252
+  ],
+  "same-fp": [
+   0.48,
+   0.48,
+   0.48
+  ],
+  "other-fp": [
+   0.228,
+   0.228,
+   0.228
+  ]
+ },
+ "dprime seed 2 all | G614 all": {
+  "n_records": 8420,
+  "n_pairs": 90,
+  "n_comp": 87,
+  "same": 0.61,
+  "other": 0.401,
+  "fp": 0.054,
+  "copy_same": 0.496,
+  "copy_other": 0.312,
+  "linemean": -0.026,
+  "ceiling": 0.406,
+  "same-other": [
+   0.198,
+   0.172,
+   0.224
+  ],
+  "same-fp": [
+   0.516,
+   0.485,
+   0.548
+  ],
+  "other-fp": [
+   0.318,
+   0.285,
+   0.354
+  ]
+ },
+ "dprime seed 2 all | G614 confirmed": {
+  "n_records": 7488,
+  "n_pairs": 80,
+  "n_comp": 77,
+  "same": 0.613,
+  "other": 0.428,
+  "fp": 0.065,
+  "copy_same": 0.501,
+  "copy_other": 0.334,
+  "linemean": -0.022,
+  "ceiling": 0.436,
+  "same-other": [
+   0.169,
+   0.147,
+   0.192
+  ],
+  "same-fp": [
+   0.503,
+   0.469,
+   0.535
+  ],
+  "other-fp": [
+   0.334,
+   0.299,
+   0.368
+  ]
+ },
+ "dprime seed 2 all | diffpos all": {
+  "n_records": 6006,
+  "n_pairs": 65,
+  "n_comp": 20,
+  "same": 0.63,
+  "other": 0.073,
+  "fp": 0.002,
+  "copy_same": 0.485,
+  "copy_other": 0.072,
+  "linemean": -0.141,
+  "ceiling": 0.124,
+  "same-other": [
+   0.532,
+   0.447,
+   0.618
+  ],
+  "same-fp": [
+   0.618,
+   0.569,
+   0.672
+  ],
+  "other-fp": [
+   0.086,
+   0.004,
+   0.184
+  ]
+ },
+ "dprime seed 2 all | diffpos confirmed": {
+  "n_records": 1670,
+  "n_pairs": 18,
+  "n_comp": 9,
+  "same": 0.705,
+  "other": 0.486,
+  "fp": 0.035,
+  "copy_same": 0.487,
+  "copy_other": 0.273,
+  "linemean": -0.336,
+  "ceiling": 0.502,
+  "same-other": [
+   0.3,
+   0.205,
+   0.423
+  ],
+  "same-fp": [
+   0.581,
+   0.419,
+   0.735
+  ],
+  "other-fp": [
+   0.281,
+   0.101,
+   0.452
+  ]
+ },
+ "dprime seed 2 all | diffpos nodvia": {
+  "n_records": 2224,
+  "n_pairs": 24,
+  "n_comp": 15,
+  "same": 0.609,
+  "other": 0.029,
+  "fp": 0.015,
+  "copy_same": 0.496,
+  "copy_other": 0.055,
+  "linemean": -0.085,
+  "ceiling": 0.086,
+  "same-other": [
+   0.544,
+   0.47,
+   0.623
+  ],
+  "same-fp": [
+   0.6,
+   0.527,
+   0.683
+  ],
+  "other-fp": [
+   0.056,
+   -0.033,
+   0.157
+  ]
+ },
+ "dprime seed 2 all | sameplate confirmed": {
+  "n_records": 468,
+  "n_pairs": 5,
+  "n_comp": 3,
+  "same": 0.528,
+  "other": 0.097,
+  "fp": 0.068,
+  "copy_same": 0.482,
+  "copy_other": 0.138,
+  "linemean": 0.016,
+  "ceiling": 0.217,
+  "same-other": [
+   0.466,
+   0.277,
+   0.706
+  ],
+  "same-fp": [
+   0.528,
+   0.375,
+   0.726
+  ],
+  "other-fp": [
+   0.062,
+   0.02,
+   0.098
+  ]
+ },
+ "dprime seed 2 all | sameplate nodvia": {
+  "n_records": 1020,
+  "n_pairs": 11,
+  "n_comp": 6,
+  "same": 0.582,
+  "other": 0.028,
+  "fp": -0.015,
+  "copy_same": 0.494,
+  "copy_other": 0.033,
+  "linemean": -0.082,
+  "ceiling": 0.022,
+  "same-other": [
+   0.509,
+   0.399,
+   0.62
+  ],
+  "same-fp": [
+   0.593,
+   0.444,
+   0.744
+  ],
+  "other-fp": [
+   0.084,
+   0.022,
+   0.147
+  ]
+ },
+ "dprime seed 2 all | Ada confirmed": {
+  "n_records": 5566,
+  "n_pairs": 60,
+  "n_comp": 1,
+  "same": 0.411,
+  "other": 0.168,
+  "fp": -0.05,
+  "copy_same": 0.41,
+  "copy_other": 0.241,
+  "linemean": -0.124,
+  "ceiling": 0.379,
+  "same-other": [
+   0.24,
+   0.24,
+   0.24
+  ],
+  "same-fp": [
+   0.455,
+   0.455,
+   0.455
+  ],
+  "other-fp": [
+   0.216,
+   0.216,
+   0.216
+  ]
+ },
+ "dmso seed 42 standard": {
+  "test_pearson": 0.6952,
+  "best_epoch": 200,
+  "n": [
+   28595,
+   4182,
+   15048
+  ]
+ },
+ "dmso seed 42 expr | G614 all": {
+  "n_records": 8420,
+  "n_pairs": 90,
+  "n_comp": 87,
+  "same": 0.748,
+  "other": 0.575,
+  "fp": 0.331,
+  "copy_same": 0.502,
+  "copy_other": 0.334,
+  "linemean": 0.487,
+  "ceiling": 0.536,
+  "same-other": [
+   0.161,
+   0.144,
+   0.18
+  ],
+  "same-fp": [
+   0.398,
+   0.37,
+   0.427
+  ],
+  "other-fp": [
+   0.237,
+   0.203,
+   0.273
+  ]
+ },
+ "dmso seed 42 expr | G614 confirmed": {
+  "n_records": 7488,
+  "n_pairs": 80,
+  "n_comp": 77,
+  "same": 0.746,
+  "other": 0.583,
+  "fp": 0.331,
+  "copy_same": 0.504,
+  "copy_other": 0.345,
+  "linemean": 0.481,
+  "ceiling": 0.549,
+  "same-other": [
+   0.152,
+   0.133,
+   0.171
+  ],
+  "same-fp": [
+   0.399,
+   0.368,
+   0.431
+  ],
+  "other-fp": [
+   0.247,
+   0.213,
+   0.284
+  ]
+ },
+ "dmso seed 42 expr | diffpos all": {
+  "n_records": 6006,
+  "n_pairs": 65,
+  "n_comp": 20,
+  "same": 0.813,
+  "other": 0.214,
+  "fp": 0.402,
+  "copy_same": 0.55,
+  "copy_other": 0.145,
+  "linemean": 0.414,
+  "ceiling": 0.211,
+  "same-other": [
+   0.558,
+   0.473,
+   0.627
+  ],
+  "same-fp": [
+   0.394,
+   0.357,
+   0.429
+  ],
+  "other-fp": [
+   -0.164,
+   -0.235,
+   -0.091
+  ]
+ },
+ "dmso seed 42 expr | diffpos confirmed": {
+  "n_records": 1670,
+  "n_pairs": 18,
+  "n_comp": 9,
+  "same": 0.838,
+  "other": 0.484,
+  "fp": 0.385,
+  "copy_same": 0.538,
+  "copy_other": 0.275,
+  "linemean": 0.382,
+  "ceiling": 0.496,
+  "same-other": [
+   0.405,
+   0.307,
+   0.52
+  ],
+  "same-fp": [
+   0.45,
+   0.326,
+   0.59
+  ],
+  "other-fp": [
+   0.046,
+   -0.114,
+   0.222
+  ]
+ },
+ "dmso seed 42 expr | diffpos nodvia": {
+  "n_records": 2224,
+  "n_pairs": 24,
+  "n_comp": 15,
+  "same": 0.784,
+  "other": 0.189,
+  "fp": 0.414,
+  "copy_same": 0.548,
+  "copy_other": 0.142,
+  "linemean": 0.431,
+  "ceiling": 0.183,
+  "same-other": [
+   0.545,
+   0.442,
+   0.646
+  ],
+  "same-fp": [
+   0.345,
+   0.301,
+   0.396
+  ],
+  "other-fp": [
+   -0.2,
+   -0.3,
+   -0.084
+  ]
+ },
+ "dmso seed 42 expr | sameplate confirmed": {
+  "n_records": 468,
+  "n_pairs": 5,
+  "n_comp": 3,
+  "same": 0.72,
+  "other": 0.547,
+  "fp": 0.351,
+  "copy_same": 0.494,
+  "copy_other": 0.302,
+  "linemean": 0.454,
+  "ceiling": 0.632,
+  "same-other": [
+   0.18,
+   0.115,
+   0.289
+  ],
+  "same-fp": [
+   0.377,
+   0.275,
+   0.488
+  ],
+  "other-fp": [
+   0.197,
+   0.077,
+   0.374
+  ]
+ },
+ "dmso seed 42 expr | sameplate nodvia": {
+  "n_records": 1020,
+  "n_pairs": 11,
+  "n_comp": 6,
+  "same": 0.761,
+  "other": 0.482,
+  "fp": 0.382,
+  "copy_same": 0.536,
+  "copy_other": 0.238,
+  "linemean": 0.478,
+  "ceiling": 0.504,
+  "same-other": [
+   0.238,
+   0.161,
+   0.323
+  ],
+  "same-fp": [
+   0.358,
+   0.292,
+   0.425
+  ],
+  "other-fp": [
+   0.12,
+   0.044,
+   0.227
+  ]
+ },
+ "dmso seed 42 expr | Ada confirmed": {
+  "n_records": 5566,
+  "n_pairs": 60,
+  "n_comp": 1,
+  "same": 0.675,
+  "other": 0.342,
+  "fp": 0.438,
+  "copy_same": 0.502,
+  "copy_other": 0.347,
+  "linemean": 0.454,
+  "ceiling": 0.422,
+  "same-other": [
+   0.304,
+   0.304,
+   0.304
+  ],
+  "same-fp": [
+   0.241,
+   0.241,
+   0.241
+  ],
+  "other-fp": [
+   -0.064,
+   -0.064,
+   -0.064
+  ]
+ },
+ "dmso seed 42 all | G614 all": {
+  "n_records": 8420,
+  "n_pairs": 90,
+  "n_comp": 87,
+  "same": 0.725,
+  "other": 0.559,
+  "fp": 0.313,
+  "copy_same": 0.46,
+  "copy_other": 0.305,
+  "linemean": 0.474,
+  "ceiling": 0.515,
+  "same-other": [
+   0.155,
+   0.138,
+   0.172
+  ],
+  "same-fp": [
+   0.39,
+   0.362,
+   0.419
+  ],
+  "other-fp": [
+   0.235,
+   0.204,
+   0.266
+  ]
+ },
+ "dmso seed 42 all | G614 confirmed": {
+  "n_records": 7488,
+  "n_pairs": 80,
+  "n_comp": 77,
+  "same": 0.724,
+  "other": 0.566,
+  "fp": 0.313,
+  "copy_same": 0.462,
+  "copy_other": 0.316,
+  "linemean": 0.468,
+  "ceiling": 0.529,
+  "same-other": [
+   0.146,
+   0.129,
+   0.163
+  ],
+  "same-fp": [
+   0.39,
+   0.36,
+   0.418
+  ],
+  "other-fp": [
+   0.244,
+   0.21,
+   0.279
+  ]
+ },
+ "dmso seed 42 all | diffpos all": {
+  "n_records": 6006,
+  "n_pairs": 65,
+  "n_comp": 20,
+  "same": 0.797,
+  "other": 0.206,
+  "fp": 0.392,
+  "copy_same": 0.509,
+  "copy_other": 0.133,
+  "linemean": 0.406,
+  "ceiling": 0.202,
+  "same-other": [
+   0.549,
+   0.467,
+   0.626
+  ],
+  "same-fp": [
+   0.387,
+   0.35,
+   0.422
+  ],
+  "other-fp": [
+   -0.162,
+   -0.233,
+   -0.088
+  ]
+ },
+ "dmso seed 42 all | diffpos confirmed": {
+  "n_records": 1670,
+  "n_pairs": 18,
+  "n_comp": 9,
+  "same": 0.822,
+  "other": 0.471,
+  "fp": 0.377,
+  "copy_same": 0.5,
+  "copy_other": 0.251,
+  "linemean": 0.377,
+  "ceiling": 0.484,
+  "same-other": [
+   0.4,
+   0.304,
+   0.504
+  ],
+  "same-fp": [
+   0.44,
+   0.323,
+   0.581
+  ],
+  "other-fp": [
+   0.04,
+   -0.111,
+   0.215
+  ]
+ },
+ "dmso seed 42 all | diffpos nodvia": {
+  "n_records": 2224,
+  "n_pairs": 24,
+  "n_comp": 15,
+  "same": 0.766,
+  "other": 0.181,
+  "fp": 0.4,
+  "copy_same": 0.504,
+  "copy_other": 0.128,
+  "linemean": 0.422,
+  "ceiling": 0.174,
+  "same-other": [
+   0.535,
+   0.438,
+   0.633
+  ],
+  "same-fp": [
+   0.339,
+   0.291,
+   0.389
+  ],
+  "other-fp": [
+   -0.197,
+   -0.292,
+   -0.096
+  ]
+ },
+ "dmso seed 42 all | sameplate confirmed": {
+  "n_records": 468,
+  "n_pairs": 5,
+  "n_comp": 3,
+  "same": 0.703,
+  "other": 0.533,
+  "fp": 0.34,
+  "copy_same": 0.454,
+  "copy_other": 0.273,
+  "linemean": 0.444,
+  "ceiling": 0.617,
+  "same-other": [
+   0.174,
+   0.112,
+   0.28
+  ],
+  "same-fp": [
+   0.368,
+   0.27,
+   0.475
+  ],
+  "other-fp": [
+   0.194,
+   0.079,
+   0.364
+  ]
+ },
+ "dmso seed 42 all | sameplate nodvia": {
+  "n_records": 1020,
+  "n_pairs": 11,
+  "n_comp": 6,
+  "same": 0.742,
+  "other": 0.471,
+  "fp": 0.37,
+  "copy_same": 0.493,
+  "copy_other": 0.219,
+  "linemean": 0.465,
+  "ceiling": 0.499,
+  "same-other": [
+   0.23,
+   0.154,
+   0.307
+  ],
+  "same-fp": [
+   0.35,
+   0.288,
+   0.414
+  ],
+  "other-fp": [
+   0.12,
+   0.048,
+   0.226
+  ]
+ },
+ "dmso seed 42 all | Ada confirmed": {
+  "n_records": 5566,
+  "n_pairs": 60,
+  "n_comp": 1,
+  "same": 0.654,
+  "other": 0.325,
+  "fp": 0.427,
+  "copy_same": 0.458,
+  "copy_other": 0.317,
+  "linemean": 0.439,
+  "ceiling": 0.398,
+  "same-other": [
+   0.301,
+   0.301,
+   0.301
+  ],
+  "same-fp": [
+   0.235,
+   0.235,
+   0.235
+  ],
+  "other-fp": [
+   -0.066,
+   -0.066,
+   -0.066
+  ]
+ }
+}

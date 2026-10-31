@@ -1,0 +1,224 @@
+{
+ "rules": "Simulation with real well shifts (samewell/notes.md \u00a779 F; A100). Well shifts are not independent Gaussian genes\nbut random combinations of the 14 plates' control-pair differences (per line H11 - H12, divided by sqrt 2), keeping\ntheir real correlation across genes and across lines; half-sample noise is drawn from control wells' half differences\n(x_A - x_B over sqrt 2, random sign), scaled per line to the treated wells' noise level; each plate adds a plate effect\nof the same kind. Genes: 1,500 drawn from the common genes G0 (seed 0); lines with valid control halves on all plates.\nDesign per run: 8 plates x 48 wells; 24 replicated conditions (two wells on two different plates), the rest single.\nDrug effect of condition c on line l: A s_c (v_c + 0.7 eta_lc), v and eta Gaussian with the genes' shift scale,\ns_c = exp(N(-1.5, 1.2)), A set so that s = 1 gives the median shift energy; proxy strength = s_c exp(N(0, 0.5)).\nPipeline as in the analysis: D' per plate and half, centring over genes, W, Q, S_same, S_cross (\u00a742), drug share\nQ / W pooled, shared-well share (S_same - S_cross) / W, same-well advantage. Truth: the same D' operator applied to the\nnoise-free drug part and shift part separately; true drug share = sum of the drug part's energy / sum of the signal's\nenergy (mean of the two wells). Scenarios: no well shifts; real well shifts; real well shifts scaled up to the size\nmeasured between replicate wells at different positions (factor f = sqrt(median over lines of V / median shift\nenergy), V as in \u00a722 on the same genes; the control pair is adjacent and fixed, its difference is smaller). Strata: tertiles of the proxy and of the\npair's own r (median over lines of Pearson(D'_a, D'_b)), within each run; 20 runs (seeds 1-20).\nOutput $WORKSPACE/rt/samewell/sim79.json",
+ "n_lines": 47,
+ "kappa_median": 1.29,
+ "shift_energy_median": 2.5,
+ "V_median": 8.54,
+ "scale_f": 1.85,
+ "no well shifts | proxy | all": {
+  "drug_share_est": 0.931,
+  "drug_share_true": 1.0,
+  "bias": -0.069,
+  "bias_sd": 0.09,
+  "shared_well_share": 0.036,
+  "advantage": 0.052,
+  "advantage_sd": 0.01
+ },
+ "no well shifts | proxy | 0": {
+  "drug_share_est": -0.86,
+  "drug_share_true": 1.0,
+  "bias": -1.86,
+  "bias_sd": 4.575,
+  "shared_well_share": -0.302,
+  "advantage": 0.079,
+  "advantage_sd": 0.014
+ },
+ "no well shifts | proxy | 1": {
+  "drug_share_est": 0.922,
+  "drug_share_true": 1.0,
+  "bias": -0.078,
+  "bias_sd": 0.357,
+  "shared_well_share": 0.149,
+  "advantage": 0.053,
+  "advantage_sd": 0.014
+ },
+ "no well shifts | proxy | 2": {
+  "drug_share_est": 0.975,
+  "drug_share_true": 1.0,
+  "bias": -0.025,
+  "bias_sd": 0.046,
+  "shared_well_share": 0.014,
+  "advantage": 0.023,
+  "advantage_sd": 0.009
+ },
+ "no well shifts | own_r | all": {
+  "drug_share_est": 0.931,
+  "drug_share_true": 1.0,
+  "bias": -0.069,
+  "bias_sd": 0.09,
+  "shared_well_share": 0.036,
+  "advantage": 0.052,
+  "advantage_sd": 0.01
+ },
+ "no well shifts | own_r | 0": {
+  "drug_share_est": -1.156,
+  "drug_share_true": 1.0,
+  "bias": -2.156,
+  "bias_sd": 4.534,
+  "shared_well_share": -0.104,
+  "advantage": 0.08,
+  "advantage_sd": 0.015
+ },
+ "no well shifts | own_r | 1": {
+  "drug_share_est": 0.967,
+  "drug_share_true": 1.0,
+  "bias": -0.033,
+  "bias_sd": 0.875,
+  "shared_well_share": 0.161,
+  "advantage": 0.056,
+  "advantage_sd": 0.015
+ },
+ "no well shifts | own_r | 2": {
+  "drug_share_est": 0.981,
+  "drug_share_true": 1.0,
+  "bias": -0.019,
+  "bias_sd": 0.047,
+  "shared_well_share": 0.013,
+  "advantage": 0.018,
+  "advantage_sd": 0.007
+ },
+ "real well shifts | proxy | all": {
+  "drug_share_est": 0.263,
+  "drug_share_true": 0.262,
+  "bias": 0.001,
+  "bias_sd": 0.054,
+  "shared_well_share": 0.314,
+  "advantage": 0.415,
+  "advantage_sd": 0.047
+ },
+ "real well shifts | proxy | 0": {
+  "drug_share_est": -0.016,
+  "drug_share_true": 0.021,
+  "bias": -0.037,
+  "bias_sd": 0.097,
+  "shared_well_share": 0.423,
+  "advantage": 0.487,
+  "advantage_sd": 0.094
+ },
+ "real well shifts | proxy | 1": {
+  "drug_share_est": 0.099,
+  "drug_share_true": 0.078,
+  "bias": 0.021,
+  "bias_sd": 0.136,
+  "shared_well_share": 0.392,
+  "advantage": 0.447,
+  "advantage_sd": 0.111
+ },
+ "real well shifts | proxy | 2": {
+  "drug_share_est": 0.456,
+  "drug_share_true": 0.446,
+  "bias": 0.01,
+  "bias_sd": 0.099,
+  "shared_well_share": 0.228,
+  "advantage": 0.311,
+  "advantage_sd": 0.088
+ },
+ "real well shifts | own_r | all": {
+  "drug_share_est": 0.263,
+  "drug_share_true": 0.262,
+  "bias": 0.001,
+  "bias_sd": 0.054,
+  "shared_well_share": 0.314,
+  "advantage": 0.415,
+  "advantage_sd": 0.047
+ },
+ "real well shifts | own_r | 0": {
+  "drug_share_est": -0.273,
+  "drug_share_true": 0.057,
+  "bias": -0.331,
+  "bias_sd": 0.068,
+  "shared_well_share": 0.626,
+  "advantage": 0.727,
+  "advantage_sd": 0.088
+ },
+ "real well shifts | own_r | 1": {
+  "drug_share_est": 0.142,
+  "drug_share_true": 0.108,
+  "bias": 0.034,
+  "bias_sd": 0.067,
+  "shared_well_share": 0.323,
+  "advantage": 0.363,
+  "advantage_sd": 0.055
+ },
+ "real well shifts | own_r | 2": {
+  "drug_share_est": 0.616,
+  "drug_share_true": 0.418,
+  "bias": 0.199,
+  "bias_sd": 0.105,
+  "shared_well_share": 0.131,
+  "advantage": 0.156,
+  "advantage_sd": 0.035
+ },
+ "real well shifts, scaled | proxy | all": {
+  "drug_share_est": 0.263,
+  "drug_share_true": 0.262,
+  "bias": 0.001,
+  "bias_sd": 0.054,
+  "shared_well_share": 0.314,
+  "advantage": 0.479,
+  "advantage_sd": 0.051
+ },
+ "real well shifts, scaled | proxy | 0": {
+  "drug_share_est": -0.017,
+  "drug_share_true": 0.021,
+  "bias": -0.038,
+  "bias_sd": 0.096,
+  "shared_well_share": 0.425,
+  "advantage": 0.569,
+  "advantage_sd": 0.105
+ },
+ "real well shifts, scaled | proxy | 1": {
+  "drug_share_est": 0.101,
+  "drug_share_true": 0.078,
+  "bias": 0.023,
+  "bias_sd": 0.134,
+  "shared_well_share": 0.391,
+  "advantage": 0.517,
+  "advantage_sd": 0.124
+ },
+ "real well shifts, scaled | proxy | 2": {
+  "drug_share_est": 0.456,
+  "drug_share_true": 0.446,
+  "bias": 0.01,
+  "bias_sd": 0.102,
+  "shared_well_share": 0.228,
+  "advantage": 0.35,
+  "advantage_sd": 0.097
+ },
+ "real well shifts, scaled | own_r | all": {
+  "drug_share_est": 0.263,
+  "drug_share_true": 0.262,
+  "bias": 0.001,
+  "bias_sd": 0.054,
+  "shared_well_share": 0.314,
+  "advantage": 0.479,
+  "advantage_sd": 0.051
+ },
+ "real well shifts, scaled | own_r | 0": {
+  "drug_share_est": -0.275,
+  "drug_share_true": 0.059,
+  "bias": -0.334,
+  "bias_sd": 0.064,
+  "shared_well_share": 0.628,
+  "advantage": 0.835,
+  "advantage_sd": 0.089
+ },
+ "real well shifts, scaled | own_r | 1": {
+  "drug_share_est": 0.143,
+  "drug_share_true": 0.104,
+  "bias": 0.038,
+  "bias_sd": 0.068,
+  "shared_well_share": 0.327,
+  "advantage": 0.429,
+  "advantage_sd": 0.063
+ },
+ "real well shifts, scaled | own_r | 2": {
+  "drug_share_est": 0.623,
+  "drug_share_true": 0.423,
+  "bias": 0.2,
+  "bias_sd": 0.108,
+  "shared_well_share": 0.128,
+  "advantage": 0.173,
+  "advantage_sd": 0.045
+ }
+}

@@ -1,0 +1,291 @@
+{
+ "rules": "References that cannot favour the same-well arm (samewell/notes.md \u00a7100, independent review 10-29 item A3; A100).\nReview point: the treated-well reference subtracts the plate's treated-well mean, and the control-well reference the\nplate's control wells, which carry their own well shift; for a pair on two plates either term is shared by the target\nand the same-well predictor but not by the replicate well. Responses rebuilt from the per-sample, per-half sums of\nlog1p values ($WORKSPACE/tahoe_agg, as sw_v1a.control_profiles), on the cached genes; T[t, j] = line t's mean log1p in\nsample j, per half. References for a pair (a on plate P, b on plate Q):\n  ctrl      T - (cell-weighted mean of the plate's two control wells)  (must reproduce the paper's control-well numbers)\n  split     the target line minus control well 1 of its plate, the other lines minus control well 2, and the reverse\n            (scores averaged over the two assignments); the control wells' own shift is no longer shared\n  treated   T - the line's mean over the plate's other treated wells (the paper's default)\n  single    every line minus the same single control well of its plate (well 1, then well 2, averaged): the noise of\n            'split' with the control shift still shared; split vs single isolates the sharing (added after the first run)\n  common    both wells minus the SAME reference: the line's mean over the treated wells of plates P and Q, without a\n            and b. INVALID for pairs on two plates (found in the first run, 10-29): without a plate term the plate's\n            own shift returns and is shared by the target and the same-well predictor; kept only for one-plate pairs\n  tsplit    as split, with the plate's other treated wells in two halves (alternate sample order) in place of the two\n            control wells; tsingle, every line against the same half (the noise of tsplit, sharing kept). Tests whether\n            the treated-well reference shares anything between the arms (10-29 review; ref99.py tsplit -> ref99_tsplit.json)\nPer record (pair x line; both wells as target, averaged): same and replicate-well scores as in the paper. Also, under\n'common', the variance components of the paper (W within-well half product, Q cross-well half product, common well\npart from the other lines; common genes centred) and the ceiling (Pearson between the two halves of the target well,\nSpearman-Brown corrected, against Pearson between the two wells' full responses).\nSets: verified pairs (labels84 'confirmed'), pairs without detectable viability effect (labels85 'nodvia'), for\ndifferent positions, one plate and plates 6/14 (same position only). Summary as ver99.py (compound-equal mean and\nsign test over compounds). Output $WORKSPACE/rt/samewell/ref99.json",
+ "sanity_corr_with_D_median": 1.0,
+ "sanity_corr_min": 0.9978,
+ "advantage": {
+  "diffpos verified | ctrl": {
+   "pairs": 18,
+   "compounds": 9,
+   "same": 0.697,
+   "other": 0.3695,
+   "diff_record_mean": 0.304,
+   "diff_compound_mean": 0.3406,
+   "compounds_positive": 9,
+   "sign_p": 0.00390625
+  },
+  "diffpos verified | split": {
+   "pairs": 18,
+   "compounds": 9,
+   "same": 0.5863,
+   "other": 0.2991,
+   "diff_record_mean": 0.2605,
+   "diff_compound_mean": 0.2817,
+   "compounds_positive": 9,
+   "sign_p": 0.00390625
+  },
+  "diffpos verified | treated": {
+   "pairs": 18,
+   "compounds": 9,
+   "same": 0.6854,
+   "other": 0.3673,
+   "diff_record_mean": 0.3207,
+   "diff_compound_mean": 0.3847,
+   "compounds_positive": 9,
+   "sign_p": 0.00390625
+  },
+  "diffpos verified | common": {
+   "pairs": 18,
+   "compounds": 9,
+   "same": 0.6978,
+   "other": 0.1145,
+   "diff_record_mean": 0.5902,
+   "diff_compound_mean": 0.7614,
+   "compounds_positive": 9,
+   "sign_p": 0.00390625
+  },
+  "diffpos nodvia | ctrl": {
+   "pairs": 24,
+   "compounds": 15,
+   "same": 0.7178,
+   "other": 0.2434,
+   "diff_record_mean": 0.4743,
+   "diff_compound_mean": 0.4546,
+   "compounds_positive": 15,
+   "sign_p": 6.103515625e-05
+  },
+  "diffpos nodvia | split": {
+   "pairs": 24,
+   "compounds": 15,
+   "same": 0.5326,
+   "other": 0.1627,
+   "diff_record_mean": 0.3735,
+   "diff_compound_mean": 0.357,
+   "compounds_positive": 15,
+   "sign_p": 6.103515625e-05
+  },
+  "diffpos nodvia | treated": {
+   "pairs": 24,
+   "compounds": 15,
+   "same": 0.7184,
+   "other": 0.0768,
+   "diff_record_mean": 0.6028,
+   "diff_compound_mean": 0.6013,
+   "compounds_positive": 15,
+   "sign_p": 6.103515625e-05
+  },
+  "diffpos nodvia | common": {
+   "pairs": 24,
+   "compounds": 15,
+   "same": 0.7374,
+   "other": -0.253,
+   "diff_record_mean": 0.9579,
+   "diff_compound_mean": 0.9274,
+   "compounds_positive": 15,
+   "sign_p": 6.103515625e-05
+  },
+  "sameplate verified | ctrl": {
+   "pairs": 6,
+   "compounds": 4,
+   "same": 0.6878,
+   "other": 0.3367,
+   "diff_record_mean": 0.2876,
+   "diff_compound_mean": 0.3148,
+   "compounds_positive": 4,
+   "sign_p": 0.125
+  },
+  "sameplate verified | split": {
+   "pairs": 6,
+   "compounds": 4,
+   "same": 0.5035,
+   "other": 0.1927,
+   "diff_record_mean": 0.2455,
+   "diff_compound_mean": 0.268,
+   "compounds_positive": 4,
+   "sign_p": 0.125
+  },
+  "sameplate verified | treated": {
+   "pairs": 6,
+   "compounds": 4,
+   "same": 0.698,
+   "other": 0.1396,
+   "diff_record_mean": 0.5104,
+   "diff_compound_mean": 0.5618,
+   "compounds_positive": 4,
+   "sign_p": 0.125
+  },
+  "sameplate verified | common": {
+   "pairs": 6,
+   "compounds": 4,
+   "same": 0.6984,
+   "other": 0.1537,
+   "diff_record_mean": 0.4968,
+   "diff_compound_mean": 0.547,
+   "compounds_positive": 4,
+   "sign_p": 0.125
+  },
+  "sameplate nodvia | ctrl": {
+   "pairs": 11,
+   "compounds": 6,
+   "same": 0.7047,
+   "other": 0.3104,
+   "diff_record_mean": 0.3468,
+   "diff_compound_mean": 0.3405,
+   "compounds_positive": 6,
+   "sign_p": 0.03125
+  },
+  "sameplate nodvia | split": {
+   "pairs": 11,
+   "compounds": 6,
+   "same": 0.5043,
+   "other": 0.167,
+   "diff_record_mean": 0.2929,
+   "diff_compound_mean": 0.2895,
+   "compounds_positive": 6,
+   "sign_p": 0.03125
+  },
+  "sameplate nodvia | treated": {
+   "pairs": 11,
+   "compounds": 6,
+   "same": 0.7032,
+   "other": 0.0109,
+   "diff_record_mean": 0.6169,
+   "diff_compound_mean": 0.6309,
+   "compounds_positive": 6,
+   "sign_p": 0.03125
+  },
+  "sameplate nodvia | common": {
+   "pairs": 11,
+   "compounds": 6,
+   "same": 0.7028,
+   "other": 0.027,
+   "diff_record_mean": 0.6024,
+   "diff_compound_mean": 0.6158,
+   "compounds_positive": 6,
+   "sign_p": 0.03125
+  },
+  "G614 verified | ctrl": {
+   "pairs": 80,
+   "compounds": 77,
+   "same": 0.6832,
+   "other": 0.4893,
+   "diff_record_mean": 0.1824,
+   "diff_compound_mean": 0.1814,
+   "compounds_positive": 77,
+   "sign_p": 1.3234889800848443e-23
+  },
+  "G614 verified | split": {
+   "pairs": 80,
+   "compounds": 77,
+   "same": 0.4632,
+   "other": 0.3765,
+   "diff_record_mean": 0.0793,
+   "diff_compound_mean": 0.0785,
+   "compounds_positive": 70,
+   "sign_p": 3.5245694262351566e-14
+  },
+  "G614 verified | treated": {
+   "pairs": 80,
+   "compounds": 77,
+   "same": 0.7098,
+   "other": 0.4804,
+   "diff_record_mean": 0.2105,
+   "diff_compound_mean": 0.2097,
+   "compounds_positive": 77,
+   "sign_p": 1.3234889800848443e-23
+  },
+  "G614 verified | common": {
+   "pairs": 80,
+   "compounds": 77,
+   "same": 0.766,
+   "other": -0.0392,
+   "diff_record_mean": 0.7691,
+   "diff_compound_mean": 0.7706,
+   "compounds_positive": 77,
+   "sign_p": 1.3234889800848443e-23
+  },
+  "G614 nodvia | ctrl": {
+   "pairs": 65,
+   "compounds": 63,
+   "same": 0.6788,
+   "other": 0.4677,
+   "diff_record_mean": 0.1974,
+   "diff_compound_mean": 0.1976,
+   "compounds_positive": 63,
+   "sign_p": 2.168404344971009e-19
+  },
+  "G614 nodvia | split": {
+   "pairs": 65,
+   "compounds": 63,
+   "same": 0.4512,
+   "other": 0.3561,
+   "diff_record_mean": 0.087,
+   "diff_compound_mean": 0.0871,
+   "compounds_positive": 56,
+   "sign_p": 1.363671398024735e-10
+  },
+  "G614 nodvia | treated": {
+   "pairs": 65,
+   "compounds": 63,
+   "same": 0.7043,
+   "other": 0.4502,
+   "diff_record_mean": 0.2407,
+   "diff_compound_mean": 0.2406,
+   "compounds_positive": 63,
+   "sign_p": 2.168404344971009e-19
+  },
+  "G614 nodvia | common": {
+   "pairs": 65,
+   "compounds": 63,
+   "same": 0.7616,
+   "other": -0.0599,
+   "diff_record_mean": 0.802,
+   "diff_compound_mean": 0.8016,
+   "compounds_positive": 63,
+   "sign_p": 2.168404344971009e-19
+  }
+ },
+ "common_components": {
+  "diffpos verified": {
+   "drug_share": 0.302,
+   "common_well": 0.4192,
+   "line_well": 0.2788,
+   "ceiling_halves_SB": 0.94,
+   "two_wells": 0.2202
+  },
+  "diffpos nodvia": {
+   "drug_share": -0.3103,
+   "common_well": 0.8301,
+   "line_well": 0.4802,
+   "ceiling_halves_SB": 0.8893,
+   "two_wells": -0.2941
+  },
+  "sameplate verified": {
+   "drug_share": 0.4661,
+   "common_well": 0.3825,
+   "line_well": 0.1514,
+   "ceiling_halves_SB": 0.843,
+   "two_wells": 0.2974
+  },
+  "sameplate nodvia": {
+   "drug_share": 0.2556,
+   "common_well": 0.4965,
+   "line_well": 0.2479,
+   "ceiling_halves_SB": 0.8327,
+   "two_wells": 0.0437
+  },
+  "G614 verified": {
+   "drug_share": 0.3092,
+   "common_well": 0.493,
+   "line_well": 0.1977,
+   "ceiling_halves_SB": 0.8936,
+   "two_wells": -0.0216
+  },
+  "G614 nodvia": {
+   "drug_share": -0.0207,
+   "common_well": 0.7275,
+   "line_well": 0.2932,
+   "ceiling_halves_SB": 0.8876,
+   "two_wells": -0.0522
+  }
+ }
+}

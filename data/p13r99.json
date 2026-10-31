@@ -1,0 +1,53 @@
+{
+ "rules": "Plate-13 response-length ratio with one definition for every group (samewell/notes.md \u00a7107, independent review 10-29\nitem A9; A100). Reads p13strong92.json (response length of each well of a pair). The paper compared plate 13's\npartner / original ratio, conditioned on the original well being strong, with min / max of strong plates-6/14 pairs;\nthe two statistics differ (conditioning on one well being strong regresses its partner toward the mean). Here, for\nevery group, the first well is the reference well (plate 13: the non-plate-13 well; plates 6/14: the plate-6 well;\nother groups: the well on the lower-numbered plate, or the lower sample number on one plate), the pair enters when the\nfirst well's length >= 3, and the statistic is partner length / first-well length. Reported: pairs, compounds,\nmedian and quartiles of the ratio, number with ratio >= 0.5.\nOutput $WORKSPACE/rt/samewell/p13r99.json",
+ "plate13": {
+  "pairs": 6,
+  "compounds": 5,
+  "median": 0.439,
+  "q25_q75": [
+   0.294,
+   0.483
+  ],
+  "ratio_ge_half": 1
+ },
+ "G614": {
+  "pairs": 18,
+  "compounds": 18,
+  "median": 0.715,
+  "q25_q75": [
+   0.529,
+   0.833
+  ],
+  "ratio_ge_half": 14
+ },
+ "diffpos same name": {
+  "pairs": 6,
+  "compounds": 3,
+  "median": 0.767,
+  "q25_q75": [
+   0.749,
+   0.801
+  ],
+  "ratio_ge_half": 5
+ },
+ "diffpos salt": {
+  "pairs": 14,
+  "compounds": 9,
+  "median": 0.793,
+  "q25_q75": [
+   0.674,
+   1.057
+  ],
+  "ratio_ge_half": 13
+ },
+ "sameplate": {
+  "pairs": 3,
+  "compounds": 3,
+  "median": 0.97,
+  "q25_q75": [
+   0.835,
+   0.984
+  ],
+  "ratio_ge_half": 3
+ }
+}

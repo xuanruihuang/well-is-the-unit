@@ -1,0 +1,289 @@
+{
+ "rules": "Reviewer questions 1 and 5 (samewell/notes.md \u00a796; runs locally on figdata89.json from figexport89.py).\n1  Sensitivity of verification to its threshold: a pair is verified if, by expression or by viability, each well ranks\n   its partner among the top x of the partner plate's treated wells (x = 5%, 10% as in the paper, 20%). For each x and\n   group (different positions, one plate, plates 6/14): pairs and compounds verified, medians over pairs of the\n   same-well and replicate-well predictions (pair medians over lines, D', as Fig. 1c), and the mean over pairs of their\n   difference.\n5  Per-compound breakdown of Fig. 1c: for verified pairs and pairs without detectable viability effect, at different\n   positions and on one plate, per compound the number of pairs and the medians over its pairs of the two predictions.\nUsage: python thr96.py <figdata89.json> <out.json>",
+ "threshold": {
+  "top 5% | diffpos": {
+   "pairs": 14,
+   "compounds": 6,
+   "same": 0.6773,
+   "other": 0.4344,
+   "diff_mean": 0.2656
+  },
+  "top 5% | sameplate": {
+   "pairs": 3,
+   "compounds": 2,
+   "same": 0.7026,
+   "other": 0.3559,
+   "diff_mean": 0.4707
+  },
+  "top 5% | G614": {
+   "pairs": 77,
+   "compounds": 75,
+   "same": 0.7116,
+   "other": 0.497,
+   "diff_mean": 0.2148
+  },
+  "top 10% | diffpos": {
+   "pairs": 18,
+   "compounds": 9,
+   "same": 0.6773,
+   "other": 0.3769,
+   "diff_mean": 0.3289
+  },
+  "top 10% | sameplate": {
+   "pairs": 6,
+   "compounds": 4,
+   "same": 0.6905,
+   "other": 0.1692,
+   "diff_mean": 0.5146
+  },
+  "top 10% | G614": {
+   "pairs": 80,
+   "compounds": 77,
+   "same": 0.708,
+   "other": 0.4952,
+   "diff_mean": 0.2201
+  },
+  "top 20% | diffpos": {
+   "pairs": 36,
+   "compounds": 16,
+   "same": 0.6836,
+   "other": 0.2396,
+   "diff_mean": 0.4368
+  },
+  "top 20% | sameplate": {
+   "pairs": 11,
+   "compounds": 7,
+   "same": 0.6964,
+   "other": 0.1408,
+   "diff_mean": 0.5646
+  },
+  "top 20% | G614": {
+   "pairs": 85,
+   "compounds": 82,
+   "same": 0.7044,
+   "other": 0.4918,
+   "diff_mean": 0.2329
+  }
+ },
+ "per_compound": {
+  "Verified, different positions": [
+   {
+    "compound": "berbamine",
+    "pairs": 1,
+    "same": 0.74,
+    "other": 0.38
+   },
+   {
+    "compound": "binimetinib",
+    "pairs": 3,
+    "same": 0.68,
+    "other": 0.29
+   },
+   {
+    "compound": "crizotinib",
+    "pairs": 1,
+    "same": 0.73,
+    "other": -0.13
+   },
+   {
+    "compound": "docetaxel",
+    "pairs": 1,
+    "same": 0.64,
+    "other": 0.22
+   },
+   {
+    "compound": "irinotecan",
+    "pairs": 1,
+    "same": 0.8,
+    "other": 0.44
+   },
+   {
+    "compound": "neratinib",
+    "pairs": 1,
+    "same": 0.64,
+    "other": 0.19
+   },
+   {
+    "compound": "tirabrutinib",
+    "pairs": 1,
+    "same": 0.72,
+    "other": 0.52
+   },
+   {
+    "compound": "tofacitinib",
+    "pairs": 1,
+    "same": 0.68,
+    "other": 0.37
+   },
+   {
+    "compound": "trametinib",
+    "pairs": 8,
+    "same": 0.67,
+    "other": 0.46
+   }
+  ],
+  "Verified, one plate": [
+   {
+    "compound": "cytarabine",
+    "pairs": 1,
+    "same": 0.67,
+    "other": 0.16
+   },
+   {
+    "compound": "gallic acid",
+    "pairs": 1,
+    "same": 0.71,
+    "other": -0.14
+   },
+   {
+    "compound": "omeprazole",
+    "pairs": 1,
+    "same": 0.7,
+    "other": 0.18
+   },
+   {
+    "compound": "tofacitinib",
+    "pairs": 3,
+    "same": 0.68,
+    "other": 0.36
+   }
+  ],
+  "No viability effect, different positions": [
+   {
+    "compound": "afatinib",
+    "pairs": 1,
+    "same": 0.76,
+    "other": 0.24
+   },
+   {
+    "compound": "almonertinib",
+    "pairs": 2,
+    "same": 0.73,
+    "other": 0.1
+   },
+   {
+    "compound": "belumosudil",
+    "pairs": 2,
+    "same": 0.72,
+    "other": 0.15
+   },
+   {
+    "compound": "berbamine",
+    "pairs": 4,
+    "same": 0.74,
+    "other": 0.01
+   },
+   {
+    "compound": "bestatin",
+    "pairs": 1,
+    "same": 0.69,
+    "other": 0.03
+   },
+   {
+    "compound": "canagliflozin",
+    "pairs": 1,
+    "same": 0.76,
+    "other": 0.32
+   },
+   {
+    "compound": "crizotinib",
+    "pairs": 2,
+    "same": 0.74,
+    "other": -0.14
+   },
+   {
+    "compound": "dapagliflozin",
+    "pairs": 1,
+    "same": 0.72,
+    "other": -0.24
+   },
+   {
+    "compound": "docetaxel",
+    "pairs": 1,
+    "same": 0.69,
+    "other": 0.1
+   },
+   {
+    "compound": "fluvoxamine",
+    "pairs": 1,
+    "same": 0.72,
+    "other": 0.09
+   },
+   {
+    "compound": "gallic acid",
+    "pairs": 2,
+    "same": 0.72,
+    "other": 0.03
+   },
+   {
+    "compound": "irinotecan",
+    "pairs": 1,
+    "same": 0.73,
+    "other": -0.06
+   },
+   {
+    "compound": "neratinib",
+    "pairs": 2,
+    "same": 0.64,
+    "other": 0.12
+   },
+   {
+    "compound": "pyridoxine",
+    "pairs": 1,
+    "same": 0.74,
+    "other": 0.26
+   },
+   {
+    "compound": "tofacitinib",
+    "pairs": 2,
+    "same": 0.69,
+    "other": 0.28
+   }
+  ],
+  "No viability effect, one plate": [
+   {
+    "compound": "cytarabine",
+    "pairs": 1,
+    "same": 0.67,
+    "other": 0.16
+   },
+   {
+    "compound": "gallic acid",
+    "pairs": 2,
+    "same": 0.71,
+    "other": -0.1
+   },
+   {
+    "compound": "gemcitabine",
+    "pairs": 1,
+    "same": 0.7,
+    "other": -0.04
+   },
+   {
+    "compound": "omeprazole",
+    "pairs": 2,
+    "same": 0.71,
+    "other": -0.01
+   },
+   {
+    "compound": "pyridoxine",
+    "pairs": 2,
+    "same": 0.7,
+    "other": -0.01
+   },
+   {
+    "compound": "tofacitinib",
+    "pairs": 3,
+    "same": 0.68,
+    "other": 0.36
+   }
+  ]
+ },
+ "trametinib": {
+  "pairs": 8,
+  "diff_mean": 0.237,
+  "other_pairs": 10,
+  "other_diff_mean": 0.4025,
+  "min_pair_diff": 0.1204
+ }
+}

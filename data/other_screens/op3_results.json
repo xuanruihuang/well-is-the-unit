@@ -1,0 +1,72 @@
+{
+ "n_genes_common": 2996,
+ "Dimethyl Sulfoxide": {
+  "n": 1080,
+  "ceiling": -0.053,
+  "same": 0.266,
+  "other": -0.001,
+  "r2_same": 0.127,
+  "r2_other": 0.023,
+  "same_gt_bound": 0.777,
+  "other_gt_bound": 0.182
+ },
+ "Dimethyl Sulfoxide | B and myeloid targets": {
+  "n": 360,
+  "ceiling": -0.049,
+  "same": 0.268,
+  "other": -0.004,
+  "r2_same": 0.161,
+  "r2_other": 0.032,
+  "same_gt_bound": 0.692,
+  "other_gt_bound": 0.131
+ },
+ "Belinostat": {
+  "n": 775,
+  "ceiling": 0.777,
+  "same": 0.533,
+  "other": 0.504,
+  "r2_same": 0.389,
+  "r2_other": 0.356,
+  "same_gt_bound": 0.013,
+  "other_gt_bound": 0.006
+ },
+ "Belinostat | B and myeloid targets": {
+  "n": 360,
+  "ceiling": 0.759,
+  "same": 0.431,
+  "other": 0.419,
+  "r2_same": 0.319,
+  "r2_other": 0.303,
+  "same_gt_bound": 0.0,
+  "other_gt_bound": 0.0
+ },
+ "Dabrafenib": {
+  "n": 1080,
+  "ceiling": 0.133,
+  "same": 0.178,
+  "other": 0.046,
+  "r2_same": 0.053,
+  "r2_other": 0.011,
+  "same_gt_bound": 0.248,
+  "other_gt_bound": 0.056
+ },
+ "Dabrafenib | B and myeloid targets": {
+  "n": 360,
+  "ceiling": 0.345,
+  "same": 0.155,
+  "other": 0.038,
+  "r2_same": 0.059,
+  "r2_other": 0.015,
+  "same_gt_bound": 0.122,
+  "other_gt_bound": 0.019
+ },
+ "kaggle_structure_across_donors": {
+  "n": 1682,
+  "n_comp": 144,
+  "same": 0.265,
+  "other": 0.14,
+  "ceiling": 0.283,
+  "same_gt_bound": 0.236,
+  "other_gt_bound": 0.048
+ }
+}

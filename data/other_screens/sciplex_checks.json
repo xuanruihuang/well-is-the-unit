@@ -1,0 +1,208 @@
+{
+ "rules": "Same-well checks in a design without pooling: sci-Plex3 (samewell/notes.md \u00a776; 5090).\nInput: sciplex_pb.py output (one cell line per plate; every treated condition in two or four wells on different plates and\npositions; two vehicle wells per plate at one of four position pairs). Per line, genes with vehicle mean >= 0.2.\nReferences: dmso = well minus the plate's vehicle mean (halves minus the same half of the vehicle wells); plate = well minus\nthe mean of the plate's other treated wells.\n  1 halves     per replicate pair (a, b): within = mean Pearson of the two halves of a well; across = mean Pearson of a half\n               of a with a half of b (same cell numbers); full = Pearson of the two whole wells. Strata: tertiles of full r\n               on the plate reference (pooled over lines). Interval: 1,000 bootstrap resamples of compounds (seed 0) for\n               the mean of within - across.\n  2 components W = mean inner product of a well's two halves, Q = mean inner product of halves across the two wells (per\n               gene); drug = Q, well = W - Q (a single line per well cannot split the shared and the own well shift);\n               pooled ratios sum / sum W.\n  3 constant   T = the line's mean treated profile leaving the well out; Pearson(T - c, y) with y on the dmso reference and\n               c = the plate's own vehicle mean (shared with the truth), the vehicles of the line's other plates with the\n               same vehicle positions, or with other positions; own_split: the constant minus vehicle half A scored against\n               the well minus vehicle half B (same vehicle wells, different vehicle cells), which keeps the vehicle wells'\n               own shift and removes their cell-sampling noise.\n  4 calibration (Wang 2026) split-half reliability: each condition's cells pooled over its wells and split at random\n               (the cached halves re-pooled exactly with the UMI totals), effect against the line's vehicle cells split\n               the same way, rho = 2 r / (1 + r), reliable if rho >= 0.5; the same with the halves replaced by the two\n               wells (well a against vehicle half A, well b against half B; same cell numbers, same correction).\n               (\u00a749) DRF and BDS of the Pearson delta metric with truth = half B of the target well, positive control =\n               half A of the same well or of the replicate well, negative control = the line's mean response over the\n               other conditions.\nOutput $WORKSPACE/mainline_rt_samewell/sciplex/sciplex_checks.json",
+ "n_pairs": 2256,
+ "halves | all": {
+  "n": 2256,
+  "dmso": {
+   "within": 0.036,
+   "across": 0.017,
+   "full": 0.035,
+   "within_minus_across": [
+    0.019,
+    0.017,
+    0.021
+   ],
+   "frac_within_higher": 0.74,
+   "components": {
+    "drug": 0.854,
+    "well": 0.146
+   }
+  },
+  "plate": {
+   "within": 0.075,
+   "across": 0.041,
+   "full": 0.077,
+   "within_minus_across": [
+    0.031,
+    0.028,
+    0.033
+   ],
+   "frac_within_higher": 0.838,
+   "components": {
+    "drug": 0.825,
+    "well": 0.175
+   }
+  }
+ },
+ "halves | full r tertile 0": {
+  "n": 752,
+  "dmso": {
+   "within": 0.015,
+   "across": 0.002,
+   "full": 0.003,
+   "within_minus_across": [
+    0.024,
+    0.021,
+    0.028
+   ],
+   "frac_within_higher": 0.754,
+   "components": {
+    "drug": 0.175,
+    "well": 0.825
+   }
+  },
+  "plate": {
+   "within": 0.03,
+   "across": 0.008,
+   "full": 0.015,
+   "within_minus_across": [
+    0.038,
+    0.033,
+    0.043
+   ],
+   "frac_within_higher": 0.839,
+   "components": {
+    "drug": 0.161,
+    "well": 0.839
+   }
+  }
+ },
+ "halves | full r tertile 1": {
+  "n": 752,
+  "dmso": {
+   "within": 0.024,
+   "across": 0.014,
+   "full": 0.029,
+   "within_minus_across": [
+    0.011,
+    0.009,
+    0.013
+   ],
+   "frac_within_higher": 0.636,
+   "components": {
+    "drug": 0.739,
+    "well": 0.261
+   }
+  },
+  "plate": {
+   "within": 0.061,
+   "across": 0.041,
+   "full": 0.077,
+   "within_minus_across": [
+    0.023,
+    0.02,
+    0.025
+   ],
+   "frac_within_higher": 0.773,
+   "components": {
+    "drug": 0.726,
+    "well": 0.274
+   }
+  }
+ },
+ "halves | full r tertile 2": {
+  "n": 752,
+  "dmso": {
+   "within": 0.192,
+   "across": 0.166,
+   "full": 0.28,
+   "within_minus_across": [
+    0.023,
+    0.02,
+    0.025
+   ],
+   "frac_within_higher": 0.83,
+   "components": {
+    "drug": 0.934,
+    "well": 0.066
+   }
+  },
+  "plate": {
+   "within": 0.239,
+   "across": 0.197,
+   "full": 0.319,
+   "within_minus_across": [
+    0.032,
+    0.029,
+    0.035
+   ],
+   "frac_within_higher": 0.903,
+   "components": {
+    "drug": 0.919,
+    "well": 0.081
+   }
+  }
+ },
+ "constant | all": {
+  "own": 0.513,
+  "own_split": 0.022,
+  "same_pos": 0.039,
+  "other_pos": 0.04,
+  "n": 4512
+ },
+ "constant | A549": {
+  "own": 0.526,
+  "own_split": 0.023,
+  "same_pos": 0.042,
+  "other_pos": 0.031,
+  "n": 1504
+ },
+ "constant | K562": {
+  "own": 0.546,
+  "own_split": 0.01,
+  "same_pos": 0.025,
+  "other_pos": 0.025,
+  "n": 1504
+ },
+ "constant | MCF7": {
+  "own": 0.454,
+  "own_split": 0.047,
+  "same_pos": 0.059,
+  "other_pos": 0.075,
+  "n": 1504
+ },
+ "calibration | all": {
+  "n_pairs": 2256,
+  "rho_half": 0.145,
+  "reliable_half": 0.199,
+  "rho_well": 0.034,
+  "reliable_well": 0.155,
+  "drf_same": -0.02,
+  "bds_same": 0.279,
+  "drf_other": -0.044,
+  "bds_other": 0.214
+ },
+ "calibration | A549": {
+  "n_pairs": 752,
+  "rho_half": 0.109,
+  "reliable_half": 0.184,
+  "rho_well": 0.045,
+  "reliable_well": 0.146,
+  "drf_same": -0.047,
+  "bds_same": 0.162,
+  "drf_other": -0.07,
+  "bds_other": 0.135
+ },
+ "calibration | K562": {
+  "n_pairs": 752,
+  "rho_half": 0.072,
+  "reliable_half": 0.117,
+  "rho_well": 0.02,
+  "reliable_well": 0.108,
+  "drf_same": -0.063,
+  "bds_same": 0.146,
+  "drf_other": -0.071,
+  "bds_other": 0.111
+ },
+ "calibration | MCF7": {
+  "n_pairs": 752,
+  "rho_half": 0.286,
+  "reliable_half": 0.298,
+  "rho_well": 0.039,
+  "reliable_well": 0.21,
+  "drf_same": 0.051,
+  "bds_same": 0.529,
+  "drf_other": 0.009,
+  "bds_other": 0.396
+ }
+}

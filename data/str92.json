@@ -1,0 +1,210 @@
+{
+ "rules": "Can a difference in drug strength between the two wells explain the same-well advantage and the well share?\n(samewell/notes.md \u00a793; A100). Review point: if a drug acts more strongly in one well than in the other (dose, batch,\ncell number) and there is no well shift, the target line and the other lines are both more reliable in the stronger\nwell, so the same-well prediction gains and W - Q > 0. Under that alternative, per (pair, line), with half products on\nthe common genes G0 centred and responses relative to the plate's other treated wells (D', as core82):\n  Q = sqrt(Wa Wb) and S_ab = sqrt(S_aa S_bb)\n(Wa, Wb: within-well half products; Q: cross-well half product; S_xy: mean product of the line's response in well x with\nthe other lines' responses in well y). Replacing the arithmetic means of the two wells by geometric means therefore gives\nshares that a strength difference alone cannot produce:\n  well share beyond strength      = sum(sqrt(Wa Wb) - Q) / sum(sqrt(Wa Wb))\n  common part beyond strength     = sum(S* - S_ab) / sum(sqrt(Wa Wb)),  S* = signed sqrt(S_aa S_bb) (smaller of the two\n                                    if their signs differ)\nand the most that a strength difference can contribute to the usual share is sum(W - sqrt(Wa Wb)) / sum(W), an upper\nbound because well shifts also differ between wells.\nCorrelation advantage: under the alternative the mean advantage of a record is 0.5 rho (sqrt(rel_ta) - sqrt(rel_tb))\n(sqrt(rel_ma) - sqrt(rel_mb)), with rel the Spearman-Brown split-half reliability of the target (t) and of the other\nlines' mean (m) in each well and |rho| <= 1; the bound with rho = 1 is compared with the observed advantage.\nExpression-inert subset: both wells' line-averaged response length (G0, centred) below the 90th percentile of the\nlength of a plate's control-well difference divided by sqrt(2) (one well's worth of shift and noise), in addition to\nno detectable viability effect (labels85 nodvia). Optional argument 'dmso': the control-well reference (cached halves) instead of D' (\u00a793 review). Subsets added for plates 6/14:\nverified pairs and pairs with a strong response (length >= 3 in either well). Output $WORKSPACE/rt/samewell/str92.json\n(str92_dmso.json). Usage: str92.py [dmso]",
+ "control_threshold": 1.8406,
+ "control_lengths": [
+  1.478,
+  1.338,
+  1.736,
+  1.867,
+  1.461,
+  2.09,
+  1.567,
+  1.333,
+  1.278,
+  1.654,
+  1.491,
+  1.374,
+  1.545
+ ],
+ "diffpos confirmed": {
+  "n_pairs": 18,
+  "n_comp": 9,
+  "same": 0.6824,
+  "other": 0.3793,
+  "drug_share": 0.6532,
+  "well_share": 0.3468,
+  "common_share": 0.2232,
+  "strength_max_contribution": 0.0336,
+  "well_share_beyond_strength": 0.3241,
+  "well_share_beyond_strength_ci": [
+   0.2811,
+   0.5086
+  ],
+  "common_beyond_strength": 0.21,
+  "common_beyond_strength_ci": [
+   0.1759,
+   0.3542
+  ],
+  "advantage": 0.3207,
+  "strength_bound_on_advantage": 0.0001,
+  "advantage_minus_bound": 0.3206
+ },
+ "diffpos nodvia": {
+  "n_pairs": 24,
+  "n_comp": 15,
+  "same": 0.7256,
+  "other": 0.0803,
+  "drug_share": 0.2076,
+  "well_share": 0.7924,
+  "common_share": 0.545,
+  "strength_max_contribution": 0.0617,
+  "well_share_beyond_strength": 0.7788,
+  "well_share_beyond_strength_ci": [
+   0.6703,
+   0.9051
+  ],
+  "common_beyond_strength": 0.5536,
+  "common_beyond_strength_ci": [
+   0.4717,
+   0.6549
+  ],
+  "advantage": 0.6028,
+  "strength_bound_on_advantage": 0.0003,
+  "advantage_minus_bound": 0.6025
+ },
+ "diffpos nodvia + expression-inert": {
+  "n_pairs": 1,
+  "n_comp": 1,
+  "same": 0.7066,
+  "other": 0.1808,
+  "drug_share": 0.2071,
+  "well_share": 0.7929,
+  "common_share": 0.4646,
+  "strength_max_contribution": 0.0813,
+  "well_share_beyond_strength": 0.7745,
+  "well_share_beyond_strength_ci": [
+   0.7745,
+   0.7745
+  ],
+  "common_beyond_strength": 0.502,
+  "common_beyond_strength_ci": [
+   0.502,
+   0.502
+  ],
+  "advantage": 0.4896,
+  "strength_bound_on_advantage": 0.0002,
+  "advantage_minus_bound": 0.4895,
+  "compounds": [
+   "belumosudil"
+  ]
+ },
+ "sameplate confirmed": {
+  "n_pairs": 6,
+  "n_comp": 4,
+  "same": 0.6957,
+  "other": 0.1709,
+  "drug_share": 0.4432,
+  "well_share": 0.5568,
+  "common_share": 0.3965,
+  "strength_max_contribution": 0.0326,
+  "well_share_beyond_strength": 0.5418,
+  "well_share_beyond_strength_ci": [
+   0.4496,
+   0.9604
+  ],
+  "common_beyond_strength": 0.3905,
+  "common_beyond_strength_ci": [
+   0.3074,
+   0.745
+  ],
+  "advantage": 0.5104,
+  "strength_bound_on_advantage": 0.0002,
+  "advantage_minus_bound": 0.5102
+ },
+ "sameplate nodvia": {
+  "n_pairs": 11,
+  "n_comp": 6,
+  "same": 0.6988,
+  "other": 0.0265,
+  "drug_share": 0.2278,
+  "well_share": 0.7722,
+  "common_share": 0.5124,
+  "strength_max_contribution": 0.0477,
+  "well_share_beyond_strength": 0.7608,
+  "well_share_beyond_strength_ci": [
+   0.5453,
+   1.0354
+  ],
+  "common_beyond_strength": 0.5179,
+  "common_beyond_strength_ci": [
+   0.3699,
+   0.6934
+  ],
+  "advantage": 0.6169,
+  "strength_bound_on_advantage": 0.0005,
+  "advantage_minus_bound": 0.6164
+ },
+ "sameplate nodvia + expression-inert": {
+  "n_pairs": 0
+ },
+ "G614": {
+  "n_pairs": 90,
+  "n_comp": 87,
+  "same": 0.7015,
+  "other": 0.4844,
+  "drug_share": 0.7021,
+  "well_share": 0.2979,
+  "common_share": 0.1562,
+  "strength_max_contribution": 0.0691,
+  "well_share_beyond_strength": 0.2458,
+  "well_share_beyond_strength_ci": [
+   0.145,
+   0.4226
+  ],
+  "common_beyond_strength": 0.1354,
+  "common_beyond_strength_ci": [
+   0.08,
+   0.2339
+  ],
+  "advantage": 0.2408,
+  "strength_bound_on_advantage": 0.0003,
+  "advantage_minus_bound": 0.2405
+ },
+ "G614 confirmed": {
+  "n_pairs": 80,
+  "n_comp": 77,
+  "same": 0.7085,
+  "other": 0.4915,
+  "drug_share": 0.7551,
+  "well_share": 0.2449,
+  "common_share": 0.1321,
+  "strength_max_contribution": 0.0525,
+  "well_share_beyond_strength": 0.203,
+  "well_share_beyond_strength_ci": [
+   0.1209,
+   0.3602
+  ],
+  "common_beyond_strength": 0.1131,
+  "common_beyond_strength_ci": [
+   0.0669,
+   0.2007
+  ],
+  "advantage": 0.2105,
+  "strength_bound_on_advantage": 0.0003,
+  "advantage_minus_bound": 0.2102
+ },
+ "G614 strong": {
+  "n_pairs": 18,
+  "n_comp": 18,
+  "same": 0.7429,
+  "other": 0.5022,
+  "drug_share": 0.7946,
+  "well_share": 0.2054,
+  "common_share": 0.0972,
+  "strength_max_contribution": 0.0784,
+  "well_share_beyond_strength": 0.1379,
+  "well_share_beyond_strength_ci": [
+   0.0615,
+   0.436
+  ],
+  "common_beyond_strength": 0.0699,
+  "common_beyond_strength_ci": [
+   0.0319,
+   0.2141
+  ],
+  "advantage": 0.1963,
+  "strength_bound_on_advantage": 0.0003,
+  "advantage_minus_bound": 0.1959
+ },
+ "reference": "dprime"
+}

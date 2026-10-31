@@ -1,0 +1,140 @@
+{
+ "rules": "Fifth-review checks (samewell/notes.md \u00a785; A100).\nA Weak-drug class by viability alone: dvia of each well against the plate's DMSO wells; noise level = dvia of a plate's\n  DMSO well against the plate's other DMSO well (plate 13 excluded). Classes written to labels85.json (format of\n  labels84.json): 'lowdvia' = both wells below the 33rd percentile of treated wells' dvia; 'nodvia' = both wells below\n  the 90th percentile of the DMSO-vs-DMSO noise level. Reported: number of pairs per group and how many of them were\n  'confirmed' in labels84.\nB Plate-13 control layout. (i) Control offset: per line, regular plate p's controls relative to its treated wells,\n  c_p = -(mean over p's treated wells of D); q_-p = mean of c over the other regular plates; Pearson(c_p, q_-p) over the\n  line's genes (median over lines) for each regular plate, against Pearson(D'_w, q) for plate-13 wells at H11 / H12\n  (D' = against plate 13's other treated wells). Equal strength fits a control swap on plate 13; clearly weaker fits a\n  position effect. (ii) Composition: SD over lines of the log2 odds of each well's line shares against the pooled\n  DMSO wells of the other regular plates, for regular plates' DMSO wells, plate 13's labelled DMSO wells, plate 13's\n  H11 / H12 wells and other treated wells.\nC D' reference across plates: for different-position pairs, energy of the difference between the two wells'\n  references (line's mean over the other treated wells of each plate; common genes centred) relative to the\n  within-well reproducible energy W.\nD Cell-cycle sign-flip on control pairs: sign of T per regular plate (cc_signflip.json).\nOutput $WORKSPACE/rt/samewell/check85.json and labels85.json",
+ "A": {
+  "dmso_noise_dvia_median": 0.208,
+  "dmso_noise_dvia_q90": 0.289,
+  "treated_dvia_q33": 0.216,
+  "treated_dvia_median": 0.25,
+  "counts": {
+   "sameplate|nodvia": [
+    11,
+    6
+   ],
+   "diffpos|nodvia": [
+    24,
+    3
+   ],
+   "Ada|lowdvia": [
+    28,
+    26
+   ],
+   "Ada|nodvia": [
+    78,
+    57
+   ],
+   "diffpos|lowdvia": [
+    5,
+    2
+   ],
+   "G614|lowdvia": [
+    24,
+    23
+   ],
+   "G614|nodvia": [
+    65,
+    60
+   ],
+   "sameplate|lowdvia": [
+    3,
+    2
+   ]
+  }
+ },
+ "B_offset": {
+  "regular_controls_vs_q_leave_one_out": {
+   "plate1": 0.792,
+   "plate2": 0.579,
+   "plate3": 0.612,
+   "plate4": 0.68,
+   "plate5": 0.809,
+   "plate6": 0.858,
+   "plate7": 0.273,
+   "plate8": 0.668,
+   "plate9": 0.342,
+   "plate10": 0.772,
+   "plate11": 0.653,
+   "plate12": 0.621,
+   "plate14": 0.726
+  },
+  "regular_median": 0.668,
+  "plate13_H11_H12_treated": {
+   "H11": 0.552,
+   "H12": 0.54
+  }
+ },
+ "B_composition": {
+  "regular_dmso_median": 0.399,
+  "regular_dmso_max": 0.732,
+  "plate13_labelled_dmso": [
+   0.44,
+   0.446
+  ],
+  "plate13_H11_H12": [
+   0.279,
+   0.355
+  ],
+  "plate13_other_treated_median": 0.364,
+  "plate5_treated_median": 0.416
+ },
+ "C": {
+  "reference_difference_energy_over_W": 0.706
+ },
+ "D": {
+  "plate1": [
+   -0.025,
+   0.5024
+  ],
+  "plate2": [
+   0.017,
+   0.6138
+  ],
+  "plate3": [
+   -0.109,
+   0.0881
+  ],
+  "plate4": [
+   -0.208,
+   0.0009
+  ],
+  "plate5": [
+   0.212,
+   0.0001
+  ],
+  "plate6": [
+   0.032,
+   0.5723
+  ],
+  "plate7": [
+   -0.119,
+   0.0638
+  ],
+  "plate8": [
+   0.036,
+   0.2616
+  ],
+  "plate9": [
+   -0.009,
+   0.9049
+  ],
+  "plate10": [
+   -0.254,
+   0.0001
+  ],
+  "plate11": [
+   0.019,
+   0.584
+  ],
+  "plate12": [
+   0.066,
+   0.0485
+  ],
+  "plate13": [
+   0.028,
+   0.6153
+  ],
+  "plate14": [
+   0.327,
+   0.0002
+  ]
+ }
+}

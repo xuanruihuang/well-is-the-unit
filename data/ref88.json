@@ -1,0 +1,153 @@
+{
+ "rules": "Eighth-review checks (samewell/notes.md \u00a788; A100).\nA Reference built from inert wells only. Under D' each response subtracts the mean of the plate's ~90 other treated\n  wells, which contains the drug response common to all lines on that plate; for a cross-plate pair this term is shared\n  by the target and the same-well predictor but not by the replicate well, and could produce a same-well advantage\n  without any well shift. Here each half subtracts the line's mean of the same half over the plate's INERT treated wells\n  only (dvia within the control-vs-control noise, check85 threshold 0.289; the well itself left out), so the subtracted\n  term carries almost no drug response. Same-well vs replicate-well predictions (line genes, both wells as target,\n  medians) and variance components (common genes centred; drug Q/W, shared well, own well) under D' and under this\n  reference ('Dinert'), for verified pair classes.\nB Ambient RNA / misassignment following each well's own line composition: per pair and line, the difference between\n  the two wells (D', common genes) regressed on c = sum_k (pi_ak - pi_bk) base_k (pi = the wells' line fractions, base =\n  line baselines) and on the wells' mean difference over lines; median R^2. Also for control-well pairs (H11 - H12,\n  plate 13 excluded; composition from the two DMSO wells).\nOutput $WORKSPACE/rt/samewell/ref88.json",
+ "n_inert_wells_per_plate_median": 56,
+ "A": {
+  "diffpos all": {
+   "n_pairs": 65,
+   "n_comp": 20,
+   "Dprime": {
+    "same": 0.6999,
+    "other": 0.1152,
+    "adv_mean": 0.546,
+    "drug_share": 0.3194,
+    "shared_well": 0.4508,
+    "own_well": 0.2298
+   },
+   "Dinert": {
+    "same": 0.7015,
+    "other": 0.1004,
+    "adv_mean": 0.5627,
+    "drug_share": 0.3055,
+    "shared_well": 0.4596,
+    "own_well": 0.2349
+   }
+  },
+  "diffpos confirmed": {
+   "n_pairs": 18,
+   "n_comp": 9,
+   "Dprime": {
+    "same": 0.6789,
+    "other": 0.3693,
+    "adv_mean": 0.3207,
+    "drug_share": 0.6532,
+    "shared_well": 0.2232,
+    "own_well": 0.1236
+   },
+   "Dinert": {
+    "same": 0.6777,
+    "other": 0.349,
+    "adv_mean": 0.3369,
+    "drug_share": 0.6233,
+    "shared_well": 0.2434,
+    "own_well": 0.1333
+   }
+  },
+  "diffpos nodvia": {
+   "n_pairs": 24,
+   "n_comp": 15,
+   "Dprime": {
+    "same": 0.72,
+    "other": 0.0799,
+    "adv_mean": 0.6028,
+    "drug_share": 0.2076,
+    "shared_well": 0.545,
+    "own_well": 0.2474
+   },
+   "Dinert": {
+    "same": 0.7212,
+    "other": 0.0721,
+    "adv_mean": 0.6204,
+    "drug_share": 0.189,
+    "shared_well": 0.5609,
+    "own_well": 0.2501
+   }
+  },
+  "sameplate nodvia": {
+   "n_pairs": 11,
+   "n_comp": 6,
+   "Dprime": {
+    "same": 0.7017,
+    "other": 0.0107,
+    "adv_mean": 0.6169,
+    "drug_share": 0.2278,
+    "shared_well": 0.5124,
+    "own_well": 0.2598
+   },
+   "Dinert": {
+    "same": 0.7062,
+    "other": 0.0068,
+    "adv_mean": 0.6412,
+    "drug_share": 0.1975,
+    "shared_well": 0.5313,
+    "own_well": 0.2713
+   }
+  },
+  "sameplate confirmed": {
+   "n_pairs": 6,
+   "n_comp": 4,
+   "Dprime": {
+    "same": 0.6927,
+    "other": 0.1445,
+    "adv_mean": 0.5104,
+    "drug_share": 0.4432,
+    "shared_well": 0.3965,
+    "own_well": 0.1603
+   },
+   "Dinert": {
+    "same": 0.6932,
+    "other": 0.1068,
+    "adv_mean": 0.5333,
+    "drug_share": 0.4258,
+    "shared_well": 0.4079,
+    "own_well": 0.1663
+   }
+  },
+  "G614": {
+   "n_pairs": 90,
+   "n_comp": 87,
+   "Dprime": {
+    "same": 0.7095,
+    "other": 0.4577,
+    "adv_mean": 0.2408,
+    "drug_share": 0.7021,
+    "shared_well": 0.1562,
+    "own_well": 0.1417
+   },
+   "Dinert": {
+    "same": 0.71,
+    "other": 0.4536,
+    "adv_mean": 0.2457,
+    "drug_share": 0.7015,
+    "shared_well": 0.1568,
+    "own_well": 0.1418
+   }
+  }
+ },
+ "B": {
+  "diffpos nodvia": {
+   "R2_composition": 0.0018,
+   "R2_well_mean": 0.5507,
+   "R2_both": 0.5525
+  },
+  "diffpos confirmed": {
+   "R2_composition": 0.0024,
+   "R2_well_mean": 0.5189,
+   "R2_both": 0.5211
+  },
+  "sameplate nodvia": {
+   "R2_composition": 0.0018,
+   "R2_well_mean": 0.549,
+   "R2_both": 0.5499
+  },
+  "G614": {
+   "R2_composition": 0.003,
+   "R2_well_mean": 0.3707,
+   "R2_both": 0.3768
+  },
+  "control pairs": {
+   "R2_composition": 0.0016,
+   "R2_well_mean": 0.5154,
+   "R2_both": 0.518
+  }
+ }
+}

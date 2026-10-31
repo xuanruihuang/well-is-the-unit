@@ -1,0 +1,22 @@
+{
+ "rules": "Per-well corrections on the current pair set (samewell/notes.md \u00a792; A100). Table S3's correction rows came from the\nearly pipeline (step2_qc, v1a_bscore: 90 pairs of plates 6/14 before salt names were merged). Recomputed on\nverified.pairs, plates 6 and 14 (96 pairs), control-well reference (sw_core D), with the corrections of those scripts:\n  none     D\n  qc       per line and gene, regression on the line's mean log UMI per cell and log cell number in the well, and the\n           well's mitochondrial fraction and log genes per cell (sw_step2.qc_covariates, centred within plate); slopes\n           fitted on the 0.05 uM wells of compounds without any replicate pair, then removed from every well\n  rowcol   row and column effects of the well means removed per plate (median polish, sw_v1a.run_bscore)\nSame-well advantage as dref92.py (mean over records of same - other; pair medians, median over pairs).\nOutput $WORKSPACE/rt/samewell/corr92.json. Usage: corr92.py",
+ "none": {
+  "n_pairs": 90,
+  "same": 0.68,
+  "other": 0.4922,
+  "advantage": 0.1941
+ },
+ "qc": {
+  "n_pairs": 90,
+  "same": 0.6643,
+  "other": 0.4736,
+  "advantage": 0.19
+ },
+ "qc_training_wells": 221,
+ "rowcol": {
+  "n_pairs": 90,
+  "same": 0.6609,
+  "other": 0.4806,
+  "advantage": 0.181
+ }
+}

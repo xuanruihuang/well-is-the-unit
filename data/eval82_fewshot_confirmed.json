@@ -1,0 +1,245 @@
+{
+ "rules": "Held-out cell lines under a clean protocol, on verified replicates (samewell/notes.md \u00a782; A100). As sw_v1b.py\n(State's five test lines; for each replicated drug-dose one well enters training and its other wells never do;\nfew-shot: test lines also contribute 30% of their single-well conditions, seed 42), with three changes:\n  - plate-13 wells are dropped everywhere (\u00a781: they do not reproduce their labelled treatments);\n  - drug-doses are keyed by the salt-stripped name (verified.norm), so salt-name replicates count as replicated and\n    never enter training under another name;\n  - each (drug-dose, held-out well) is grouped by the pair of training well and held-out well: G614, sameplate,\n    diffpos, samepos, Ada; strength = dvia of the pair.\nModels: perturbation mean (mean response of the training lines in the training well) and the additive model\n(alpha_line + beta_drugdose, 10 rounds of alternating means). Scores: Pearson over the line's genes against the\ntraining well and against the held-out well; the line's own agreement between the two wells (ceiling).\nOptional 'dprime': responses relative to the line's mean over the plate's other treated wells (D', leaving the well\nout) instead of the plate's DMSO wells (\u00a783). Output $WORKSPACE/rt/samewell/eval82_<mode>[_dprime].json.\nOptional 4th argument: a label class of labels84.json; only held-out pairs of that class are scored (\u00a784).\nOptional 5th argument \"swap\": the training well is the other one (plate 14 for plates 6/14, else the highest plate\nnumber), so each pair is evaluated in both directions (\u00a789).\nUsage: eval82.py <fewshot|zeroshot> [dprime|dmso] [class] [swap]",
+ "mode": "fewshot",
+ "n_training_rows": 43311,
+ "diffpos": {
+  "n_rec": 60,
+  "n_cond": 10,
+  "n_comp": 6,
+  "ceiling": 0.651,
+  "additive": {
+   "train": 0.754,
+   "held": 0.421,
+   "diff_by_compound": [
+    0.314,
+    0.223,
+    0.388
+   ]
+  },
+  "pmean": {
+   "train": 0.705,
+   "held": 0.368,
+   "diff_by_compound": [
+    0.308,
+    0.231,
+    0.377
+   ]
+  }
+ },
+ "diffpos | dvia 0": {
+  "n_rec": 20,
+  "n_cond": 4,
+  "n_comp": 4,
+  "ceiling": 0.509,
+  "additive": {
+   "train": 0.785,
+   "held": 0.445,
+   "diff_by_compound": [
+    0.313,
+    0.213,
+    0.391
+   ]
+  },
+  "pmean": {
+   "train": 0.679,
+   "held": 0.388,
+   "diff_by_compound": [
+    0.312,
+    0.229,
+    0.398
+   ]
+  }
+ },
+ "diffpos | dvia 1": {
+  "n_rec": 20,
+  "n_cond": 4,
+  "n_comp": 4,
+  "ceiling": 0.626,
+  "additive": {
+   "train": 0.761,
+   "held": 0.378,
+   "diff_by_compound": [
+    0.352,
+    0.185,
+    0.464
+   ]
+  },
+  "pmean": {
+   "train": 0.723,
+   "held": 0.341,
+   "diff_by_compound": [
+    0.345,
+    0.205,
+    0.447
+   ]
+  }
+ },
+ "diffpos | dvia 2": {
+  "n_rec": 20,
+  "n_cond": 3,
+  "n_comp": 2,
+  "ceiling": 0.704,
+  "additive": {
+   "train": 0.731,
+   "held": 0.431,
+   "diff_by_compound": [
+    0.234,
+    0.165,
+    0.303
+   ]
+  },
+  "pmean": {
+   "train": 0.679,
+   "held": 0.383,
+   "diff_by_compound": [
+    0.227,
+    0.163,
+    0.291
+   ]
+  }
+ },
+ "sameplate": {
+  "n_rec": 20,
+  "n_cond": 4,
+  "n_comp": 3,
+  "ceiling": 0.727,
+  "additive": {
+   "train": 0.733,
+   "held": 0.473,
+   "diff_by_compound": [
+    0.213,
+    0.09,
+    0.385
+   ]
+  },
+  "pmean": {
+   "train": 0.684,
+   "held": 0.434,
+   "diff_by_compound": [
+    0.27,
+    0.119,
+    0.516
+   ]
+  }
+ },
+ "G614": {
+  "n_rec": 385,
+  "n_cond": 77,
+  "n_comp": 77,
+  "ceiling": 0.632,
+  "additive": {
+   "train": 0.817,
+   "held": 0.596,
+   "diff_by_compound": [
+    0.223,
+    0.202,
+    0.241
+   ]
+  },
+  "pmean": {
+   "train": 0.732,
+   "held": 0.482,
+   "diff_by_compound": [
+    0.246,
+    0.227,
+    0.265
+   ]
+  }
+ },
+ "G614 | dvia 0": {
+  "n_rec": 125,
+  "n_cond": 25,
+  "n_comp": 25,
+  "ceiling": 0.64,
+  "additive": {
+   "train": 0.82,
+   "held": 0.613,
+   "diff_by_compound": [
+    0.217,
+    0.18,
+    0.249
+   ]
+  },
+  "pmean": {
+   "train": 0.728,
+   "held": 0.489,
+   "diff_by_compound": [
+    0.247,
+    0.214,
+    0.282
+   ]
+  }
+ },
+ "G614 | dvia 1": {
+  "n_rec": 130,
+  "n_cond": 26,
+  "n_comp": 26,
+  "ceiling": 0.607,
+  "additive": {
+   "train": 0.826,
+   "held": 0.585,
+   "diff_by_compound": [
+    0.236,
+    0.208,
+    0.268
+   ]
+  },
+  "pmean": {
+   "train": 0.727,
+   "held": 0.461,
+   "diff_by_compound": [
+    0.255,
+    0.228,
+    0.282
+   ]
+  }
+ },
+ "G614 | dvia 2": {
+  "n_rec": 130,
+  "n_cond": 26,
+  "n_comp": 26,
+  "ceiling": 0.637,
+  "additive": {
+   "train": 0.811,
+   "held": 0.595,
+   "diff_by_compound": [
+    0.214,
+    0.178,
+    0.248
+   ]
+  },
+  "pmean": {
+   "train": 0.739,
+   "held": 0.493,
+   "diff_by_compound": [
+    0.237,
+    0.199,
+    0.271
+   ]
+  }
+ },
+ "Ada": {
+  "n_rec": 55,
+  "n_cond": 1,
+  "n_comp": 1,
+  "ceiling": 0.503,
+  "additive": {
+   "train": 0.703,
+   "held": 0.497,
+   "diff_by_compound": [
+    0.198,
+    0.198,
+    0.198
+   ]
+  },
+  "pmean": {
+   "train": 0.629,
+   "held": 0.497,
+   "diff_by_compound": [
+    0.136,
+    0.136,
+    0.136
+   ]
+  }
+ }
+}

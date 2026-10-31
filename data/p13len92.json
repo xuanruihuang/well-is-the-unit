@@ -1,0 +1,368 @@
+{
+ "rules": "Label check without a position-sharing comparison group (samewell/notes.md \u00a792, recheck; A100). Reads\np13strong92.json. Review points: plates 6/14 share positions, which the partner rank also detects, so they are not a fair\ncomparison for pairs at different positions; pairs are not independent (several doses of one compound); a response\nlength >= 3 can also come from a well shift. Reported per group (G614, same-name pairs at different positions, salt-name\npairs on different plates, one-plate pairs, plate 13):\n  - strong pairs (length >= 3 in either well), their compounds, pairs and compounds recognised (top 10% both ways);\n  - for pairs whose first well (for plate 13 the original, non-plate-13 well) has length >= 3: the partner's length,\n    and how many partners have length >= 2.7 (the largest plate-13 partner length in this set);\n  - the strong plate-13 pairs and recognised salt pairs, by compound.\nOutput $WORKSPACE/rt/samewell/p13len92.json. Usage: p13len92.py",
+ "G614": {
+  "strong_pairs": 18,
+  "strong_compounds": 18,
+  "recognised_pairs": 17,
+  "recognised_compounds": 17,
+  "compounds": [
+   [
+    "allantoin",
+    1
+   ],
+   [
+    "anethole trithione",
+    1
+   ],
+   [
+    "clonidine",
+    1
+   ],
+   [
+    "darinaparsin",
+    1
+   ],
+   [
+    "folic acid",
+    1
+   ],
+   [
+    "homoharringtonine",
+    1
+   ],
+   [
+    "idarubicin",
+    1
+   ],
+   [
+    "lenalidomide",
+    1
+   ],
+   [
+    "lidocaine",
+    1
+   ],
+   [
+    "medroxyprogesterone acetate",
+    1
+   ],
+   [
+    "mitoxantrone",
+    1
+   ],
+   [
+    "neratinib",
+    1
+   ],
+   [
+    "pentagastrin",
+    1
+   ],
+   [
+    "pentamidine",
+    1
+   ],
+   [
+    "terfenadine",
+    1
+   ],
+   [
+    "triamcinolone",
+    1
+   ],
+   [
+    "tucidinostat",
+    1
+   ],
+   [
+    "vinblastine",
+    1
+   ]
+  ],
+  "recognised": [
+   [
+    "allantoin",
+    1
+   ],
+   [
+    "anethole trithione",
+    1
+   ],
+   [
+    "clonidine",
+    1
+   ],
+   [
+    "darinaparsin",
+    1
+   ],
+   [
+    "folic acid",
+    1
+   ],
+   [
+    "homoharringtonine",
+    1
+   ],
+   [
+    "idarubicin",
+    1
+   ],
+   [
+    "lenalidomide",
+    1
+   ],
+   [
+    "lidocaine",
+    1
+   ],
+   [
+    "medroxyprogesterone acetate",
+    1
+   ],
+   [
+    "neratinib",
+    1
+   ],
+   [
+    "pentagastrin",
+    1
+   ],
+   [
+    "pentamidine",
+    1
+   ],
+   [
+    "terfenadine",
+    1
+   ],
+   [
+    "triamcinolone",
+    1
+   ],
+   [
+    "tucidinostat",
+    1
+   ],
+   [
+    "vinblastine",
+    1
+   ]
+  ],
+  "partner_length_when_one_well_strong": {
+   "n": 22,
+   "median": 2.65,
+   "min": 1.49,
+   "n_ge_2_7": 11
+  },
+  "partner_length_both_directions": {
+   "n": 22,
+   "median": 2.65,
+   "n_ge_2_7": 11
+  },
+  "strong_pairs_both_wells_ge_3": 4
+ },
+ "diffpos same name": {
+  "strong_pairs": 7,
+  "strong_compounds": 3,
+  "recognised_pairs": 6,
+  "recognised_compounds": 2,
+  "compounds": [
+   [
+    "afatinib",
+    1
+   ],
+   [
+    "binimetinib",
+    3
+   ],
+   [
+    "trametinib",
+    3
+   ]
+  ],
+  "recognised": [
+   [
+    "binimetinib",
+    3
+   ],
+   [
+    "trametinib",
+    3
+   ]
+  ],
+  "partner_length_when_one_well_strong": {
+   "n": 11,
+   "median": 3.22,
+   "min": 2.4,
+   "n_ge_2_7": 8
+  },
+  "partner_length_both_directions": {
+   "n": 11,
+   "median": 3.22,
+   "n_ge_2_7": 8
+  },
+  "strong_pairs_both_wells_ge_3": 4
+ },
+ "diffpos salt": {
+  "strong_pairs": 17,
+  "strong_compounds": 10,
+  "recognised_pairs": 6,
+  "recognised_compounds": 2,
+  "compounds": [
+   [
+    "belumosudil",
+    1
+   ],
+   [
+    "berbamine",
+    1
+   ],
+   [
+    "crizotinib",
+    1
+   ],
+   [
+    "docetaxel",
+    1
+   ],
+   [
+    "fluvoxamine",
+    1
+   ],
+   [
+    "irinotecan",
+    1
+   ],
+   [
+    "ixazomib",
+    2
+   ],
+   [
+    "neratinib",
+    1
+   ],
+   [
+    "tirabrutinib",
+    2
+   ],
+   [
+    "trametinib",
+    6
+   ]
+  ],
+  "recognised": [
+   [
+    "tirabrutinib",
+    1
+   ],
+   [
+    "trametinib",
+    5
+   ]
+  ],
+  "partner_length_when_one_well_strong": {
+   "n": 25,
+   "median": 3.34,
+   "min": 1.66,
+   "n_ge_2_7": 16
+  },
+  "partner_length_both_directions": {
+   "n": 25,
+   "median": 3.34,
+   "n_ge_2_7": 16
+  },
+  "strong_pairs_both_wells_ge_3": 8
+ },
+ "sameplate": {
+  "strong_pairs": 5,
+  "strong_compounds": 4,
+  "recognised_pairs": 0,
+  "recognised_compounds": 0,
+  "compounds": [
+   [
+    "cytarabine",
+    1
+   ],
+   [
+    "everolimus",
+    1
+   ],
+   [
+    "gemcitabine",
+    2
+   ],
+   [
+    "pyridoxine",
+    1
+   ]
+  ],
+  "recognised": [],
+  "partner_length_when_one_well_strong": {
+   "n": 6,
+   "median": 2.65,
+   "min": 2.02,
+   "n_ge_2_7": 3
+  },
+  "partner_length_both_directions": {
+   "n": 6,
+   "median": 2.65,
+   "n_ge_2_7": 3
+  },
+  "strong_pairs_both_wells_ge_3": 1
+ },
+ "plate13": {
+  "strong_pairs": 10,
+  "strong_compounds": 7,
+  "recognised_pairs": 1,
+  "recognised_compounds": 1,
+  "compounds": [
+   [
+    "afatinib",
+    1
+   ],
+   [
+    "belumosudil",
+    1
+   ],
+   [
+    "cytarabine",
+    1
+   ],
+   [
+    "irinotecan (hydrochloride)",
+    3
+   ],
+   [
+    "malotilate",
+    1
+   ],
+   [
+    "terfenadine",
+    1
+   ],
+   [
+    "topotecan (hydrochloride)",
+    2
+   ]
+  ],
+  "recognised": [
+   [
+    "cytarabine",
+    1
+   ]
+  ],
+  "partner_length_when_one_well_strong": {
+   "n": 6,
+   "median": 1.81,
+   "min": 1.34,
+   "n_ge_2_7": 0
+  },
+  "partner_length_both_directions": {
+   "n": 10,
+   "median": 1.98,
+   "n_ge_2_7": 1
+  },
+  "strong_pairs_both_wells_ge_3": 0
+ }
+}

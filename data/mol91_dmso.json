@@ -1,0 +1,165 @@
+{
+ "rules": "Molina & Zhang 2026 cross-line transfer on verified replicate pairs (samewell/notes.md \u00a791; A100). As mol_transfer.py\n(\u00a733: State's five lines; source = mean response of the other four lines in a well, >= 3 present; one-shot transfer =\nthe source itself; low-rank ridge = SVD basis (k = 30) of the training sources and a ridge map to the target response,\nlambda from {1e-4 .. 1e3} (grid extended downwards in \u00a793 after the lowest value was chosen) x mean feature variance on a 20% validation split of training compounds, seed 0; genes\nexpressed in the target, base >= 0.2), with these changes:\n  - plate-13 wells are dropped everywhere (\u00a781);\n  - reference 'dprime' (the line's mean over the plate's other treated wells, well left out; main) or 'dmso' (the\n    plate's DMSO wells; sw_core);\n  - training: wells of compounds (verified.norm) that have no verified.pairs pair, excluding stereoisomers and other\n    salts of those (bp91_data.py moved_to_test); test: every verified pair (a, b) in\n    both directions, source from well t, scored against the target in t (their setting) and in the other well o;\n  - pair label classes from labels84 (confirmed, ...) and labels85 (nodvia, ...).\nSummaries per group and class: medians over records; same - other as the mean over compounds with a 95% interval from\n1,000 bootstrap resamples of compounds (seed 0). Output $WORKSPACE/rt/samewell/mol91_<ref>.json (+ _records.json).\nUsage: mol91.py <dprime|dmso>",
+ "ref": "dmso",
+ "n_records": 2700,
+ "G614 all": {
+  "n_records": 900,
+  "n_pairs": 90,
+  "n_comp": 87,
+  "r": 0.61,
+  "direct_same": 0.641,
+  "direct_other": 0.446,
+  "direct_diff": [
+   0.188,
+   0.173,
+   0.205
+  ],
+  "ridge_same": 0.793,
+  "ridge_other": 0.611,
+  "ridge_diff": [
+   0.183,
+   0.164,
+   0.203
+  ]
+ },
+ "G614 confirmed": {
+  "n_records": 800,
+  "n_pairs": 80,
+  "n_comp": 77,
+  "r": 0.632,
+  "direct_same": 0.641,
+  "direct_other": 0.456,
+  "direct_diff": [
+   0.176,
+   0.161,
+   0.192
+  ],
+  "ridge_same": 0.789,
+  "ridge_other": 0.622,
+  "ridge_diff": [
+   0.168,
+   0.15,
+   0.187
+  ]
+ },
+ "diffpos all": {
+  "n_records": 650,
+  "n_pairs": 65,
+  "n_comp": 20,
+  "r": 0.253,
+  "direct_same": 0.668,
+  "direct_other": 0.235,
+  "direct_diff": [
+   0.451,
+   0.394,
+   0.507
+  ],
+  "ridge_same": 0.857,
+  "ridge_other": 0.253,
+  "ridge_diff": [
+   0.571,
+   0.487,
+   0.656
+  ]
+ },
+ "diffpos confirmed": {
+  "n_records": 180,
+  "n_pairs": 18,
+  "n_comp": 9,
+  "r": 0.651,
+  "direct_same": 0.609,
+  "direct_other": 0.352,
+  "direct_diff": [
+   0.321,
+   0.246,
+   0.39
+  ],
+  "ridge_same": 0.894,
+  "ridge_other": 0.634,
+  "ridge_diff": [
+   0.35,
+   0.251,
+   0.461
+  ]
+ },
+ "diffpos nodvia": {
+  "n_records": 240,
+  "n_pairs": 24,
+  "n_comp": 15,
+  "r": 0.207,
+  "direct_same": 0.671,
+  "direct_other": 0.212,
+  "direct_diff": [
+   0.46,
+   0.406,
+   0.513
+  ],
+  "ridge_same": 0.821,
+  "ridge_other": 0.212,
+  "ridge_diff": [
+   0.6,
+   0.483,
+   0.729
+  ]
+ },
+ "sameplate confirmed": {
+  "n_records": 60,
+  "n_pairs": 6,
+  "n_comp": 4,
+  "r": 0.585,
+  "direct_same": 0.602,
+  "direct_other": 0.339,
+  "direct_diff": [
+   0.299,
+   0.191,
+   0.408
+  ],
+  "ridge_same": 0.75,
+  "ridge_other": 0.456,
+  "ridge_diff": [
+   0.275,
+   0.16,
+   0.39
+  ]
+ },
+ "sameplate nodvia": {
+  "n_records": 110,
+  "n_pairs": 11,
+  "n_comp": 6,
+  "r": 0.513,
+  "direct_same": 0.653,
+  "direct_other": 0.308,
+  "direct_diff": [
+   0.324,
+   0.228,
+   0.403
+  ],
+  "ridge_same": 0.797,
+  "ridge_other": 0.433,
+  "ridge_diff": [
+   0.289,
+   0.179,
+   0.389
+  ]
+ },
+ "Ada confirmed": {
+  "n_records": 600,
+  "n_pairs": 60,
+  "n_comp": 1,
+  "r": 0.512,
+  "direct_same": 0.59,
+  "direct_other": 0.425,
+  "direct_diff": [
+   0.162,
+   0.162,
+   0.162
+  ],
+  "ridge_same": 0.684,
+  "ridge_other": 0.404,
+  "ridge_diff": [
+   0.272,
+   0.272,
+   0.272
+  ]
+ }
+}

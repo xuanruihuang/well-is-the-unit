@@ -1,0 +1,297 @@
+{
+ "rules": "Robustness of the control-well pairs (samewell/notes.md \u00a7104, independent review 10-29 item A6; A100).\nPer plate (plate 13 apart) and line: R = profile(control well 1) - profile(control well 2); same-pair prediction =\nmean of the other lines' R on that plate; other-plates prediction = mean of the other lines' R on another plate\n(averaged over the other plates); Pearson on the line's genes (base >= 0.2, cached genes mapped to the pseudobulk\ngenes). Profiles:\n  log1p-mean   mean over cells of log1p(1e4 c / n) (sw_v1a.control_profiles; the paper's numbers)\n  pb-logcpm    raw counts summed over the line's cells in the well (pb/counts_lsh.npy), log(1 + 1e6 c / N): no\n               per-cell nonlinearity, so depth per cell cannot create a shared shift through log1p\n  pb-matched   as pb-logcpm after binomial thinning of the deeper well's summed counts to the shallower well's total\n               (per line and plate; seed 0): the two wells of a pair then have the same depth for every line\nTests: per-plate medians and the number of plates with same > other; the 13 x 13 matrix M[i, j] = median over lines of\nplate i of Pearson(mean of the other lines' R on plate j, line's R on plate i), with a permutation test of the\ndiagonal against random matchings (100,000 permutations of the predictor plates; statistic = mean diagonal);\nbootstrap over plates of the per-plate difference (diagonal - row mean of the off-diagonal).\nPlate 13: its control wells are inferred at B11/B12 (sample numbers), not H11/H12; its labels do not reproduce\n(\u00a781), so this is reported apart: same-pair prediction, and the other plates' pairs as predictors of plate 13's R\n(different position) against the other plates' pairs as predictors of each other (same position H11/H12).\nOutput $WORKSPACE/rt/samewell/ctrl99.json",
+ "control_samples": {
+  "plate1": [
+   "smp_1589",
+   "smp_1590"
+  ],
+  "plate2": [
+   "smp_1685",
+   "smp_1686"
+  ],
+  "plate3": [
+   "smp_1781",
+   "smp_1782"
+  ],
+  "plate4": [
+   "smp_1877",
+   "smp_1878"
+  ],
+  "plate5": [
+   "smp_1973",
+   "smp_1974"
+  ],
+  "plate6": [
+   "smp_2069",
+   "smp_2070"
+  ],
+  "plate7": [
+   "smp_2165",
+   "smp_2166"
+  ],
+  "plate8": [
+   "smp_2261",
+   "smp_2262"
+  ],
+  "plate9": [
+   "smp_2357",
+   "smp_2358"
+  ],
+  "plate10": [
+   "smp_2453",
+   "smp_2454"
+  ],
+  "plate11": [
+   "smp_2549",
+   "smp_2550"
+  ],
+  "plate12": [
+   "smp_2645",
+   "smp_2646"
+  ],
+  "plate13": [
+   "smp_2669",
+   "smp_2670"
+  ],
+  "plate14": [
+   "smp_2837",
+   "smp_2838"
+  ]
+ },
+ "versions": {
+  "log1p-mean": {
+   "records": 624,
+   "same_median": 0.6963,
+   "other_median": 0.4744,
+   "advantage_record_mean": 0.2007,
+   "plates_same_gt_other": 13,
+   "plates": 13,
+   "per_plate": [
+    [
+     0.727,
+     0.455
+    ],
+    [
+     0.775,
+     0.532
+    ],
+    [
+     0.635,
+     0.445
+    ],
+    [
+     0.688,
+     0.461
+    ],
+    [
+     0.755,
+     0.579
+    ],
+    [
+     0.746,
+     0.348
+    ],
+    [
+     0.646,
+     0.479
+    ],
+    [
+     0.732,
+     0.568
+    ],
+    [
+     0.62,
+     0.429
+    ],
+    [
+     0.687,
+     0.452
+    ],
+    [
+     0.711,
+     0.558
+    ],
+    [
+     0.718,
+     0.567
+    ],
+    [
+     0.62,
+     0.378
+    ]
+   ],
+   "diagonal_mean": 0.697,
+   "permutation_p": 9.99990000099999e-06,
+   "plate_bootstrap_diff": [
+    0.2163,
+    0.1856,
+    0.2543
+   ],
+   "plate13": {
+    "records": 47,
+    "same_median": 0.7731,
+    "other_plates_median": 0.099,
+    "control_samples": [
+     "smp_2669",
+     "smp_2670"
+    ]
+   }
+  },
+  "pb-logcpm": {
+   "records": 624,
+   "same_median": 0.6822,
+   "other_median": 0.464,
+   "advantage_record_mean": 0.1877,
+   "plates_same_gt_other": 13,
+   "plates": 13,
+   "per_plate": [
+    [
+     0.69,
+     0.456
+    ],
+    [
+     0.77,
+     0.523
+    ],
+    [
+     0.555,
+     0.414
+    ],
+    [
+     0.713,
+     0.492
+    ],
+    [
+     0.737,
+     0.573
+    ],
+    [
+     0.777,
+     0.347
+    ],
+    [
+     0.54,
+     0.424
+    ],
+    [
+     0.707,
+     0.554
+    ],
+    [
+     0.533,
+     0.388
+    ],
+    [
+     0.693,
+     0.478
+    ],
+    [
+     0.701,
+     0.555
+    ],
+    [
+     0.716,
+     0.564
+    ],
+    [
+     0.624,
+     0.387
+    ]
+   ],
+   "diagonal_mean": 0.6734,
+   "permutation_p": 9.99990000099999e-06,
+   "plate_bootstrap_diff": [
+    0.2002,
+    0.1641,
+    0.248
+   ],
+   "plate13": {
+    "records": 48,
+    "same_median": 0.717,
+    "other_plates_median": 0.0991,
+    "control_samples": [
+     "smp_2669",
+     "smp_2670"
+    ]
+   }
+  },
+  "pb-matched": {
+   "records": 624,
+   "same_median": 0.6611,
+   "other_median": 0.4481,
+   "advantage_record_mean": 0.182,
+   "plates_same_gt_other": 13,
+   "plates": 13,
+   "per_plate": [
+    [
+     0.683,
+     0.446
+    ],
+    [
+     0.759,
+     0.514
+    ],
+    [
+     0.538,
+     0.402
+    ],
+    [
+     0.695,
+     0.477
+    ],
+    [
+     0.72,
+     0.557
+    ],
+    [
+     0.754,
+     0.335
+    ],
+    [
+     0.492,
+     0.403
+    ],
+    [
+     0.67,
+     0.528
+    ],
+    [
+     0.51,
+     0.377
+    ],
+    [
+     0.662,
+     0.457
+    ],
+    [
+     0.684,
+     0.537
+    ],
+    [
+     0.69,
+     0.544
+    ],
+    [
+     0.599,
+     0.37
+    ]
+   ],
+   "diagonal_mean": 0.6504,
+   "permutation_p": 9.99990000099999e-06,
+   "plate_bootstrap_diff": [
+    0.1929,
+    0.1545,
+    0.2419
+   ],
+   "plate13": {
+    "records": 48,
+    "same_median": 0.6629,
+    "other_plates_median": 0.0898,
+    "control_samples": [
+     "smp_2669",
+     "smp_2670"
+    ]
+   }
+  }
+ }
+}

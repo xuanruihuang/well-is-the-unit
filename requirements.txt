@@ -1,0 +1,11 @@
+numpy>=2.2
+scipy>=1.15
+pyarrow>=20
+scikit-learn>=1.9
+h5py>=3.16
+pandas>=2.2
+matplotlib>=3.10
+fsspec>=2024.3
+# BioPert re-implementation and the transfer model (GPU recommended)
+torch>=2.5
+rdkit>=2024.3

@@ -1,0 +1,367 @@
+{
+ "split": "A",
+ "seed": 42,
+ "n": [
+  39558,
+  5322,
+  7832
+ ],
+ "best_epoch": 200,
+ "val_spearman": 0.6197,
+ "history": [
+  [
+   10,
+   0.04875,
+   0.5304
+  ],
+  [
+   20,
+   0.0437,
+   0.5685
+  ],
+  [
+   30,
+   0.04155,
+   0.5822
+  ],
+  [
+   40,
+   0.04104,
+   0.5907
+  ],
+  [
+   50,
+   0.04043,
+   0.5968
+  ],
+  [
+   60,
+   0.03952,
+   0.6006
+  ],
+  [
+   70,
+   0.0383,
+   0.6037
+  ],
+  [
+   80,
+   0.03774,
+   0.6065
+  ],
+  [
+   90,
+   0.0408,
+   0.6087
+  ],
+  [
+   100,
+   0.03535,
+   0.6114
+  ],
+  [
+   110,
+   0.04247,
+   0.6124
+  ],
+  [
+   120,
+   0.04117,
+   0.6133
+  ],
+  [
+   130,
+   0.04006,
+   0.6153
+  ],
+  [
+   140,
+   0.03776,
+   0.6163
+  ],
+  [
+   150,
+   0.04402,
+   0.6172
+  ],
+  [
+   160,
+   0.03675,
+   0.6178
+  ],
+  [
+   170,
+   0.03671,
+   0.6187
+  ],
+  [
+   180,
+   0.03932,
+   0.6191
+  ],
+  [
+   190,
+   0.03631,
+   0.6195
+  ],
+  [
+   200,
+   0.0396,
+   0.6197
+  ]
+ ],
+ "n_test_compounds": 56,
+ "test_pearson": 0.7867,
+ "test_copy": 0.4739,
+ "test_trainmean": 0.3251,
+ "test_linemean": 0.3972,
+ "test_pearson_centred": 0.737,
+ "wells_all": {
+  "n_rec": 2326,
+  "n_cond": 25,
+  "same": 0.76,
+  "same_mean": 0.741,
+  "other": 0.587,
+  "other_mean": 0.475,
+  "copy_same": 0.46,
+  "copy_same_mean": 0.456,
+  "copy_other": 0.229,
+  "copy_other_mean": 0.208,
+  "same_c": 0.661,
+  "same_c_mean": 0.672,
+  "other_c": 0.413,
+  "other_c_mean": 0.376,
+  "linemean": 0.465,
+  "linemean_mean": 0.38,
+  "ceiling": 0.371,
+  "ceiling_mean": 0.342,
+  "diff": [
+   0.268,
+   0.165,
+   0.367
+  ],
+  "diff_centred": [
+   0.298,
+   0.202,
+   0.391
+  ],
+  "same_gt_ceiling": 0.985
+ },
+ "wells_all_6_14": {
+  "n_rec": 1498,
+  "n_cond": 16,
+  "same": 0.752,
+  "same_mean": 0.731,
+  "other": 0.677,
+  "other_mean": 0.651,
+  "copy_same": 0.437,
+  "copy_same_mean": 0.432,
+  "copy_other": 0.284,
+  "copy_other_mean": 0.29,
+  "same_c": 0.616,
+  "same_c_mean": 0.609,
+  "other_c": 0.495,
+  "other_c_mean": 0.467,
+  "linemean": 0.544,
+  "linemean_mean": 0.519,
+  "ceiling": 0.518,
+  "ceiling_mean": 0.48,
+  "diff": [
+   0.08,
+   0.052,
+   0.115
+  ],
+  "diff_centred": [
+   0.142,
+   0.092,
+   0.202
+  ],
+  "same_gt_ceiling": 0.976
+ },
+ "wells_all_other_pairs": {
+  "n_rec": 828,
+  "n_cond": 9,
+  "same": 0.776,
+  "same_mean": 0.758,
+  "other": 0.165,
+  "other_mean": 0.157,
+  "copy_same": 0.506,
+  "copy_same_mean": 0.499,
+  "copy_other": 0.041,
+  "copy_other_mean": 0.06,
+  "same_c": 0.811,
+  "same_c_mean": 0.785,
+  "other_c": 0.238,
+  "other_c_mean": 0.212,
+  "linemean": 0.127,
+  "linemean_mean": 0.127,
+  "ceiling": 0.101,
+  "ceiling_mean": 0.093,
+  "diff": [
+   0.603,
+   0.507,
+   0.71
+  ],
+  "diff_centred": [
+   0.574,
+   0.479,
+   0.681
+  ],
+  "same_gt_ceiling": 1.0
+ },
+ "wells_all_acted": {
+  "n_rec": 832,
+  "n_cond": 15,
+  "same": 0.78,
+  "same_mean": 0.773,
+  "other": 0.722,
+  "other_mean": 0.719,
+  "copy_same": 0.472,
+  "copy_same_mean": 0.468,
+  "copy_other": 0.345,
+  "copy_other_mean": 0.352,
+  "same_c": 0.641,
+  "same_c_mean": 0.643,
+  "other_c": 0.558,
+  "other_c_mean": 0.543,
+  "linemean": 0.573,
+  "linemean_mean": 0.566,
+  "ceiling": 0.585,
+  "ceiling_mean": 0.604,
+  "diff": [
+   0.067,
+   0.047,
+   0.092
+  ],
+  "diff_centred": [
+   0.125,
+   0.084,
+   0.172
+  ],
+  "same_gt_ceiling": 0.957
+ },
+ "wells_expr": {
+  "n_rec": 2326,
+  "n_cond": 25,
+  "same": 0.778,
+  "same_mean": 0.757,
+  "other": 0.6,
+  "other_mean": 0.486,
+  "copy_same": 0.505,
+  "copy_same_mean": 0.497,
+  "copy_other": 0.254,
+  "copy_other_mean": 0.229,
+  "same_c": 0.681,
+  "same_c_mean": 0.69,
+  "other_c": 0.424,
+  "other_c_mean": 0.387,
+  "linemean": 0.478,
+  "linemean_mean": 0.387,
+  "ceiling": 0.388,
+  "ceiling_mean": 0.356,
+  "diff": [
+   0.274,
+   0.169,
+   0.375
+  ],
+  "diff_centred": [
+   0.306,
+   0.207,
+   0.4
+  ],
+  "same_gt_ceiling": 0.98
+ },
+ "wells_expr_6_14": {
+  "n_rec": 1498,
+  "n_cond": 16,
+  "same": 0.771,
+  "same_mean": 0.748,
+  "other": 0.693,
+  "other_mean": 0.665,
+  "copy_same": 0.48,
+  "copy_same_mean": 0.473,
+  "copy_other": 0.315,
+  "copy_other_mean": 0.318,
+  "same_c": 0.638,
+  "same_c_mean": 0.629,
+  "other_c": 0.508,
+  "other_c_mean": 0.479,
+  "linemean": 0.555,
+  "linemean_mean": 0.531,
+  "ceiling": 0.539,
+  "ceiling_mean": 0.499,
+  "diff": [
+   0.083,
+   0.054,
+   0.12
+  ],
+  "diff_centred": [
+   0.151,
+   0.097,
+   0.215
+  ],
+  "same_gt_ceiling": 0.969
+ },
+ "wells_expr_other_pairs": {
+  "n_rec": 828,
+  "n_cond": 9,
+  "same": 0.792,
+  "same_mean": 0.773,
+  "other": 0.173,
+  "other_mean": 0.162,
+  "copy_same": 0.548,
+  "copy_same_mean": 0.54,
+  "copy_other": 0.05,
+  "copy_other_mean": 0.066,
+  "same_c": 0.826,
+  "same_c_mean": 0.799,
+  "other_c": 0.249,
+  "other_c_mean": 0.22,
+  "linemean": 0.124,
+  "linemean_mean": 0.126,
+  "ceiling": 0.109,
+  "ceiling_mean": 0.098,
+  "diff": [
+   0.612,
+   0.513,
+   0.724
+  ],
+  "diff_centred": [
+   0.581,
+   0.481,
+   0.691
+  ],
+  "same_gt_ceiling": 1.0
+ },
+ "wells_expr_acted": {
+  "n_rec": 888,
+  "n_cond": 15,
+  "same": 0.796,
+  "same_mean": 0.787,
+  "other": 0.734,
+  "other_mean": 0.73,
+  "copy_same": 0.514,
+  "copy_same_mean": 0.507,
+  "copy_other": 0.374,
+  "copy_other_mean": 0.379,
+  "same_c": 0.66,
+  "same_c_mean": 0.661,
+  "other_c": 0.568,
+  "other_c_mean": 0.554,
+  "linemean": 0.583,
+  "linemean_mean": 0.575,
+  "ceiling": 0.603,
+  "ceiling_mean": 0.618,
+  "diff": [
+   0.069,
+   0.049,
+   0.095
+  ],
+  "diff_centred": [
+   0.132,
+   0.088,
+   0.182
+  ],
+  "same_gt_ceiling": 0.948
+ }
+}

@@ -1,0 +1,2147 @@
+{
+ "rules": "Fifth-review checks (samewell/notes.md \u00a785; A100).\nA Weak-drug class by viability alone: dvia of each well against the plate's DMSO wells; noise level = dvia of a plate's\n  DMSO well against the plate's other DMSO well (plate 13 excluded). Classes written to labels85.json (format of\n  labels84.json): 'lowdvia' = both wells below the 33rd percentile of treated wells' dvia; 'nodvia' = both wells below\n  the 90th percentile of the DMSO-vs-DMSO noise level. Reported: number of pairs per group and how many of them were\n  'confirmed' in labels84.\nB Plate-13 control layout. (i) Control offset: per line, regular plate p's controls relative to its treated wells,\n  c_p = -(mean over p's treated wells of D); q_-p = mean of c over the other regular plates; Pearson(c_p, q_-p) over the\n  line's genes (median over lines) for each regular plate, against Pearson(D'_w, q) for plate-13 wells at H11 / H12\n  (D' = against plate 13's other treated wells). Equal strength fits a control swap on plate 13; clearly weaker fits a\n  position effect. (ii) Composition: SD over lines of the log2 odds of each well's line shares against the pooled\n  DMSO wells of the other regular plates, for regular plates' DMSO wells, plate 13's labelled DMSO wells, plate 13's\n  H11 / H12 wells and other treated wells.\nC D' reference across plates: for different-position pairs, energy of the difference between the two wells'\n  references (line's mean over the other treated wells of each plate; common genes centred) relative to the\n  within-well reproducible energy W.\nD Cell-cycle sign-flip on control pairs: sign of T per regular plate (cc_signflip.json).\nOutput $WORKSPACE/rt/samewell/check85.json and labels85.json",
+ "pairs": [
+  {
+   "a": 5,
+   "b": 70,
+   "group": "sameplate",
+   "comp": "gemcitabine",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "unresolved"
+  },
+  {
+   "a": 6,
+   "b": 544,
+   "group": "diffpos",
+   "comp": "irinotecan",
+   "salt": true,
+   "cls": "nodvia",
+   "cls84": "unresolved"
+  },
+  {
+   "a": 55,
+   "b": 550,
+   "group": "diffpos",
+   "comp": "belumosudil",
+   "salt": true,
+   "cls": "nodvia",
+   "cls84": "inert"
+  },
+  {
+   "a": 81,
+   "b": 170,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "lowdvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 81,
+   "b": 170,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 81,
+   "b": 253,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 81,
+   "b": 346,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "lowdvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 81,
+   "b": 346,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 81,
+   "b": 440,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 81,
+   "b": 533,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "lowdvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 81,
+   "b": 533,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 81,
+   "b": 608,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "inert"
+  },
+  {
+   "a": 81,
+   "b": 620,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 81,
+   "b": 703,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "lowdvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 81,
+   "b": 703,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 81,
+   "b": 783,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "lowdvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 81,
+   "b": 783,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 81,
+   "b": 874,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "lowdvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 81,
+   "b": 874,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 81,
+   "b": 968,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "lowdvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 81,
+   "b": 968,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 81,
+   "b": 1060,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 170,
+   "b": 253,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "inert"
+  },
+  {
+   "a": 170,
+   "b": 346,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "lowdvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 170,
+   "b": 346,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 170,
+   "b": 440,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 170,
+   "b": 533,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "lowdvia",
+   "cls84": "inert"
+  },
+  {
+   "a": 170,
+   "b": 533,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "inert"
+  },
+  {
+   "a": 170,
+   "b": 608,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "inert"
+  },
+  {
+   "a": 170,
+   "b": 620,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "unresolved"
+  },
+  {
+   "a": 170,
+   "b": 703,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "lowdvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 170,
+   "b": 703,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 170,
+   "b": 783,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "lowdvia",
+   "cls84": "inert"
+  },
+  {
+   "a": 170,
+   "b": 783,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "inert"
+  },
+  {
+   "a": 170,
+   "b": 874,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "lowdvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 170,
+   "b": 874,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 170,
+   "b": 968,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "lowdvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 170,
+   "b": 968,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 170,
+   "b": 1060,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 253,
+   "b": 346,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 253,
+   "b": 440,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 253,
+   "b": 533,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "inert"
+  },
+  {
+   "a": 253,
+   "b": 608,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "inert"
+  },
+  {
+   "a": 253,
+   "b": 620,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 253,
+   "b": 703,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "inert"
+  },
+  {
+   "a": 253,
+   "b": 783,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 253,
+   "b": 874,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "inert"
+  },
+  {
+   "a": 253,
+   "b": 968,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 253,
+   "b": 1060,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "inert"
+  },
+  {
+   "a": 346,
+   "b": 440,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 346,
+   "b": 533,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "lowdvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 346,
+   "b": 533,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 346,
+   "b": 608,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "inert"
+  },
+  {
+   "a": 346,
+   "b": 620,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 346,
+   "b": 703,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "lowdvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 346,
+   "b": 703,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 346,
+   "b": 783,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "lowdvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 346,
+   "b": 783,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 346,
+   "b": 874,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "lowdvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 346,
+   "b": 874,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 346,
+   "b": 968,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "lowdvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 346,
+   "b": 968,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 346,
+   "b": 1060,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 440,
+   "b": 533,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 440,
+   "b": 608,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "inert"
+  },
+  {
+   "a": 440,
+   "b": 620,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 440,
+   "b": 703,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 440,
+   "b": 783,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 440,
+   "b": 874,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 440,
+   "b": 968,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 440,
+   "b": 1060,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 533,
+   "b": 608,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 533,
+   "b": 620,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 533,
+   "b": 703,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "lowdvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 533,
+   "b": 703,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 533,
+   "b": 783,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "lowdvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 533,
+   "b": 783,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 533,
+   "b": 874,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "lowdvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 533,
+   "b": 874,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 533,
+   "b": 968,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "lowdvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 533,
+   "b": 968,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 533,
+   "b": 1060,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 608,
+   "b": 620,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "unresolved"
+  },
+  {
+   "a": 608,
+   "b": 703,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "inert"
+  },
+  {
+   "a": 608,
+   "b": 783,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "inert"
+  },
+  {
+   "a": 608,
+   "b": 874,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "inert"
+  },
+  {
+   "a": 608,
+   "b": 968,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "inert"
+  },
+  {
+   "a": 608,
+   "b": 1060,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "inert"
+  },
+  {
+   "a": 620,
+   "b": 703,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 620,
+   "b": 783,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 620,
+   "b": 874,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 620,
+   "b": 968,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 620,
+   "b": 1060,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "unresolved"
+  },
+  {
+   "a": 703,
+   "b": 783,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "lowdvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 703,
+   "b": 783,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 703,
+   "b": 874,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "lowdvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 703,
+   "b": 874,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 703,
+   "b": 968,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "lowdvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 703,
+   "b": 968,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 703,
+   "b": 1060,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 783,
+   "b": 874,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "lowdvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 783,
+   "b": 874,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 783,
+   "b": 968,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "lowdvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 783,
+   "b": 968,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 783,
+   "b": 1060,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "inert"
+  },
+  {
+   "a": 874,
+   "b": 968,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "lowdvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 874,
+   "b": 968,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 874,
+   "b": 1060,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 968,
+   "b": 1060,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 114,
+   "b": 642,
+   "group": "diffpos",
+   "comp": "afatinib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "inert"
+  },
+  {
+   "a": 139,
+   "b": 639,
+   "group": "diffpos",
+   "comp": "belumosudil",
+   "salt": true,
+   "cls": "nodvia",
+   "cls84": "unresolved"
+  },
+  {
+   "a": 257,
+   "b": 539,
+   "group": "diffpos",
+   "comp": "berbamine",
+   "salt": true,
+   "cls": "lowdvia",
+   "cls84": "inert"
+  },
+  {
+   "a": 257,
+   "b": 539,
+   "group": "diffpos",
+   "comp": "berbamine",
+   "salt": true,
+   "cls": "nodvia",
+   "cls84": "inert"
+  },
+  {
+   "a": 287,
+   "b": 596,
+   "group": "diffpos",
+   "comp": "fluvoxamine",
+   "salt": true,
+   "cls": "nodvia",
+   "cls84": "unresolved"
+  },
+  {
+   "a": 296,
+   "b": 543,
+   "group": "diffpos",
+   "comp": "almonertinib",
+   "salt": true,
+   "cls": "nodvia",
+   "cls84": "inert"
+  },
+  {
+   "a": 350,
+   "b": 627,
+   "group": "diffpos",
+   "comp": "berbamine",
+   "salt": true,
+   "cls": "nodvia",
+   "cls84": "unresolved"
+  },
+  {
+   "a": 364,
+   "b": 431,
+   "group": "sameplate",
+   "comp": "pyridoxine",
+   "salt": true,
+   "cls": "nodvia",
+   "cls84": "unresolved"
+  },
+  {
+   "a": 373,
+   "b": 387,
+   "group": "sameplate",
+   "comp": "tofacitinib",
+   "salt": true,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 407,
+   "b": 694,
+   "group": "diffpos",
+   "comp": "docetaxel",
+   "salt": true,
+   "cls": "nodvia",
+   "cls84": "unresolved"
+  },
+  {
+   "a": 441,
+   "b": 1149,
+   "group": "G614",
+   "comp": "8-hydroxyquinoline",
+   "salt": false,
+   "cls": "lowdvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 441,
+   "b": 1149,
+   "group": "G614",
+   "comp": "8-hydroxyquinoline",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 442,
+   "b": 1150,
+   "group": "G614",
+   "comp": "chlorhexidine",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 443,
+   "b": 1151,
+   "group": "G614",
+   "comp": "trifluridine",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 444,
+   "b": 710,
+   "group": "diffpos",
+   "comp": "berbamine",
+   "salt": true,
+   "cls": "nodvia",
+   "cls84": "unresolved"
+  },
+  {
+   "a": 444,
+   "b": 1152,
+   "group": "G614",
+   "comp": "berbamine",
+   "salt": false,
+   "cls": "lowdvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 444,
+   "b": 1152,
+   "group": "G614",
+   "comp": "berbamine",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 710,
+   "b": 1152,
+   "group": "diffpos",
+   "comp": "berbamine",
+   "salt": true,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 445,
+   "b": 1153,
+   "group": "G614",
+   "comp": "retinoic acid",
+   "salt": false,
+   "cls": "lowdvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 445,
+   "b": 1153,
+   "group": "G614",
+   "comp": "retinoic acid",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 450,
+   "b": 1158,
+   "group": "G614",
+   "comp": "palmatine",
+   "salt": false,
+   "cls": "lowdvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 450,
+   "b": 1158,
+   "group": "G614",
+   "comp": "palmatine",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 452,
+   "b": 1160,
+   "group": "G614",
+   "comp": "raltitrexed",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 453,
+   "b": 1161,
+   "group": "G614",
+   "comp": "furosemide",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 454,
+   "b": 1162,
+   "group": "G614",
+   "comp": "clotrimazole",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 455,
+   "b": 1163,
+   "group": "G614",
+   "comp": "sodium salicylate",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 456,
+   "b": 528,
+   "group": "sameplate",
+   "comp": "gallic acid",
+   "salt": true,
+   "cls": "nodvia",
+   "cls84": "inert"
+  },
+  {
+   "a": 456,
+   "b": 1164,
+   "group": "G614",
+   "comp": "gallic acid",
+   "salt": false,
+   "cls": "lowdvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 456,
+   "b": 1164,
+   "group": "G614",
+   "comp": "gallic acid",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 456,
+   "b": 1235,
+   "group": "diffpos",
+   "comp": "gallic acid",
+   "salt": true,
+   "cls": "lowdvia",
+   "cls84": "inert"
+  },
+  {
+   "a": 456,
+   "b": 1235,
+   "group": "diffpos",
+   "comp": "gallic acid",
+   "salt": true,
+   "cls": "nodvia",
+   "cls84": "inert"
+  },
+  {
+   "a": 528,
+   "b": 1164,
+   "group": "diffpos",
+   "comp": "gallic acid",
+   "salt": true,
+   "cls": "nodvia",
+   "cls84": "inert"
+  },
+  {
+   "a": 528,
+   "b": 1235,
+   "group": "G614",
+   "comp": "gallic acid",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 1164,
+   "b": 1235,
+   "group": "sameplate",
+   "comp": "gallic acid",
+   "salt": true,
+   "cls": "lowdvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 1164,
+   "b": 1235,
+   "group": "sameplate",
+   "comp": "gallic acid",
+   "salt": true,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 457,
+   "b": 1165,
+   "group": "G614",
+   "comp": "(r)-verapamil",
+   "salt": false,
+   "cls": "lowdvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 457,
+   "b": 1165,
+   "group": "G614",
+   "comp": "(r)-verapamil",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 458,
+   "b": 524,
+   "group": "sameplate",
+   "comp": "pyridoxine",
+   "salt": true,
+   "cls": "nodvia",
+   "cls84": "unresolved"
+  },
+  {
+   "a": 458,
+   "b": 1166,
+   "group": "G614",
+   "comp": "pyridoxine",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 524,
+   "b": 1166,
+   "group": "diffpos",
+   "comp": "pyridoxine",
+   "salt": true,
+   "cls": "nodvia",
+   "cls84": "inert"
+  },
+  {
+   "a": 459,
+   "b": 1167,
+   "group": "G614",
+   "comp": "acetohexamide",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 460,
+   "b": 1168,
+   "group": "G614",
+   "comp": "temsirolimus",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 461,
+   "b": 1169,
+   "group": "G614",
+   "comp": "megestrol",
+   "salt": false,
+   "cls": "lowdvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 461,
+   "b": 1169,
+   "group": "G614",
+   "comp": "megestrol",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 462,
+   "b": 1170,
+   "group": "G614",
+   "comp": "diammonium glycyrrhizinate",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 464,
+   "b": 1171,
+   "group": "G614",
+   "comp": "ropivacaine",
+   "salt": false,
+   "cls": "lowdvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 464,
+   "b": 1171,
+   "group": "G614",
+   "comp": "ropivacaine",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 466,
+   "b": 1173,
+   "group": "G614",
+   "comp": "quinestrol",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 467,
+   "b": 481,
+   "group": "sameplate",
+   "comp": "tofacitinib",
+   "salt": true,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 467,
+   "b": 1174,
+   "group": "G614",
+   "comp": "tofacitinib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 467,
+   "b": 1188,
+   "group": "diffpos",
+   "comp": "tofacitinib",
+   "salt": true,
+   "cls": "nodvia",
+   "cls84": "unresolved"
+  },
+  {
+   "a": 481,
+   "b": 1174,
+   "group": "diffpos",
+   "comp": "tofacitinib",
+   "salt": true,
+   "cls": "lowdvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 481,
+   "b": 1174,
+   "group": "diffpos",
+   "comp": "tofacitinib",
+   "salt": true,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 481,
+   "b": 1188,
+   "group": "G614",
+   "comp": "tofacitinib",
+   "salt": false,
+   "cls": "lowdvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 481,
+   "b": 1188,
+   "group": "G614",
+   "comp": "tofacitinib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 1174,
+   "b": 1188,
+   "group": "sameplate",
+   "comp": "tofacitinib",
+   "salt": true,
+   "cls": "lowdvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 1174,
+   "b": 1188,
+   "group": "sameplate",
+   "comp": "tofacitinib",
+   "salt": true,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 468,
+   "b": 1175,
+   "group": "G614",
+   "comp": "trimetrexate",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 469,
+   "b": 1176,
+   "group": "G614",
+   "comp": "gemfibrozil",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 471,
+   "b": 1178,
+   "group": "G614",
+   "comp": "tolcapone",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 473,
+   "b": 1180,
+   "group": "G614",
+   "comp": "aliskiren",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 477,
+   "b": 1184,
+   "group": "G614",
+   "comp": "elagolix",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 478,
+   "b": 1185,
+   "group": "G614",
+   "comp": "resveratrol",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "unresolved"
+  },
+  {
+   "a": 479,
+   "b": 1186,
+   "group": "G614",
+   "comp": "rapamycin",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 480,
+   "b": 1187,
+   "group": "G614",
+   "comp": "saquinavir",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 482,
+   "b": 1189,
+   "group": "G614",
+   "comp": "thymol",
+   "salt": false,
+   "cls": "lowdvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 482,
+   "b": 1189,
+   "group": "G614",
+   "comp": "thymol",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 483,
+   "b": 714,
+   "group": "diffpos",
+   "comp": "almonertinib",
+   "salt": true,
+   "cls": "nodvia",
+   "cls84": "inert"
+  },
+  {
+   "a": 485,
+   "b": 1192,
+   "group": "G614",
+   "comp": "vilanterol",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 486,
+   "b": 1193,
+   "group": "G614",
+   "comp": "lenalidomide",
+   "salt": false,
+   "cls": "lowdvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 486,
+   "b": 1193,
+   "group": "G614",
+   "comp": "lenalidomide",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 487,
+   "b": 1194,
+   "group": "G614",
+   "comp": "azithromycin",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 488,
+   "b": 1195,
+   "group": "G614",
+   "comp": "ritonavir",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 489,
+   "b": 1196,
+   "group": "G614",
+   "comp": "pentamidine",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 491,
+   "b": 1198,
+   "group": "G614",
+   "comp": "sulfisoxazole",
+   "salt": false,
+   "cls": "lowdvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 491,
+   "b": 1198,
+   "group": "G614",
+   "comp": "sulfisoxazole",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 492,
+   "b": 1199,
+   "group": "G614",
+   "comp": "norepinephrine",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 493,
+   "b": 1200,
+   "group": "G614",
+   "comp": "ciclopirox",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 495,
+   "b": 1202,
+   "group": "G614",
+   "comp": "demeclocycline",
+   "salt": false,
+   "cls": "lowdvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 495,
+   "b": 1202,
+   "group": "G614",
+   "comp": "demeclocycline",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 498,
+   "b": 1206,
+   "group": "G614",
+   "comp": "cepharanthine",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 499,
+   "b": 1207,
+   "group": "G614",
+   "comp": "radotinib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 500,
+   "b": 1208,
+   "group": "G614",
+   "comp": "docetaxel",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 502,
+   "b": 1210,
+   "group": "G614",
+   "comp": "tucidinostat",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 503,
+   "b": 1211,
+   "group": "G614",
+   "comp": "bergenin",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 504,
+   "b": 1212,
+   "group": "G614",
+   "comp": "allantoin",
+   "salt": false,
+   "cls": "lowdvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 504,
+   "b": 1212,
+   "group": "G614",
+   "comp": "allantoin",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 505,
+   "b": 1213,
+   "group": "G614",
+   "comp": "bimatoprost",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "inert"
+  },
+  {
+   "a": 506,
+   "b": 1214,
+   "group": "G614",
+   "comp": "triamcinolone",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 507,
+   "b": 1215,
+   "group": "G614",
+   "comp": "olanzapine",
+   "salt": false,
+   "cls": "lowdvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 507,
+   "b": 1215,
+   "group": "G614",
+   "comp": "olanzapine",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 508,
+   "b": 1216,
+   "group": "G614",
+   "comp": "rimonabant",
+   "salt": false,
+   "cls": "lowdvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 508,
+   "b": 1216,
+   "group": "G614",
+   "comp": "rimonabant",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 510,
+   "b": 1218,
+   "group": "G614",
+   "comp": "lumateperone",
+   "salt": false,
+   "cls": "lowdvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 510,
+   "b": 1218,
+   "group": "G614",
+   "comp": "lumateperone",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 511,
+   "b": 1219,
+   "group": "G614",
+   "comp": "relugolix",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "inert"
+  },
+  {
+   "a": 513,
+   "b": 1221,
+   "group": "G614",
+   "comp": "hexylresorcinol",
+   "salt": false,
+   "cls": "lowdvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 513,
+   "b": 1221,
+   "group": "G614",
+   "comp": "hexylresorcinol",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 514,
+   "b": 1222,
+   "group": "G614",
+   "comp": "baicalin",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 515,
+   "b": 1223,
+   "group": "G614",
+   "comp": "berberine",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 517,
+   "b": 1015,
+   "group": "diffpos",
+   "comp": "neratinib",
+   "salt": true,
+   "cls": "nodvia",
+   "cls84": "inert"
+  },
+  {
+   "a": 517,
+   "b": 1225,
+   "group": "G614",
+   "comp": "neratinib",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 1015,
+   "b": 1225,
+   "group": "diffpos",
+   "comp": "neratinib",
+   "salt": true,
+   "cls": "nodvia",
+   "cls84": "inert"
+  },
+  {
+   "a": 518,
+   "b": 1226,
+   "group": "G614",
+   "comp": "sinomenine",
+   "salt": false,
+   "cls": "lowdvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 518,
+   "b": 1226,
+   "group": "G614",
+   "comp": "sinomenine",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 519,
+   "b": 1227,
+   "group": "G614",
+   "comp": "goserelin",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "inert"
+  },
+  {
+   "a": 520,
+   "b": 1228,
+   "group": "G614",
+   "comp": "fusidic acid",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 521,
+   "b": 1229,
+   "group": "G614",
+   "comp": "balsalazide",
+   "salt": false,
+   "cls": "lowdvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 521,
+   "b": 1229,
+   "group": "G614",
+   "comp": "balsalazide",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 522,
+   "b": 1230,
+   "group": "G614",
+   "comp": "cloxacillin",
+   "salt": false,
+   "cls": "lowdvia",
+   "cls84": "inert"
+  },
+  {
+   "a": 522,
+   "b": 1230,
+   "group": "G614",
+   "comp": "cloxacillin",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "inert"
+  },
+  {
+   "a": 523,
+   "b": 1231,
+   "group": "G614",
+   "comp": "artesunate",
+   "salt": false,
+   "cls": "lowdvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 523,
+   "b": 1231,
+   "group": "G614",
+   "comp": "artesunate",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 525,
+   "b": 1233,
+   "group": "G614",
+   "comp": "folic acid",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 527,
+   "b": 1234,
+   "group": "G614",
+   "comp": "adenine",
+   "salt": false,
+   "cls": "lowdvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 527,
+   "b": 1234,
+   "group": "G614",
+   "comp": "adenine",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 529,
+   "b": 1236,
+   "group": "G614",
+   "comp": "lipoic acid",
+   "salt": false,
+   "cls": "lowdvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 529,
+   "b": 1236,
+   "group": "G614",
+   "comp": "lipoic acid",
+   "salt": false,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 546,
+   "b": 849,
+   "group": "diffpos",
+   "comp": "crizotinib",
+   "salt": true,
+   "cls": "lowdvia",
+   "cls84": "inert"
+  },
+  {
+   "a": 546,
+   "b": 849,
+   "group": "diffpos",
+   "comp": "crizotinib",
+   "salt": true,
+   "cls": "nodvia",
+   "cls84": "inert"
+  },
+  {
+   "a": 548,
+   "b": 784,
+   "group": "diffpos",
+   "comp": "bestatin",
+   "salt": true,
+   "cls": "nodvia",
+   "cls84": "inert"
+  },
+  {
+   "a": 552,
+   "b": 597,
+   "group": "sameplate",
+   "comp": "cytarabine",
+   "salt": true,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 604,
+   "b": 871,
+   "group": "diffpos",
+   "comp": "dapagliflozin",
+   "salt": true,
+   "cls": "nodvia",
+   "cls84": "unresolved"
+  },
+  {
+   "a": 634,
+   "b": 942,
+   "group": "diffpos",
+   "comp": "crizotinib",
+   "salt": true,
+   "cls": "lowdvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 634,
+   "b": 942,
+   "group": "diffpos",
+   "comp": "crizotinib",
+   "salt": true,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  },
+  {
+   "a": 669,
+   "b": 877,
+   "group": "diffpos",
+   "comp": "canagliflozin",
+   "salt": true,
+   "cls": "nodvia",
+   "cls84": "unresolved"
+  },
+  {
+   "a": 881,
+   "b": 895,
+   "group": "sameplate",
+   "comp": "omeprazole",
+   "salt": true,
+   "cls": "lowdvia",
+   "cls84": "inert"
+  },
+  {
+   "a": 881,
+   "b": 895,
+   "group": "sameplate",
+   "comp": "omeprazole",
+   "salt": true,
+   "cls": "nodvia",
+   "cls84": "inert"
+  },
+  {
+   "a": 975,
+   "b": 988,
+   "group": "sameplate",
+   "comp": "omeprazole",
+   "salt": true,
+   "cls": "nodvia",
+   "cls84": "confirmed"
+  }
+ ]
+}

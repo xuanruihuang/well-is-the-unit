@@ -1,0 +1,204 @@
+{
+ "rules": "Separating the well from plate x drug (samewell/notes.md \u00a7101, independent review 10-29 item A4; A100).\nResponses: treated-well reference D' (as core82/ver99); scores per record (pair x line, both wells as target,\naveraged) as in the paper; compound-equal means and sign tests over compounds (ver99.summ).\n(1) Product: verified pairs at different positions split into same-name and salt-name pairs.\n(2) Dose direction: for a pair of compound k at dose c, each line's dose direction g_t = (mean response of k's wells at\n    the higher other dose) - (at the lower other dose), wells of the pair and plate 13 excluded. Every response of line\n    t in either well is replaced by its residual on g_t (least squares, line genes); scores recomputed. Also the share\n    of the line's between-well difference (y_a - y_b) explained by g_t (median R^2). A first-order dosing or potency\n    difference between the wells lies along g_t; a well shift does not.\n(3) Plates 6/14 spatial structure: per same-position pair, c(x) = mean over lines of (y_6 - y_14) on the common genes;\n    Pearson between c(x) and c(x') for positions at Chebyshev distance 1, 2-3 and >= 4; and between the two wells of\n    the three compounds with two wells per plate (same compound, different positions) against different compounds at\n    the same distances.\n(4) Adagrasib 0.05 uM: 14 wells on 13 plates (two on plate 7). Per well w and line t: same = Pearson(mean of the other\n    lines in w, y_tw); other(w') likewise with well w'. Advantage per well = mean over lines of same - mean over w' of\n    other; sign test over the 14 wells. The pair of plate-7 wells (one plate, separately dosed wells) against the\n    cross-plate pairs: their replicate-well scores, record medians. A shift that belongs to plate x drug would make\n    the plate-7 pair agree better than cross-plate pairs; a well shift would not.\nOutput $WORKSPACE/rt/samewell/well99.json",
+ "product | same name": {
+  "pairs": 6,
+  "compounds": 2,
+  "same": 0.6791,
+  "other": 0.3435,
+  "diff_record_mean": 0.32,
+  "diff_compound_mean": 0.32,
+  "compounds_positive": 2,
+  "sign_p": 0.5
+ },
+ "product | salt name": {
+  "pairs": 12,
+  "compounds": 8,
+  "same": 0.6875,
+  "other": 0.3941,
+  "diff_record_mean": 0.3211,
+  "diff_compound_mean": 0.3845,
+  "compounds_positive": 8,
+  "sign_p": 0.0078125
+ },
+ "dose": {
+  "diffpos verified": {
+   "pairs_with_two_other_doses": 18,
+   "of": 18,
+   "before": {
+    "pairs": 18,
+    "compounds": 9,
+    "same": 0.6854,
+    "other": 0.3673,
+    "diff_record_mean": 0.3207,
+    "diff_compound_mean": 0.3847,
+    "compounds_positive": 9,
+    "sign_p": 0.00390625
+   },
+   "after": {
+    "pairs": 18,
+    "compounds": 9,
+    "same": 0.6678,
+    "other": 0.2906,
+    "diff_record_mean": 0.3612,
+    "diff_compound_mean": 0.4179,
+    "compounds_positive": 9,
+    "sign_p": 0.00390625
+   },
+   "median_R2_between_well_difference": 0.0205
+  },
+  "G614 verified": {
+   "pairs_with_two_other_doses": 79,
+   "of": 80,
+   "before": {
+    "pairs": 79,
+    "compounds": 76,
+    "same": 0.7086,
+    "other": 0.4783,
+    "diff_record_mean": 0.2111,
+    "diff_compound_mean": 0.2104,
+    "compounds_positive": 76,
+    "sign_p": 2.6469779601696886e-23
+   },
+   "after": {
+    "pairs": 79,
+    "compounds": 76,
+    "same": 0.6925,
+    "other": 0.4673,
+    "diff_record_mean": 0.2076,
+    "diff_compound_mean": 0.2081,
+    "compounds_positive": 76,
+    "sign_p": 2.6469779601696886e-23
+   },
+   "median_R2_between_well_difference": 0.0216
+  },
+  "sameplate verified": {
+   "pairs_with_two_other_doses": 6,
+   "of": 6,
+   "before": {
+    "pairs": 6,
+    "compounds": 4,
+    "same": 0.698,
+    "other": 0.1396,
+    "diff_record_mean": 0.5104,
+    "diff_compound_mean": 0.5618,
+    "compounds_positive": 4,
+    "sign_p": 0.125
+   },
+   "after": {
+    "pairs": 6,
+    "compounds": 4,
+    "same": 0.6583,
+    "other": 0.0978,
+    "diff_record_mean": 0.5737,
+    "diff_compound_mean": 0.5936,
+    "compounds_positive": 4,
+    "sign_p": 0.125
+   },
+   "median_R2_between_well_difference": 0.0138
+  }
+ },
+ "spatial_614": {
+  "different compounds": {
+   "1": {
+    "n": 294,
+    "median": 0.1531
+   },
+   "2-3": {
+    "n": 1096,
+    "median": 0.0473
+   },
+   ">=4": {
+    "n": 2612,
+    "median": -0.0502
+   }
+  },
+  "same compound, two wells": {
+   "2-3": [
+    0.106
+   ],
+   ">=4": [
+    -0.36,
+    0.044
+   ]
+  },
+  "positions": 90,
+  "permutation": {
+   "observed": 0.2033,
+   "null_q95": 0.0443,
+   "null_max": 0.0881,
+   "p": 0.000999000999000999
+  }
+ },
+ "adagrasib_wells": [
+  [
+   "plate1",
+   93
+  ],
+  [
+   "plate2",
+   93
+  ],
+  [
+   "plate3",
+   93
+  ],
+  [
+   "plate4",
+   93
+  ],
+  [
+   "plate5",
+   93
+  ],
+  [
+   "plate6",
+   93
+  ],
+  [
+   "plate7",
+   81
+  ],
+  [
+   "plate7",
+   93
+  ],
+  [
+   "plate8",
+   93
+  ],
+  [
+   "plate9",
+   93
+  ],
+  [
+   "plate10",
+   93
+  ],
+  [
+   "plate11",
+   93
+  ],
+  [
+   "plate12",
+   93
+  ],
+  [
+   "plate14",
+   93
+  ]
+ ],
+ "adagrasib": {
+  "wells": 14,
+  "advantage_per_well_mean": 0.3738,
+  "wells_positive": 14,
+  "sign_p": 0.0001220703125,
+  "plate7_pair_other_median": -0.19,
+  "cross_plate_pairs_other_median_of_pair_medians": 0.3272,
+  "cross_plate_pair_medians_q10_q90": [
+   -0.0893,
+   0.4968
+  ],
+  "plate7_rank_among_pairs": 90,
+  "n_cross_pairs": 90
+ }
+}

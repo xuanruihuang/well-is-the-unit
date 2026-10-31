@@ -1,0 +1,2237 @@
+{
+ "rules": "Label classes of the verified pairs, saved with their wells, and per-plate counts for the control-well pairs\n(samewell/notes.md \u00a784; A100). Classification as check83.py part A: expression (line-mean D' signature, common\ngenes) and viability pattern (each line's viability log2 odds against the plate's DMSO wells); a pair is 'confirmed'\nif both directions reach the 90th percentile among the other treated wells of the partner's plate (plate 13\nexcluded) in either readout; 'inert' if both wells' dvia are below the median dvia of treated wells and it is not\nconfirmed; 'discordant' if one well's dvia is above the 80th percentile and the other's below the median;\notherwise 'unresolved'. Control pairs (H11 - H12, plate 13 excluded): per plate, median over lines of the\nsame-pair and other-plates predictions; number of plates where same > other.\nOutput $WORKSPACE/rt/samewell/labels84.json",
+ "pairs": [
+  {
+   "a": 2,
+   "b": 50,
+   "group": "sameplate",
+   "comp": "everolimus",
+   "salt": false,
+   "cls": "unresolved"
+  },
+  {
+   "a": 5,
+   "b": 70,
+   "group": "sameplate",
+   "comp": "gemcitabine",
+   "salt": false,
+   "cls": "unresolved"
+  },
+  {
+   "a": 6,
+   "b": 544,
+   "group": "diffpos",
+   "comp": "irinotecan",
+   "salt": true,
+   "cls": "unresolved"
+  },
+  {
+   "a": 21,
+   "b": 869,
+   "group": "diffpos",
+   "comp": "binimetinib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 31,
+   "b": 557,
+   "group": "diffpos",
+   "comp": "trametinib",
+   "salt": true,
+   "cls": "discordant"
+  },
+  {
+   "a": 31,
+   "b": 850,
+   "group": "diffpos",
+   "comp": "trametinib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 557,
+   "b": 850,
+   "group": "diffpos",
+   "comp": "trametinib",
+   "salt": true,
+   "cls": "confirmed"
+  },
+  {
+   "a": 32,
+   "b": 553,
+   "group": "diffpos",
+   "comp": "afatinib",
+   "salt": false,
+   "cls": "unresolved"
+  },
+  {
+   "a": 55,
+   "b": 550,
+   "group": "diffpos",
+   "comp": "belumosudil",
+   "salt": true,
+   "cls": "inert"
+  },
+  {
+   "a": 65,
+   "b": 860,
+   "group": "diffpos",
+   "comp": "ixazomib",
+   "salt": true,
+   "cls": "unresolved"
+  },
+  {
+   "a": 81,
+   "b": 170,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 81,
+   "b": 253,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 81,
+   "b": 346,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 81,
+   "b": 440,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 81,
+   "b": 533,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 81,
+   "b": 608,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "inert"
+  },
+  {
+   "a": 81,
+   "b": 620,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 81,
+   "b": 703,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 81,
+   "b": 783,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 81,
+   "b": 874,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 81,
+   "b": 968,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 81,
+   "b": 1060,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 81,
+   "b": 1240,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "unresolved"
+  },
+  {
+   "a": 170,
+   "b": 253,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "inert"
+  },
+  {
+   "a": 170,
+   "b": 346,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 170,
+   "b": 440,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 170,
+   "b": 533,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "inert"
+  },
+  {
+   "a": 170,
+   "b": 608,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "inert"
+  },
+  {
+   "a": 170,
+   "b": 620,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "unresolved"
+  },
+  {
+   "a": 170,
+   "b": 703,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 170,
+   "b": 783,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "inert"
+  },
+  {
+   "a": 170,
+   "b": 874,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 170,
+   "b": 968,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 170,
+   "b": 1060,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 170,
+   "b": 1240,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "unresolved"
+  },
+  {
+   "a": 253,
+   "b": 346,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 253,
+   "b": 440,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 253,
+   "b": 533,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "inert"
+  },
+  {
+   "a": 253,
+   "b": 608,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "inert"
+  },
+  {
+   "a": 253,
+   "b": 620,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 253,
+   "b": 703,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "inert"
+  },
+  {
+   "a": 253,
+   "b": 783,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 253,
+   "b": 874,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "inert"
+  },
+  {
+   "a": 253,
+   "b": 968,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 253,
+   "b": 1060,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "inert"
+  },
+  {
+   "a": 253,
+   "b": 1240,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 346,
+   "b": 440,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 346,
+   "b": 533,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 346,
+   "b": 608,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "inert"
+  },
+  {
+   "a": 346,
+   "b": 620,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 346,
+   "b": 703,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 346,
+   "b": 783,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 346,
+   "b": 874,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 346,
+   "b": 968,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 346,
+   "b": 1060,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 346,
+   "b": 1240,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 440,
+   "b": 533,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 440,
+   "b": 608,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "inert"
+  },
+  {
+   "a": 440,
+   "b": 620,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 440,
+   "b": 703,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 440,
+   "b": 783,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 440,
+   "b": 874,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 440,
+   "b": 968,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 440,
+   "b": 1060,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 440,
+   "b": 1240,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 533,
+   "b": 608,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 533,
+   "b": 620,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 533,
+   "b": 703,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 533,
+   "b": 783,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 533,
+   "b": 874,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 533,
+   "b": 968,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 533,
+   "b": 1060,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 533,
+   "b": 1240,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "unresolved"
+  },
+  {
+   "a": 608,
+   "b": 620,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "unresolved"
+  },
+  {
+   "a": 608,
+   "b": 703,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "inert"
+  },
+  {
+   "a": 608,
+   "b": 783,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "inert"
+  },
+  {
+   "a": 608,
+   "b": 874,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "inert"
+  },
+  {
+   "a": 608,
+   "b": 968,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "inert"
+  },
+  {
+   "a": 608,
+   "b": 1060,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "inert"
+  },
+  {
+   "a": 608,
+   "b": 1240,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "unresolved"
+  },
+  {
+   "a": 620,
+   "b": 703,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 620,
+   "b": 783,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 620,
+   "b": 874,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 620,
+   "b": 968,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 620,
+   "b": 1060,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "unresolved"
+  },
+  {
+   "a": 620,
+   "b": 1240,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "unresolved"
+  },
+  {
+   "a": 703,
+   "b": 783,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 703,
+   "b": 874,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 703,
+   "b": 968,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 703,
+   "b": 1060,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 703,
+   "b": 1240,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "unresolved"
+  },
+  {
+   "a": 783,
+   "b": 874,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 783,
+   "b": 968,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 783,
+   "b": 1060,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "inert"
+  },
+  {
+   "a": 783,
+   "b": 1240,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "unresolved"
+  },
+  {
+   "a": 874,
+   "b": 968,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 874,
+   "b": 1060,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 874,
+   "b": 1240,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "unresolved"
+  },
+  {
+   "a": 968,
+   "b": 1060,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 968,
+   "b": 1240,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "unresolved"
+  },
+  {
+   "a": 1060,
+   "b": 1240,
+   "group": "Ada",
+   "comp": "adagrasib",
+   "salt": false,
+   "cls": "unresolved"
+  },
+  {
+   "a": 83,
+   "b": 133,
+   "group": "sameplate",
+   "comp": "everolimus",
+   "salt": false,
+   "cls": "discordant"
+  },
+  {
+   "a": 86,
+   "b": 157,
+   "group": "sameplate",
+   "comp": "gemcitabine",
+   "salt": false,
+   "cls": "unresolved"
+  },
+  {
+   "a": 87,
+   "b": 632,
+   "group": "diffpos",
+   "comp": "irinotecan",
+   "salt": true,
+   "cls": "confirmed"
+  },
+  {
+   "a": 103,
+   "b": 963,
+   "group": "diffpos",
+   "comp": "binimetinib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 113,
+   "b": 646,
+   "group": "diffpos",
+   "comp": "trametinib",
+   "salt": true,
+   "cls": "confirmed"
+  },
+  {
+   "a": 113,
+   "b": 943,
+   "group": "diffpos",
+   "comp": "trametinib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 646,
+   "b": 943,
+   "group": "diffpos",
+   "comp": "trametinib",
+   "salt": true,
+   "cls": "confirmed"
+  },
+  {
+   "a": 114,
+   "b": 642,
+   "group": "diffpos",
+   "comp": "afatinib",
+   "salt": false,
+   "cls": "inert"
+  },
+  {
+   "a": 139,
+   "b": 639,
+   "group": "diffpos",
+   "comp": "belumosudil",
+   "salt": true,
+   "cls": "unresolved"
+  },
+  {
+   "a": 151,
+   "b": 954,
+   "group": "diffpos",
+   "comp": "ixazomib",
+   "salt": true,
+   "cls": "unresolved"
+  },
+  {
+   "a": 173,
+   "b": 222,
+   "group": "sameplate",
+   "comp": "everolimus",
+   "salt": false,
+   "cls": "unresolved"
+  },
+  {
+   "a": 176,
+   "b": 241,
+   "group": "sameplate",
+   "comp": "gemcitabine",
+   "salt": false,
+   "cls": "discordant"
+  },
+  {
+   "a": 177,
+   "b": 715,
+   "group": "diffpos",
+   "comp": "irinotecan",
+   "salt": true,
+   "cls": "discordant"
+  },
+  {
+   "a": 191,
+   "b": 1055,
+   "group": "diffpos",
+   "comp": "binimetinib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 202,
+   "b": 727,
+   "group": "diffpos",
+   "comp": "trametinib",
+   "salt": true,
+   "cls": "confirmed"
+  },
+  {
+   "a": 202,
+   "b": 1036,
+   "group": "diffpos",
+   "comp": "trametinib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 727,
+   "b": 1036,
+   "group": "diffpos",
+   "comp": "trametinib",
+   "salt": true,
+   "cls": "confirmed"
+  },
+  {
+   "a": 203,
+   "b": 723,
+   "group": "diffpos",
+   "comp": "afatinib",
+   "salt": false,
+   "cls": "discordant"
+  },
+  {
+   "a": 227,
+   "b": 720,
+   "group": "diffpos",
+   "comp": "belumosudil",
+   "salt": true,
+   "cls": "unresolved"
+  },
+  {
+   "a": 237,
+   "b": 1047,
+   "group": "diffpos",
+   "comp": "ixazomib",
+   "salt": true,
+   "cls": "unresolved"
+  },
+  {
+   "a": 257,
+   "b": 539,
+   "group": "diffpos",
+   "comp": "berbamine",
+   "salt": true,
+   "cls": "inert"
+  },
+  {
+   "a": 269,
+   "b": 341,
+   "group": "sameplate",
+   "comp": "gallic acid",
+   "salt": true,
+   "cls": "discordant"
+  },
+  {
+   "a": 271,
+   "b": 337,
+   "group": "sameplate",
+   "comp": "pyridoxine",
+   "salt": true,
+   "cls": "unresolved"
+  },
+  {
+   "a": 280,
+   "b": 294,
+   "group": "sameplate",
+   "comp": "tofacitinib",
+   "salt": true,
+   "cls": "unresolved"
+  },
+  {
+   "a": 287,
+   "b": 596,
+   "group": "diffpos",
+   "comp": "fluvoxamine",
+   "salt": true,
+   "cls": "unresolved"
+  },
+  {
+   "a": 296,
+   "b": 543,
+   "group": "diffpos",
+   "comp": "almonertinib",
+   "salt": true,
+   "cls": "inert"
+  },
+  {
+   "a": 313,
+   "b": 611,
+   "group": "diffpos",
+   "comp": "docetaxel",
+   "salt": true,
+   "cls": "discordant"
+  },
+  {
+   "a": 330,
+   "b": 829,
+   "group": "diffpos",
+   "comp": "neratinib",
+   "salt": true,
+   "cls": "discordant"
+  },
+  {
+   "a": 350,
+   "b": 627,
+   "group": "diffpos",
+   "comp": "berbamine",
+   "salt": true,
+   "cls": "unresolved"
+  },
+  {
+   "a": 362,
+   "b": 435,
+   "group": "sameplate",
+   "comp": "gallic acid",
+   "salt": true,
+   "cls": "discordant"
+  },
+  {
+   "a": 364,
+   "b": 431,
+   "group": "sameplate",
+   "comp": "pyridoxine",
+   "salt": true,
+   "cls": "unresolved"
+  },
+  {
+   "a": 373,
+   "b": 387,
+   "group": "sameplate",
+   "comp": "tofacitinib",
+   "salt": true,
+   "cls": "confirmed"
+  },
+  {
+   "a": 380,
+   "b": 681,
+   "group": "diffpos",
+   "comp": "fluvoxamine",
+   "salt": true,
+   "cls": "unresolved"
+  },
+  {
+   "a": 389,
+   "b": 631,
+   "group": "diffpos",
+   "comp": "almonertinib",
+   "salt": true,
+   "cls": "unresolved"
+  },
+  {
+   "a": 407,
+   "b": 694,
+   "group": "diffpos",
+   "comp": "docetaxel",
+   "salt": true,
+   "cls": "unresolved"
+  },
+  {
+   "a": 424,
+   "b": 922,
+   "group": "diffpos",
+   "comp": "neratinib",
+   "salt": true,
+   "cls": "confirmed"
+  },
+  {
+   "a": 441,
+   "b": 1149,
+   "group": "G614",
+   "comp": "8-hydroxyquinoline",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 442,
+   "b": 1150,
+   "group": "G614",
+   "comp": "chlorhexidine",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 443,
+   "b": 1151,
+   "group": "G614",
+   "comp": "trifluridine",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 444,
+   "b": 710,
+   "group": "diffpos",
+   "comp": "berbamine",
+   "salt": true,
+   "cls": "unresolved"
+  },
+  {
+   "a": 444,
+   "b": 1152,
+   "group": "G614",
+   "comp": "berbamine",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 710,
+   "b": 1152,
+   "group": "diffpos",
+   "comp": "berbamine",
+   "salt": true,
+   "cls": "confirmed"
+  },
+  {
+   "a": 445,
+   "b": 1153,
+   "group": "G614",
+   "comp": "retinoic acid",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 446,
+   "b": 1154,
+   "group": "G614",
+   "comp": "cysteamine",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 447,
+   "b": 1155,
+   "group": "G614",
+   "comp": "vinblastine",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 448,
+   "b": 1156,
+   "group": "G614",
+   "comp": "pasireotide",
+   "salt": false,
+   "cls": "unresolved"
+  },
+  {
+   "a": 449,
+   "b": 1157,
+   "group": "G614",
+   "comp": "riluzole",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 450,
+   "b": 1158,
+   "group": "G614",
+   "comp": "palmatine",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 451,
+   "b": 1159,
+   "group": "G614",
+   "comp": "isocorydine",
+   "salt": false,
+   "cls": "discordant"
+  },
+  {
+   "a": 452,
+   "b": 1160,
+   "group": "G614",
+   "comp": "raltitrexed",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 453,
+   "b": 1161,
+   "group": "G614",
+   "comp": "furosemide",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 454,
+   "b": 1162,
+   "group": "G614",
+   "comp": "clotrimazole",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 455,
+   "b": 1163,
+   "group": "G614",
+   "comp": "sodium salicylate",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 456,
+   "b": 528,
+   "group": "sameplate",
+   "comp": "gallic acid",
+   "salt": true,
+   "cls": "inert"
+  },
+  {
+   "a": 456,
+   "b": 1164,
+   "group": "G614",
+   "comp": "gallic acid",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 456,
+   "b": 1235,
+   "group": "diffpos",
+   "comp": "gallic acid",
+   "salt": true,
+   "cls": "inert"
+  },
+  {
+   "a": 528,
+   "b": 1164,
+   "group": "diffpos",
+   "comp": "gallic acid",
+   "salt": true,
+   "cls": "inert"
+  },
+  {
+   "a": 528,
+   "b": 1235,
+   "group": "G614",
+   "comp": "gallic acid",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 1164,
+   "b": 1235,
+   "group": "sameplate",
+   "comp": "gallic acid",
+   "salt": true,
+   "cls": "confirmed"
+  },
+  {
+   "a": 457,
+   "b": 1165,
+   "group": "G614",
+   "comp": "(r)-verapamil",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 458,
+   "b": 524,
+   "group": "sameplate",
+   "comp": "pyridoxine",
+   "salt": true,
+   "cls": "unresolved"
+  },
+  {
+   "a": 458,
+   "b": 1166,
+   "group": "G614",
+   "comp": "pyridoxine",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 458,
+   "b": 1232,
+   "group": "diffpos",
+   "comp": "pyridoxine",
+   "salt": true,
+   "cls": "unresolved"
+  },
+  {
+   "a": 524,
+   "b": 1166,
+   "group": "diffpos",
+   "comp": "pyridoxine",
+   "salt": true,
+   "cls": "inert"
+  },
+  {
+   "a": 524,
+   "b": 1232,
+   "group": "G614",
+   "comp": "pyridoxine",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 1166,
+   "b": 1232,
+   "group": "sameplate",
+   "comp": "pyridoxine",
+   "salt": true,
+   "cls": "discordant"
+  },
+  {
+   "a": 459,
+   "b": 1167,
+   "group": "G614",
+   "comp": "acetohexamide",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 460,
+   "b": 1168,
+   "group": "G614",
+   "comp": "temsirolimus",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 461,
+   "b": 1169,
+   "group": "G614",
+   "comp": "megestrol",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 462,
+   "b": 1170,
+   "group": "G614",
+   "comp": "diammonium glycyrrhizinate",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 464,
+   "b": 1171,
+   "group": "G614",
+   "comp": "ropivacaine",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 465,
+   "b": 1172,
+   "group": "G614",
+   "comp": "salicylic acid",
+   "salt": false,
+   "cls": "discordant"
+  },
+  {
+   "a": 466,
+   "b": 1173,
+   "group": "G614",
+   "comp": "quinestrol",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 467,
+   "b": 481,
+   "group": "sameplate",
+   "comp": "tofacitinib",
+   "salt": true,
+   "cls": "confirmed"
+  },
+  {
+   "a": 467,
+   "b": 1174,
+   "group": "G614",
+   "comp": "tofacitinib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 467,
+   "b": 1188,
+   "group": "diffpos",
+   "comp": "tofacitinib",
+   "salt": true,
+   "cls": "unresolved"
+  },
+  {
+   "a": 481,
+   "b": 1174,
+   "group": "diffpos",
+   "comp": "tofacitinib",
+   "salt": true,
+   "cls": "confirmed"
+  },
+  {
+   "a": 481,
+   "b": 1188,
+   "group": "G614",
+   "comp": "tofacitinib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 1174,
+   "b": 1188,
+   "group": "sameplate",
+   "comp": "tofacitinib",
+   "salt": true,
+   "cls": "confirmed"
+  },
+  {
+   "a": 468,
+   "b": 1175,
+   "group": "G614",
+   "comp": "trimetrexate",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 469,
+   "b": 1176,
+   "group": "G614",
+   "comp": "gemfibrozil",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 470,
+   "b": 1177,
+   "group": "G614",
+   "comp": "18\u03b2-glycyrrhetinic acid",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 471,
+   "b": 1178,
+   "group": "G614",
+   "comp": "tolcapone",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 472,
+   "b": 1179,
+   "group": "G614",
+   "comp": "terfenadine",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 473,
+   "b": 1180,
+   "group": "G614",
+   "comp": "aliskiren",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 474,
+   "b": 763,
+   "group": "diffpos",
+   "comp": "fluvoxamine",
+   "salt": true,
+   "cls": "unresolved"
+  },
+  {
+   "a": 474,
+   "b": 1181,
+   "group": "G614",
+   "comp": "fluvoxamine",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 763,
+   "b": 1181,
+   "group": "diffpos",
+   "comp": "fluvoxamine",
+   "salt": true,
+   "cls": "unresolved"
+  },
+  {
+   "a": 475,
+   "b": 1182,
+   "group": "G614",
+   "comp": "s-adenosyl-l-methionine",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 476,
+   "b": 1183,
+   "group": "G614",
+   "comp": "idarubicin",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 477,
+   "b": 1184,
+   "group": "G614",
+   "comp": "elagolix",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 478,
+   "b": 1185,
+   "group": "G614",
+   "comp": "resveratrol",
+   "salt": false,
+   "cls": "unresolved"
+  },
+  {
+   "a": 479,
+   "b": 1186,
+   "group": "G614",
+   "comp": "rapamycin",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 480,
+   "b": 1187,
+   "group": "G614",
+   "comp": "saquinavir",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 482,
+   "b": 1189,
+   "group": "G614",
+   "comp": "thymol",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 483,
+   "b": 714,
+   "group": "diffpos",
+   "comp": "almonertinib",
+   "salt": true,
+   "cls": "inert"
+  },
+  {
+   "a": 483,
+   "b": 1190,
+   "group": "G614",
+   "comp": "almonertinib",
+   "salt": false,
+   "cls": "unresolved"
+  },
+  {
+   "a": 714,
+   "b": 1190,
+   "group": "diffpos",
+   "comp": "almonertinib",
+   "salt": true,
+   "cls": "unresolved"
+  },
+  {
+   "a": 484,
+   "b": 1191,
+   "group": "G614",
+   "comp": "darinaparsin",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 485,
+   "b": 1192,
+   "group": "G614",
+   "comp": "vilanterol",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 486,
+   "b": 1193,
+   "group": "G614",
+   "comp": "lenalidomide",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 487,
+   "b": 1194,
+   "group": "G614",
+   "comp": "azithromycin",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 488,
+   "b": 1195,
+   "group": "G614",
+   "comp": "ritonavir",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 489,
+   "b": 1196,
+   "group": "G614",
+   "comp": "pentamidine",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 490,
+   "b": 1197,
+   "group": "G614",
+   "comp": "adenosine",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 491,
+   "b": 1198,
+   "group": "G614",
+   "comp": "sulfisoxazole",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 492,
+   "b": 1199,
+   "group": "G614",
+   "comp": "norepinephrine",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 493,
+   "b": 1200,
+   "group": "G614",
+   "comp": "ciclopirox",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 494,
+   "b": 1201,
+   "group": "G614",
+   "comp": "lidocaine",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 495,
+   "b": 1202,
+   "group": "G614",
+   "comp": "demeclocycline",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 496,
+   "b": 1203,
+   "group": "G614",
+   "comp": "mitoxantrone",
+   "salt": false,
+   "cls": "discordant"
+  },
+  {
+   "a": 497,
+   "b": 1205,
+   "group": "G614",
+   "comp": "busulfan",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 498,
+   "b": 1206,
+   "group": "G614",
+   "comp": "cepharanthine",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 499,
+   "b": 1207,
+   "group": "G614",
+   "comp": "radotinib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 500,
+   "b": 777,
+   "group": "diffpos",
+   "comp": "docetaxel",
+   "salt": true,
+   "cls": "unresolved"
+  },
+  {
+   "a": 500,
+   "b": 1208,
+   "group": "G614",
+   "comp": "docetaxel",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 777,
+   "b": 1208,
+   "group": "diffpos",
+   "comp": "docetaxel",
+   "salt": true,
+   "cls": "confirmed"
+  },
+  {
+   "a": 501,
+   "b": 1209,
+   "group": "G614",
+   "comp": "triclosan",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 502,
+   "b": 1210,
+   "group": "G614",
+   "comp": "tucidinostat",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 503,
+   "b": 1211,
+   "group": "G614",
+   "comp": "bergenin",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 504,
+   "b": 1212,
+   "group": "G614",
+   "comp": "allantoin",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 505,
+   "b": 1213,
+   "group": "G614",
+   "comp": "bimatoprost",
+   "salt": false,
+   "cls": "inert"
+  },
+  {
+   "a": 506,
+   "b": 1214,
+   "group": "G614",
+   "comp": "triamcinolone",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 507,
+   "b": 1215,
+   "group": "G614",
+   "comp": "olanzapine",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 508,
+   "b": 1216,
+   "group": "G614",
+   "comp": "rimonabant",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 509,
+   "b": 1217,
+   "group": "G614",
+   "comp": "pentagastrin",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 510,
+   "b": 1218,
+   "group": "G614",
+   "comp": "lumateperone",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 511,
+   "b": 1219,
+   "group": "G614",
+   "comp": "relugolix",
+   "salt": false,
+   "cls": "inert"
+  },
+  {
+   "a": 512,
+   "b": 1220,
+   "group": "G614",
+   "comp": "homoharringtonine",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 513,
+   "b": 1221,
+   "group": "G614",
+   "comp": "hexylresorcinol",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 514,
+   "b": 1222,
+   "group": "G614",
+   "comp": "baicalin",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 515,
+   "b": 1223,
+   "group": "G614",
+   "comp": "berberine",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 516,
+   "b": 1224,
+   "group": "G614",
+   "comp": "medroxyprogesterone acetate",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 517,
+   "b": 1015,
+   "group": "diffpos",
+   "comp": "neratinib",
+   "salt": true,
+   "cls": "inert"
+  },
+  {
+   "a": 517,
+   "b": 1225,
+   "group": "G614",
+   "comp": "neratinib",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 1015,
+   "b": 1225,
+   "group": "diffpos",
+   "comp": "neratinib",
+   "salt": true,
+   "cls": "inert"
+  },
+  {
+   "a": 518,
+   "b": 1226,
+   "group": "G614",
+   "comp": "sinomenine",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 519,
+   "b": 1227,
+   "group": "G614",
+   "comp": "goserelin",
+   "salt": false,
+   "cls": "inert"
+  },
+  {
+   "a": 520,
+   "b": 1228,
+   "group": "G614",
+   "comp": "fusidic acid",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 521,
+   "b": 1229,
+   "group": "G614",
+   "comp": "balsalazide",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 522,
+   "b": 1230,
+   "group": "G614",
+   "comp": "cloxacillin",
+   "salt": false,
+   "cls": "inert"
+  },
+  {
+   "a": 523,
+   "b": 1231,
+   "group": "G614",
+   "comp": "artesunate",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 525,
+   "b": 1233,
+   "group": "G614",
+   "comp": "folic acid",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 527,
+   "b": 1234,
+   "group": "G614",
+   "comp": "adenine",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 529,
+   "b": 1236,
+   "group": "G614",
+   "comp": "lipoic acid",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 530,
+   "b": 1237,
+   "group": "G614",
+   "comp": "amsacrine",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 531,
+   "b": 1238,
+   "group": "G614",
+   "comp": "anethole trithione",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 532,
+   "b": 1239,
+   "group": "G614",
+   "comp": "clonidine",
+   "salt": false,
+   "cls": "confirmed"
+  },
+  {
+   "a": 546,
+   "b": 849,
+   "group": "diffpos",
+   "comp": "crizotinib",
+   "salt": true,
+   "cls": "inert"
+  },
+  {
+   "a": 548,
+   "b": 784,
+   "group": "diffpos",
+   "comp": "bestatin",
+   "salt": true,
+   "cls": "inert"
+  },
+  {
+   "a": 552,
+   "b": 597,
+   "group": "sameplate",
+   "comp": "cytarabine",
+   "salt": true,
+   "cls": "confirmed"
+  },
+  {
+   "a": 564,
+   "b": 798,
+   "group": "diffpos",
+   "comp": "tirabrutinib",
+   "salt": true,
+   "cls": "unresolved"
+  },
+  {
+   "a": 581,
+   "b": 786,
+   "group": "diffpos",
+   "comp": "canagliflozin",
+   "salt": true,
+   "cls": "unresolved"
+  },
+  {
+   "a": 604,
+   "b": 871,
+   "group": "diffpos",
+   "comp": "dapagliflozin",
+   "salt": true,
+   "cls": "unresolved"
+  },
+  {
+   "a": 605,
+   "b": 805,
+   "group": "diffpos",
+   "comp": "imiquimod",
+   "salt": true,
+   "cls": "discordant"
+  },
+  {
+   "a": 634,
+   "b": 942,
+   "group": "diffpos",
+   "comp": "crizotinib",
+   "salt": true,
+   "cls": "confirmed"
+  },
+  {
+   "a": 637,
+   "b": 875,
+   "group": "diffpos",
+   "comp": "bestatin",
+   "salt": true,
+   "cls": "unresolved"
+  },
+  {
+   "a": 641,
+   "b": 682,
+   "group": "sameplate",
+   "comp": "cytarabine",
+   "salt": true,
+   "cls": "unresolved"
+  },
+  {
+   "a": 653,
+   "b": 889,
+   "group": "diffpos",
+   "comp": "tirabrutinib",
+   "salt": true,
+   "cls": "confirmed"
+  },
+  {
+   "a": 669,
+   "b": 877,
+   "group": "diffpos",
+   "comp": "canagliflozin",
+   "salt": true,
+   "cls": "unresolved"
+  },
+  {
+   "a": 717,
+   "b": 1035,
+   "group": "diffpos",
+   "comp": "crizotinib",
+   "salt": true,
+   "cls": "unresolved"
+  },
+  {
+   "a": 718,
+   "b": 969,
+   "group": "diffpos",
+   "comp": "bestatin",
+   "salt": true,
+   "cls": "unresolved"
+  },
+  {
+   "a": 722,
+   "b": 764,
+   "group": "sameplate",
+   "comp": "cytarabine",
+   "salt": true,
+   "cls": "unresolved"
+  },
+  {
+   "a": 734,
+   "b": 983,
+   "group": "diffpos",
+   "comp": "tirabrutinib",
+   "salt": true,
+   "cls": "unresolved"
+  },
+  {
+   "a": 751,
+   "b": 971,
+   "group": "diffpos",
+   "comp": "canagliflozin",
+   "salt": true,
+   "cls": "unresolved"
+  },
+  {
+   "a": 771,
+   "b": 1057,
+   "group": "diffpos",
+   "comp": "dapagliflozin",
+   "salt": true,
+   "cls": "discordant"
+  },
+  {
+   "a": 790,
+   "b": 804,
+   "group": "sameplate",
+   "comp": "omeprazole",
+   "salt": true,
+   "cls": "unresolved"
+  },
+  {
+   "a": 881,
+   "b": 895,
+   "group": "sameplate",
+   "comp": "omeprazole",
+   "salt": true,
+   "cls": "inert"
+  },
+  {
+   "a": 975,
+   "b": 988,
+   "group": "sameplate",
+   "comp": "omeprazole",
+   "salt": true,
+   "cls": "confirmed"
+  }
+ ],
+ "counts": {
+  "sameplate|unresolved": 11,
+  "diffpos|unresolved": 28,
+  "diffpos|confirmed": 18,
+  "diffpos|discordant": 7,
+  "diffpos|inert": 12,
+  "Ada|confirmed": 60,
+  "Ada|inert": 18,
+  "Ada|unresolved": 13,
+  "sameplate|discordant": 5,
+  "sameplate|confirmed": 6,
+  "G614|confirmed": 80,
+  "G614|unresolved": 3,
+  "G614|discordant": 3,
+  "sameplate|inert": 2,
+  "G614|inert": 4
+ },
+ "control_per_plate": {
+  "plate1": [
+   0.727,
+   0.452
+  ],
+  "plate2": [
+   0.775,
+   0.527
+  ],
+  "plate3": [
+   0.635,
+   0.457
+  ],
+  "plate4": [
+   0.688,
+   0.458
+  ],
+  "plate5": [
+   0.754,
+   0.588
+  ],
+  "plate6": [
+   0.746,
+   0.345
+  ],
+  "plate7": [
+   0.645,
+   0.476
+  ],
+  "plate8": [
+   0.732,
+   0.569
+  ],
+  "plate9": [
+   0.62,
+   0.424
+  ],
+  "plate10": [
+   0.688,
+   0.456
+  ],
+  "plate11": [
+   0.71,
+   0.561
+  ],
+  "plate12": [
+   0.718,
+   0.566
+  ],
+  "plate14": [
+   0.62,
+   0.377
+  ]
+ },
+ "control_plates_same_gt_other": 13
+}

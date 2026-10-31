@@ -1,0 +1,1007 @@
+{
+ "rules": "Method checks of the redrawn figures (samewell/notes.md \u00a7110 A3, A4; A100). Same profiles, lines, genes, A/B split and\nstripe score as fig110.py (whole-well difference; genes = the K highest and K lowest of the A-line mean; score = Pearson of\neach B line's row with the A mean over those genes; median over B lines).\n  A3 depth (control pairs): per line, the deeper well's summed counts are thinned binomially to the shallower well's\n     total (seed 0) before the difference; stripe score with and without thinning.\n  A4 drug strength (drug pairs, G614 and diffpos): a proportional difference in drug strength between two wells moves\n     each line along its own response; each line's difference is regressed (over the genes, no intercept) on its mean\n     response in the two wells (D'), and genes and score are recomputed on the residuals.\nOutput $WORKSPACE/rt/samewell/fig110qc.json. Usage: fig110qc.py",
+ "A3": {
+  "plate1": {
+   "plain": 0.9230192696052681,
+   "thinned": 0.9216538457225691
+  },
+  "plate2": {
+   "plain": 0.9490028716246932,
+   "thinned": 0.948162557009782
+  },
+  "plate3": {
+   "plain": 0.8706056091978063,
+   "thinned": 0.8682647903961034
+  },
+  "plate4": {
+   "plain": 0.909272512389059,
+   "thinned": 0.9046825445163991
+  },
+  "plate5": {
+   "plain": 0.9286009674521714,
+   "thinned": 0.9272370617983945
+  },
+  "plate6": {
+   "plain": 0.9491719074208808,
+   "thinned": 0.9458421779126502
+  },
+  "plate7": {
+   "plain": 0.8940161762114925,
+   "thinned": 0.8892437455303882
+  },
+  "plate8": {
+   "plain": 0.9368308302860879,
+   "thinned": 0.928505489914519
+  },
+  "plate9": {
+   "plain": 0.8908541899910513,
+   "thinned": 0.8875827374535036
+  },
+  "plate10": {
+   "plain": 0.9047855482857305,
+   "thinned": 0.8941184084973347
+  },
+  "plate11": {
+   "plain": 0.9214861381866668,
+   "thinned": 0.9178813940934563
+  },
+  "plate12": {
+   "plain": 0.9325131878750587,
+   "thinned": 0.9271122242575429
+  },
+  "plate14": {
+   "plain": 0.8847413069304062,
+   "thinned": 0.878483122402897
+  }
+ },
+ "A4": {
+  "diffpos|irinotecan_0.05|7|587": {
+   "group": "diffpos",
+   "cls": "unresolved",
+   "plain": 0.937802385759595,
+   "residual": 0.9302147865616629
+  },
+  "diffpos|binimetinib_0.05|23|952": {
+   "group": "diffpos",
+   "cls": "confirmed",
+   "plain": 0.9473796878112839,
+   "residual": 0.9387507728984279
+  },
+  "diffpos|trametinib_0.05|34|601": {
+   "group": "diffpos",
+   "cls": "discordant",
+   "plain": 0.9196424783166353,
+   "residual": 0.9246413915682028
+  },
+  "diffpos|trametinib_0.05|34|932": {
+   "group": "diffpos",
+   "cls": "confirmed",
+   "plain": 0.8587805906460917,
+   "residual": 0.8913664842868514
+  },
+  "diffpos|trametinib_0.05|601|932": {
+   "group": "diffpos",
+   "cls": "confirmed",
+   "plain": 0.9421214227988837,
+   "residual": 0.9344127383749957
+  },
+  "diffpos|afatinib_0.05|35|597": {
+   "group": "diffpos",
+   "cls": "unresolved",
+   "plain": 0.9250078296969179,
+   "residual": 0.9216195669074247
+  },
+  "diffpos|belumosudil_0.05|62|594": {
+   "group": "diffpos",
+   "cls": "inert",
+   "plain": 0.9028539758836344,
+   "residual": 0.9115682388800311
+  },
+  "diffpos|ixazomib_0.05|74|943": {
+   "group": "diffpos",
+   "cls": "unresolved",
+   "plain": 0.9313269809511653,
+   "residual": 0.9281310778750556
+  },
+  "diffpos|irinotecan_0.5|103|683": {
+   "group": "diffpos",
+   "cls": "confirmed",
+   "plain": 0.9386677366487932,
+   "residual": 0.9196320847136994
+  },
+  "diffpos|binimetinib_0.5|119|1048": {
+   "group": "diffpos",
+   "cls": "confirmed",
+   "plain": 0.9569803608328786,
+   "residual": 0.9570220440943624
+  },
+  "diffpos|trametinib_0.5|130|697": {
+   "group": "diffpos",
+   "cls": "confirmed",
+   "plain": 0.9302390623190329,
+   "residual": 0.9225341921085701
+  },
+  "diffpos|trametinib_0.5|130|1028": {
+   "group": "diffpos",
+   "cls": "confirmed",
+   "plain": 0.9335189826039603,
+   "residual": 0.9322147309920452
+  },
+  "diffpos|trametinib_0.5|697|1028": {
+   "group": "diffpos",
+   "cls": "confirmed",
+   "plain": 0.9448622151281211,
+   "residual": 0.9434183172534762
+  },
+  "diffpos|afatinib_0.5|131|693": {
+   "group": "diffpos",
+   "cls": "inert",
+   "plain": 0.9461958054137478,
+   "residual": 0.9489543572576926
+  },
+  "diffpos|belumosudil_0.5|158|690": {
+   "group": "diffpos",
+   "cls": "unresolved",
+   "plain": 0.9350705804292974,
+   "residual": 0.9333500704534695
+  },
+  "diffpos|ixazomib_0.5|170|1039": {
+   "group": "diffpos",
+   "cls": "unresolved",
+   "plain": 0.927529011148152,
+   "residual": 0.9622861226251628
+  },
+  "diffpos|irinotecan_5.0|199|779": {
+   "group": "diffpos",
+   "cls": "discordant",
+   "plain": 0.9310287787846121,
+   "residual": 0.9339717666955225
+  },
+  "diffpos|binimetinib_5.0|215|1144": {
+   "group": "diffpos",
+   "cls": "confirmed",
+   "plain": 0.9076903886094472,
+   "residual": 0.8937803736692003
+  },
+  "diffpos|trametinib_5.0|226|793": {
+   "group": "diffpos",
+   "cls": "confirmed",
+   "plain": 0.9440386237381478,
+   "residual": 0.9031715509570905
+  },
+  "diffpos|trametinib_5.0|226|1124": {
+   "group": "diffpos",
+   "cls": "confirmed",
+   "plain": 0.9388115093645603,
+   "residual": 0.8941516846247428
+  },
+  "diffpos|trametinib_5.0|793|1124": {
+   "group": "diffpos",
+   "cls": "confirmed",
+   "plain": 0.9090142828710986,
+   "residual": 0.913768366355525
+  },
+  "diffpos|afatinib_5.0|227|789": {
+   "group": "diffpos",
+   "cls": "discordant",
+   "plain": 0.9683362055355311,
+   "residual": 0.9453703602185097
+  },
+  "diffpos|belumosudil_5.0|254|786": {
+   "group": "diffpos",
+   "cls": "unresolved",
+   "plain": 0.8751723153355077,
+   "residual": 0.8706945281812943
+  },
+  "diffpos|ixazomib_5.0|266|1135": {
+   "group": "diffpos",
+   "cls": "unresolved",
+   "plain": 0.9270605071885675,
+   "residual": 0.8933960852775967
+  },
+  "diffpos|berbamine_0.05|291|582": {
+   "group": "diffpos",
+   "cls": "inert",
+   "plain": 0.9266006430292606,
+   "residual": 0.934979648370108
+  },
+  "diffpos|fluvoxamine_0.05|321|644": {
+   "group": "diffpos",
+   "cls": "unresolved",
+   "plain": 0.9417127936405928,
+   "residual": 0.934393175899958
+  },
+  "diffpos|almonertinib_0.05|330|586": {
+   "group": "diffpos",
+   "cls": "inert",
+   "plain": 0.9515520763372021,
+   "residual": 0.9485828699922839
+  },
+  "diffpos|docetaxel_0.05|348|660": {
+   "group": "diffpos",
+   "cls": "discordant",
+   "plain": 0.9543943887517439,
+   "residual": 0.9309384651141945
+  },
+  "diffpos|neratinib_0.05|365|911": {
+   "group": "diffpos",
+   "cls": "discordant",
+   "plain": 0.9114069327893649,
+   "residual": 0.9194836889749589
+  },
+  "diffpos|berbamine_0.5|387|678": {
+   "group": "diffpos",
+   "cls": "unresolved",
+   "plain": 0.9397398309223518,
+   "residual": 0.9383582537277733
+  },
+  "diffpos|fluvoxamine_0.5|417|740": {
+   "group": "diffpos",
+   "cls": "unresolved",
+   "plain": 0.9508405587275645,
+   "residual": 0.9369298031575125
+  },
+  "diffpos|almonertinib_0.5|426|682": {
+   "group": "diffpos",
+   "cls": "unresolved",
+   "plain": 0.9465613002667483,
+   "residual": 0.9377422812066507
+  },
+  "diffpos|docetaxel_0.5|444|756": {
+   "group": "diffpos",
+   "cls": "unresolved",
+   "plain": 0.9548077930548169,
+   "residual": 0.9485986170971463
+  },
+  "diffpos|neratinib_0.5|461|1007": {
+   "group": "diffpos",
+   "cls": "confirmed",
+   "plain": 0.9090076435905152,
+   "residual": 0.915602081339099
+  },
+  "G614|8-hydroxyquinoline_5.0|480|1248": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.8474824578515865,
+   "residual": 0.860951560068421
+  },
+  "G614|chlorhexidine_5.0|481|1249": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.8807781086176224,
+   "residual": 0.8816441823763262
+  },
+  "G614|trifluridine_5.0|482|1250": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.9184422399555789,
+   "residual": 0.9022478390724196
+  },
+  "diffpos|berbamine_5.0|483|774": {
+   "group": "diffpos",
+   "cls": "unresolved",
+   "plain": 0.9475333194327377,
+   "residual": 0.9377421368483145
+  },
+  "G614|berbamine_5.0|483|1251": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.9183604049590551,
+   "residual": 0.9053324429921461
+  },
+  "diffpos|berbamine_5.0|774|1251": {
+   "group": "diffpos",
+   "cls": "confirmed",
+   "plain": 0.8954958342581945,
+   "residual": 0.8931065978302966
+  },
+  "G614|retinoic acid_5.0|484|1252": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.84545173978485,
+   "residual": 0.8462943145257225
+  },
+  "G614|cysteamine_5.0|485|1253": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.8239176895780704,
+   "residual": 0.8295349899798719
+  },
+  "G614|vinblastine_5.0|486|1254": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.8062601839532506,
+   "residual": 0.8427395931556475
+  },
+  "G614|pasireotide_5.0|487|1255": {
+   "group": "G614",
+   "cls": "unresolved",
+   "plain": 0.8381011915871864,
+   "residual": 0.8331725948283724
+  },
+  "G614|riluzole_5.0|488|1256": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.8921284960635081,
+   "residual": 0.8815943227261169
+  },
+  "G614|palmatine_5.0|489|1257": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.7591505822372131,
+   "residual": 0.7649643848531618
+  },
+  "G614|isocorydine_5.0|490|1258": {
+   "group": "G614",
+   "cls": "discordant",
+   "plain": 0.8822232468141769,
+   "residual": 0.8832653328032485
+  },
+  "G614|raltitrexed_5.0|491|1259": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.8470667385771806,
+   "residual": 0.8236809760853725
+  },
+  "G614|furosemide_5.0|492|1260": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.8360881809348265,
+   "residual": 0.8135442082618678
+  },
+  "G614|clotrimazole_5.0|493|1261": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.7687625652253272,
+   "residual": 0.7566077452815554
+  },
+  "G614|sodium salicylate_5.0|494|1262": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.8958207316119196,
+   "residual": 0.8960026154370959
+  },
+  "G614|gallic acid_5.0|495|1263": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.8636881195641509,
+   "residual": 0.8503899218067255
+  },
+  "diffpos|gallic acid_5.0|495|1336": {
+   "group": "diffpos",
+   "cls": "inert",
+   "plain": 0.9150266457127034,
+   "residual": 0.906002698205613
+  },
+  "diffpos|gallic acid_5.0|568|1263": {
+   "group": "diffpos",
+   "cls": "inert",
+   "plain": 0.9577348259109584,
+   "residual": 0.9543121304274864
+  },
+  "G614|gallic acid_5.0|568|1336": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.8643594448367677,
+   "residual": 0.8439759177388286
+  },
+  "G614|(r)-verapamil_5.0|496|1264": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.7720889327346159,
+   "residual": 0.76653112541247
+  },
+  "G614|pyridoxine_5.0|497|1265": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.8712537152012241,
+   "residual": 0.8555094562590129
+  },
+  "diffpos|pyridoxine_5.0|497|1332": {
+   "group": "diffpos",
+   "cls": "unresolved",
+   "plain": 0.925616807672496,
+   "residual": 0.9204203579958206
+  },
+  "diffpos|pyridoxine_5.0|564|1265": {
+   "group": "diffpos",
+   "cls": "inert",
+   "plain": 0.9371851178083519,
+   "residual": 0.9392162665866391
+  },
+  "G614|pyridoxine_5.0|564|1332": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.8344503088847912,
+   "residual": 0.8303566662938198
+  },
+  "G614|acetohexamide_5.0|498|1266": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.8323794686465339,
+   "residual": 0.8276471877391834
+  },
+  "G614|temsirolimus_5.0|499|1267": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.7838775622748505,
+   "residual": 0.7290642955987983
+  },
+  "G614|megestrol_5.0|500|1268": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.8564996403949998,
+   "residual": 0.8499655288220797
+  },
+  "G614|diammonium glycyrrhizinate_5.0|501|1269": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.9005301841032909,
+   "residual": 0.8951059699984518
+  },
+  "G614|ropivacaine_5.0|503|1271": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.8002904981655677,
+   "residual": 0.7763115228809154
+  },
+  "G614|salicylic acid_5.0|504|1272": {
+   "group": "G614",
+   "cls": "discordant",
+   "plain": 0.8188203501243199,
+   "residual": 0.8396041597422237
+  },
+  "G614|quinestrol_5.0|505|1273": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.7948292908802786,
+   "residual": 0.6881455264347456
+  },
+  "G614|tofacitinib_5.0|506|1274": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.8151062972337161,
+   "residual": 0.7913341449715448
+  },
+  "diffpos|tofacitinib_5.0|506|1288": {
+   "group": "diffpos",
+   "cls": "unresolved",
+   "plain": 0.8831013814875349,
+   "residual": 0.9060603683150503
+  },
+  "diffpos|tofacitinib_5.0|520|1274": {
+   "group": "diffpos",
+   "cls": "confirmed",
+   "plain": 0.9029346531367061,
+   "residual": 0.9154132714404247
+  },
+  "G614|tofacitinib_5.0|520|1288": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.8730859605863703,
+   "residual": 0.8517758001422725
+  },
+  "G614|trimetrexate_5.0|507|1275": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.9003896125764983,
+   "residual": 0.8896087020634652
+  },
+  "G614|gemfibrozil_5.0|508|1276": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.8570458665880096,
+   "residual": 0.8539249719019101
+  },
+  "G614|18\u03b2-glycyrrhetinic acid_5.0|509|1277": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.776444855987779,
+   "residual": 0.7644901789347754
+  },
+  "G614|tolcapone_5.0|510|1278": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.8313376321331765,
+   "residual": 0.7557582639222991
+  },
+  "G614|terfenadine_5.0|511|1279": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.902525160027411,
+   "residual": 0.8939048534521551
+  },
+  "G614|aliskiren_5.0|512|1280": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.8330593883561559,
+   "residual": 0.8114166840147562
+  },
+  "diffpos|fluvoxamine_5.0|513|836": {
+   "group": "diffpos",
+   "cls": "unresolved",
+   "plain": 0.9188478012276853,
+   "residual": 0.9189813772735484
+  },
+  "G614|fluvoxamine_5.0|513|1281": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.8704483658535125,
+   "residual": 0.8553108718982305
+  },
+  "diffpos|fluvoxamine_5.0|836|1281": {
+   "group": "diffpos",
+   "cls": "unresolved",
+   "plain": 0.8875205633516129,
+   "residual": 0.8897658733730283
+  },
+  "G614|s-adenosyl-l-methionine_5.0|514|1282": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.8090305498962715,
+   "residual": 0.7991944238523425
+  },
+  "G614|idarubicin_5.0|515|1283": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.810794561032301,
+   "residual": 0.7772098900567844
+  },
+  "G614|elagolix_5.0|516|1284": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.8700316259859127,
+   "residual": 0.87762689312571
+  },
+  "G614|resveratrol_5.0|517|1285": {
+   "group": "G614",
+   "cls": "unresolved",
+   "plain": 0.8933032607058273,
+   "residual": 0.8909543135219631
+  },
+  "G614|rapamycin_5.0|518|1286": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.8403316919139585,
+   "residual": 0.8379892464937819
+  },
+  "G614|saquinavir_5.0|519|1287": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.8882723355639448,
+   "residual": 0.8080899760517706
+  },
+  "G614|thymol_5.0|521|1289": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.874733458143874,
+   "residual": 0.8793356252939957
+  },
+  "diffpos|almonertinib_5.0|522|778": {
+   "group": "diffpos",
+   "cls": "inert",
+   "plain": 0.9219113132174708,
+   "residual": 0.9254848017692665
+  },
+  "G614|almonertinib_5.0|522|1290": {
+   "group": "G614",
+   "cls": "unresolved",
+   "plain": 0.8624352323169977,
+   "residual": 0.8603200725765975
+  },
+  "diffpos|almonertinib_5.0|778|1290": {
+   "group": "diffpos",
+   "cls": "unresolved",
+   "plain": 0.9183585677115218,
+   "residual": 0.917968057543502
+  },
+  "G614|darinaparsin_5.0|523|1291": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.8379043474130591,
+   "residual": 0.7919146472813057
+  },
+  "G614|vilanterol_5.0|524|1292": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.8879636876194045,
+   "residual": 0.8527953209163481
+  },
+  "G614|lenalidomide_5.0|525|1293": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.8717144908753489,
+   "residual": 0.7793967307058192
+  },
+  "G614|azithromycin_5.0|526|1294": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.8290109666238652,
+   "residual": 0.8228332986863632
+  },
+  "G614|ritonavir_5.0|527|1295": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.9079052798171818,
+   "residual": 0.8316640500959356
+  },
+  "G614|pentamidine_5.0|528|1296": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.8441498532081708,
+   "residual": 0.8450452552992593
+  },
+  "G614|adenosine_5.0|529|1297": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.8614631209622088,
+   "residual": 0.8694130968402524
+  },
+  "G614|sulfisoxazole_5.0|530|1298": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.8984788816606478,
+   "residual": 0.881479864179554
+  },
+  "G614|norepinephrine_5.0|531|1299": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.8230368354276958,
+   "residual": 0.8069198609202708
+  },
+  "G614|ciclopirox_5.0|532|1300": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.8549735829606278,
+   "residual": 0.8200457174111795
+  },
+  "G614|lidocaine_5.0|533|1301": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.8429154468810444,
+   "residual": 0.8357473031808146
+  },
+  "G614|demeclocycline_5.0|534|1302": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.8633138862119121,
+   "residual": 0.7988788997690244
+  },
+  "G614|mitoxantrone_5.0|535|1303": {
+   "group": "G614",
+   "cls": "discordant",
+   "plain": 0.8279888049148906,
+   "residual": 0.8533211220440605
+  },
+  "G614|busulfan_5.0|537|1305": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.7640058917287214,
+   "residual": 0.7574798457338905
+  },
+  "G614|cepharanthine_5.0|538|1306": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.7421560301677862,
+   "residual": 0.7532169087730742
+  },
+  "G614|radotinib_5.0|539|1307": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.7878641897657435,
+   "residual": 0.7691078495315365
+  },
+  "diffpos|docetaxel_5.0|540|852": {
+   "group": "diffpos",
+   "cls": "unresolved",
+   "plain": 0.9168005282730332,
+   "residual": 0.9185286433345443
+  },
+  "G614|docetaxel_5.0|540|1308": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.8580255011610389,
+   "residual": 0.8406954316257644
+  },
+  "diffpos|docetaxel_5.0|852|1308": {
+   "group": "diffpos",
+   "cls": "confirmed",
+   "plain": 0.9001808301280452,
+   "residual": 0.9018915850038324
+  },
+  "G614|triclosan_5.0|541|1309": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.7458931948684488,
+   "residual": 0.7416250553394018
+  },
+  "G614|tucidinostat_5.0|542|1310": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.8880576274286309,
+   "residual": 0.8663151849431925
+  },
+  "G614|bergenin_5.0|543|1311": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.9078862658818585,
+   "residual": 0.9092402129455683
+  },
+  "G614|allantoin_5.0|544|1312": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.882342090279038,
+   "residual": 0.8831453551205367
+  },
+  "G614|bimatoprost_5.0|545|1313": {
+   "group": "G614",
+   "cls": "inert",
+   "plain": 0.8097189476359447,
+   "residual": 0.8147480690810636
+  },
+  "G614|triamcinolone_5.0|546|1314": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.7590254054853447,
+   "residual": 0.7801470324647551
+  },
+  "G614|olanzapine_5.0|547|1315": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.7673199700909056,
+   "residual": 0.7724034601299694
+  },
+  "G614|rimonabant_5.0|548|1316": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.7373011562106496,
+   "residual": 0.7384721929414082
+  },
+  "G614|pentagastrin_5.0|549|1317": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.9123171717259607,
+   "residual": 0.8602651930859098
+  },
+  "G614|lumateperone_5.0|550|1318": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.7802860774598122,
+   "residual": 0.7933169691127739
+  },
+  "G614|relugolix_5.0|551|1319": {
+   "group": "G614",
+   "cls": "inert",
+   "plain": 0.9309742427567689,
+   "residual": 0.8969625038103454
+  },
+  "G614|homoharringtonine_5.0|552|1320": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.9048084525691044,
+   "residual": 0.8959385018181986
+  },
+  "G614|hexylresorcinol_5.0|553|1321": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.8648858650322468,
+   "residual": 0.8672087661462864
+  },
+  "G614|baicalin_5.0|554|1322": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.798516889466552,
+   "residual": 0.8089077028446245
+  },
+  "G614|berberine_5.0|555|1323": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.8210061199444791,
+   "residual": 0.8203699208568009
+  },
+  "G614|medroxyprogesterone acetate_5.0|556|1324": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.804286867406448,
+   "residual": 0.7771343756356217
+  },
+  "diffpos|neratinib_5.0|557|1103": {
+   "group": "diffpos",
+   "cls": "inert",
+   "plain": 0.9451386361040526,
+   "residual": 0.942809433299581
+  },
+  "G614|neratinib_5.0|557|1325": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.8356234639633566,
+   "residual": 0.8330986348834537
+  },
+  "diffpos|neratinib_5.0|1103|1325": {
+   "group": "diffpos",
+   "cls": "inert",
+   "plain": 0.9097361096195709,
+   "residual": 0.9180581280754232
+  },
+  "G614|sinomenine_5.0|558|1326": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.7884550823390752,
+   "residual": 0.7728232097625424
+  },
+  "G614|goserelin_5.0|559|1327": {
+   "group": "G614",
+   "cls": "inert",
+   "plain": 0.879001966772708,
+   "residual": 0.8917565390503351
+  },
+  "G614|fusidic acid_5.0|560|1328": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.7698898521495796,
+   "residual": 0.7664178273989648
+  },
+  "G614|balsalazide_5.0|561|1329": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.8807133570753822,
+   "residual": 0.8382104551484937
+  },
+  "G614|cloxacillin_5.0|562|1330": {
+   "group": "G614",
+   "cls": "inert",
+   "plain": 0.8935835750527403,
+   "residual": 0.8961167392898759
+  },
+  "G614|artesunate_5.0|563|1331": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.8452074594998769,
+   "residual": 0.8479810610440657
+  },
+  "G614|folic acid_5.0|565|1333": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.9045420237525719,
+   "residual": 0.8464060773497637
+  },
+  "G614|adenine_5.0|567|1335": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.9173490811965547,
+   "residual": 0.918613416507322
+  },
+  "G614|lipoic acid_5.0|569|1337": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.7862276480895178,
+   "residual": 0.78312070699718
+  },
+  "G614|amsacrine_5.0|570|1338": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.745181341519572,
+   "residual": 0.7906971821574231
+  },
+  "G614|anethole trithione_5.0|571|1339": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.8821782323848045,
+   "residual": 0.8819208812788031
+  },
+  "G614|clonidine_5.0|572|1340": {
+   "group": "G614",
+   "cls": "confirmed",
+   "plain": 0.9204134363393897,
+   "residual": 0.8612185324999204
+  },
+  "diffpos|crizotinib_0.05|589|931": {
+   "group": "diffpos",
+   "cls": "inert",
+   "plain": 0.9391263264379548,
+   "residual": 0.940541955813471
+  },
+  "diffpos|bestatin_0.05|592|864": {
+   "group": "diffpos",
+   "cls": "inert",
+   "plain": 0.9273754260087401,
+   "residual": 0.9219865622117719
+  },
+  "diffpos|tirabrutinib_0.05|608|878": {
+   "group": "diffpos",
+   "cls": "unresolved",
+   "plain": 0.970480173054726,
+   "residual": 0.9487371314166343
+  },
+  "diffpos|canagliflozin_0.05|628|866": {
+   "group": "diffpos",
+   "cls": "unresolved",
+   "plain": 0.9448409673689646,
+   "residual": 0.9379550932485495
+  },
+  "diffpos|dapagliflozin_0.05|653|954": {
+   "group": "diffpos",
+   "cls": "unresolved",
+   "plain": 0.9455306553750457,
+   "residual": 0.9501758206584536
+  },
+  "diffpos|imiquimod_0.05|654|885": {
+   "group": "diffpos",
+   "cls": "discordant",
+   "plain": 0.9476994540870887,
+   "residual": 0.9454439491689292
+  },
+  "diffpos|crizotinib_0.5|685|1027": {
+   "group": "diffpos",
+   "cls": "confirmed",
+   "plain": 0.9416497830546282,
+   "residual": 0.9413990038437932
+  },
+  "diffpos|bestatin_0.5|688|960": {
+   "group": "diffpos",
+   "cls": "unresolved",
+   "plain": 0.9236425977405619,
+   "residual": 0.9197820843090369
+  },
+  "diffpos|tirabrutinib_0.5|704|974": {
+   "group": "diffpos",
+   "cls": "confirmed",
+   "plain": 0.9264630943400517,
+   "residual": 0.9181626941317733
+  },
+  "diffpos|canagliflozin_0.5|724|962": {
+   "group": "diffpos",
+   "cls": "unresolved",
+   "plain": 0.9213494583420523,
+   "residual": 0.9230956480288022
+  },
+  "diffpos|crizotinib_5.0|781|1123": {
+   "group": "diffpos",
+   "cls": "unresolved",
+   "plain": 0.9454146108078254,
+   "residual": 0.9490030310488962
+  },
+  "diffpos|bestatin_5.0|784|1056": {
+   "group": "diffpos",
+   "cls": "unresolved",
+   "plain": 0.9374457281512053,
+   "residual": 0.9378025134585627
+  },
+  "diffpos|tirabrutinib_5.0|800|1070": {
+   "group": "diffpos",
+   "cls": "unresolved",
+   "plain": 0.9203972460716783,
+   "residual": 0.9247409719671628
+  },
+  "diffpos|canagliflozin_5.0|820|1058": {
+   "group": "diffpos",
+   "cls": "unresolved",
+   "plain": 0.8740341738294293,
+   "residual": 0.8932946249894138
+  },
+  "diffpos|dapagliflozin_5.0|845|1146": {
+   "group": "diffpos",
+   "cls": "discordant",
+   "plain": 0.9203501668276911,
+   "residual": 0.9246590222357215
+  }
+ },
+ "A4 summary G614": {
+  "pairs": 90,
+  "plain_median": 0.8462592391810153,
+  "residual_median": 0.8380998508211378,
+  "residual_range": [
+   0.6881455264347456,
+   0.918613416507322
+  ]
+ },
+ "A4 summary diffpos concordant": {
+  "pairs": 18,
+  "plain_median": 0.9318790224614966,
+  "residual_median": 0.9168823877354362,
+  "residual_range": [
+   0.8913664842868514,
+   0.9570220440943624
+  ]
+ }
+}

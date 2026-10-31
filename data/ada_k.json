@@ -1,0 +1,243 @@
+{
+ "rules": "Averaging same-position replicates: adagrasib 0.05 uM (samewell/notes.md \u00a758; A100).\nWells (sw_core conditions, positions from sample numbers): H10 on 13 plates; G10 on plate 7; B9 and B10 on plate 13.\nPer line (genes with base >= 0.2) and k = 1..12: the mean response of k H10 wells drawn at random (30 draws, seed 0)\nfrom the H10 wells on plates other than the target's plate, against\n  same position     each H10 well in turn as the target\n  other position    G10 (plate 7; plate 7's H10 excluded from the draws) and B9, B10 (plate 13)\nPearson of the k-mean with the target; medians over lines of the per-line mean over targets and draws. Also the lines\nin the top tenth by the energy of their mean H10 response (the lines that respond to the drug).\nAdded after the first run: the other-position curve for G10 alone (same control position H11/H12 as the H10 wells; B9 and\nB10 on plate 13 are referenced to controls at B11/B12), and all curves again on D' (D minus the line's mean over the\nother treated wells of the plate, \u00a753), which removes the control-position offset from every well.\nOutput $WORKSPACE/rt/samewell/ada_k.json",
+ "wells": {
+  "81": [
+   "plate1",
+   93
+  ],
+  "170": [
+   "plate2",
+   93
+  ],
+  "253": [
+   "plate3",
+   93
+  ],
+  "346": [
+   "plate4",
+   93
+  ],
+  "440": [
+   "plate5",
+   93
+  ],
+  "533": [
+   "plate6",
+   93
+  ],
+  "608": [
+   "plate7",
+   81
+  ],
+  "620": [
+   "plate7",
+   93
+  ],
+  "703": [
+   "plate8",
+   93
+  ],
+  "783": [
+   "plate9",
+   93
+  ],
+  "874": [
+   "plate10",
+   93
+  ],
+  "968": [
+   "plate11",
+   93
+  ],
+  "1060": [
+   "plate12",
+   93
+  ],
+  "1080": [
+   "plate13",
+   20
+  ],
+  "1081": [
+   "plate13",
+   21
+  ],
+  "1240": [
+   "plate14",
+   93
+  ]
+ },
+ "all": {
+  "D_same": [
+   0.4517,
+   0.5203,
+   0.5484,
+   0.5776,
+   0.5901,
+   0.6042,
+   0.6072,
+   0.6149,
+   0.6185,
+   0.6231,
+   0.6288,
+   0.6317
+  ],
+  "D_other": [
+   -0.0115,
+   -0.0301,
+   -0.0368,
+   -0.0394,
+   -0.0377,
+   -0.037,
+   -0.0382,
+   -0.0386,
+   -0.0459,
+   -0.0454,
+   -0.048,
+   -0.045
+  ],
+  "D_G10": [
+   0.2015,
+   0.2348,
+   0.2381,
+   0.2457,
+   0.2504,
+   0.2522,
+   0.2553,
+   0.2646,
+   0.2653,
+   0.2661,
+   0.2679,
+   0.2703
+  ],
+  "Dprime_same": [
+   0.3033,
+   0.3566,
+   0.3781,
+   0.4055,
+   0.4341,
+   0.447,
+   0.4594,
+   0.4701,
+   0.4777,
+   0.4858,
+   0.4924,
+   0.4974
+  ],
+  "Dprime_other": [
+   0.0039,
+   0.0018,
+   -0.0009,
+   -0.001,
+   -0.0094,
+   -0.0074,
+   -0.0013,
+   -0.0062,
+   -0.0033,
+   -0.0051,
+   -0.0081,
+   -0.0058
+  ],
+  "Dprime_G10": [
+   -0.042,
+   -0.053,
+   -0.0518,
+   -0.0649,
+   -0.0675,
+   -0.0687,
+   -0.0717,
+   -0.0731,
+   -0.0756,
+   -0.0731,
+   -0.0768,
+   -0.0778
+  ],
+  "n_lines": 48
+ },
+ "top_tenth": {
+  "D_same": [
+   0.7366,
+   0.7825,
+   0.8077,
+   0.8182,
+   0.8259,
+   0.8298,
+   0.8339,
+   0.8358,
+   0.8395,
+   0.8402,
+   0.8414,
+   0.8426
+  ],
+  "D_other": [
+   0.4505,
+   0.4651,
+   0.5011,
+   0.499,
+   0.5083,
+   0.5061,
+   0.5141,
+   0.5154,
+   0.5142,
+   0.5116,
+   0.5166,
+   0.5177
+  ],
+  "D_G10": [
+   0.5111,
+   0.5637,
+   0.5783,
+   0.5954,
+   0.5903,
+   0.6039,
+   0.6036,
+   0.6056,
+   0.6008,
+   0.6058,
+   0.6085,
+   0.6077
+  ],
+  "Dprime_same": [
+   0.6839,
+   0.7475,
+   0.7734,
+   0.7871,
+   0.7952,
+   0.8007,
+   0.8047,
+   0.8098,
+   0.8125,
+   0.8132,
+   0.8156,
+   0.8168
+  ],
+  "Dprime_other": [
+   0.6116,
+   0.6503,
+   0.6755,
+   0.6774,
+   0.6881,
+   0.6944,
+   0.6913,
+   0.6976,
+   0.699,
+   0.7007,
+   0.7016,
+   0.7004
+  ],
+  "Dprime_G10": [
+   0.6144,
+   0.665,
+   0.6868,
+   0.7004,
+   0.7026,
+   0.7051,
+   0.7122,
+   0.7111,
+   0.7175,
+   0.7138,
+   0.7166,
+   0.7164
+  ],
+  "n_lines": 5
+ }
+}

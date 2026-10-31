@@ -1,0 +1,829 @@
+{
+ "rules": "Core numbers on verified replicates only (samewell/notes.md \u00a782; A100). Pairs from verified.py (no plate 13).\nResponses: D (well minus the plate's DMSO wells, cached) and D' (each half minus the line's mean of the same half over\nthe plate's other treated wells, leaving the well out; plate 13 stays in the plate-13 reference only, it pairs with\nnothing). Per (pair, line):\n  cross      Pearson of the line's two wells (line genes), D and D'\n  ceiling    Spearman-Brown of the two halves of a well, mean of the two wells (D')\n  adv        same-well advantage: Pearson(mean of the other lines in the target well, target) minus the same with the\n             replicate well's other lines, both wells as target, line genes; D and D'\n  W, Q, sw   variance components on the common genes G0 centred (D'): W = within-well half product, Q = cross-well\n             half product (drug part), sw = S_same - S_cross (shared well part); shares pooled over records\n  plate      same-plate check (D and D'): the predictor from another well of the target's plate (other compound) minus\n             from a well of another plate; 20 random wells each (plate 13 excluded)\n  delta      (diffpos only) Pearson(mean over the other lines of D'_a - D'_b, the target's D'_a - D'_b); null: the\n             other lines of a random diffpos pair of another compound (200)\nPer pair: permutation T with the pair as unit (one coin per line; 1,000), D', G0 centred (Gram matrices).\nSummaries per group: medians or pooled ratios; 95% intervals over compounds (1,000) and two-way compounds x plates\n(plates present in every pair of the group fixed; empty resamples dropped); leave-one-plate-out range; dvia tertiles\nwithin the group. Optional argument: a label class of labels84.json (confirmed, inert, ...), restricting the pairs\nto that class (\u00a784). Output $WORKSPACE/rt/samewell/core82[_<class>].json",
+ "pairs": {
+  "diffpos": [
+   65,
+   20
+  ],
+  "sameplate": [
+   24,
+   7
+  ],
+  "G614": [
+   90,
+   87
+  ],
+  "samepos": [
+   0,
+   0
+  ],
+  "Ada": [
+   91,
+   1
+  ]
+ },
+ "diffpos": {
+  "n_records": 3120,
+  "n_pairs": 65,
+  "n_compounds": 20,
+  "fixed_plates": [],
+  "dvia_median": 0.268,
+  "cross_D": 0.25,
+  "cross_Dprime": 0.162,
+  "ceiling": 0.83,
+  "adv_D": [
+   0.448,
+   0.394,
+   0.517,
+   0.335,
+   0.558
+  ],
+  "adv_Dprime": [
+   0.546,
+   0.467,
+   0.633,
+   0.428,
+   0.675
+  ],
+  "adv_Dprime_loo": [
+   0.522,
+   0.562
+  ],
+  "plate_D": [
+   0.132,
+   0.116,
+   0.147,
+   0.065,
+   0.184
+  ],
+  "plate_Dprime": [
+   -0.003,
+   -0.006,
+   -0.0,
+   -0.01,
+   0.003
+  ],
+  "drug_share": [
+   0.319,
+   0.086,
+   0.498,
+   0.046,
+   0.549
+  ],
+  "shared_well_share": [
+   0.451,
+   0.327,
+   0.612
+  ],
+  "own_well_share": 0.23,
+  "perm": {
+   "observed": 0.553,
+   "perm_q": [
+    -0.026,
+    0.026
+   ],
+   "perm_max": 0.044,
+   "p": 0.000999000999000999
+  },
+  "delta": {
+   "n": 3120,
+   "observed_median": 0.725,
+   "null_median": 0.002,
+   "share_above_null95": 1.0
+  }
+ },
+ "diffpos | dvia 0": {
+  "n_records": 1056,
+  "n_pairs": 22,
+  "n_compounds": 12,
+  "fixed_plates": [],
+  "dvia_median": 0.219,
+  "cross_D": 0.184,
+  "cross_Dprime": 0.112,
+  "ceiling": 0.787,
+  "adv_D": [
+   0.487,
+   0.399,
+   0.576,
+   0.348,
+   0.68
+  ],
+  "adv_Dprime": [
+   0.595,
+   0.524,
+   0.66,
+   0.46,
+   0.776
+  ],
+  "adv_Dprime_loo": [
+   0.563,
+   0.655
+  ],
+  "plate_D": [
+   0.142,
+   0.111,
+   0.17,
+   0.069,
+   0.212
+  ],
+  "plate_Dprime": [
+   -0.001,
+   -0.004,
+   0.003,
+   -0.01,
+   0.011
+  ],
+  "drug_share": [
+   0.232,
+   0.128,
+   0.34,
+   -0.027,
+   0.414
+  ],
+  "shared_well_share": [
+   0.539,
+   0.449,
+   0.638
+  ],
+  "own_well_share": 0.229,
+  "perm": {
+   "observed": 0.601,
+   "perm_q": [
+    -0.048,
+    0.045
+   ],
+   "perm_max": 0.082,
+   "p": 0.000999000999000999
+  },
+  "delta": {
+   "n": 1056,
+   "observed_median": 0.729,
+   "null_median": -0.004,
+   "share_above_null95": 1.0
+  }
+ },
+ "diffpos | dvia 1": {
+  "n_records": 1008,
+  "n_pairs": 21,
+  "n_compounds": 14,
+  "fixed_plates": [],
+  "dvia_median": 0.268,
+  "cross_D": 0.245,
+  "cross_Dprime": 0.151,
+  "ceiling": 0.829,
+  "adv_D": [
+   0.445,
+   0.383,
+   0.521,
+   0.288,
+   0.602
+  ],
+  "adv_Dprime": [
+   0.579,
+   0.479,
+   0.696,
+   0.404,
+   0.776
+  ],
+  "adv_Dprime_loo": [
+   0.543,
+   0.61
+  ],
+  "plate_D": [
+   0.13,
+   0.102,
+   0.161,
+   0.065,
+   0.197
+  ],
+  "plate_Dprime": [
+   -0.003,
+   -0.007,
+   -0.001,
+   -0.013,
+   0.007
+  ],
+  "drug_share": [
+   0.24,
+   -0.009,
+   0.425,
+   -0.093,
+   0.527
+  ],
+  "shared_well_share": [
+   0.502,
+   0.37,
+   0.666
+  ],
+  "own_well_share": 0.258,
+  "perm": {
+   "observed": 0.587,
+   "perm_q": [
+    -0.046,
+    0.05
+   ],
+   "perm_max": 0.073,
+   "p": 0.000999000999000999
+  },
+  "delta": {
+   "n": 1008,
+   "observed_median": 0.722,
+   "null_median": 0.001,
+   "share_above_null95": 1.0
+  }
+ },
+ "diffpos | dvia 2": {
+  "n_records": 1056,
+  "n_pairs": 22,
+  "n_compounds": 12,
+  "fixed_plates": [],
+  "dvia_median": 0.381,
+  "cross_D": 0.318,
+  "cross_Dprime": 0.293,
+  "ceiling": 0.879,
+  "adv_D": [
+   0.413,
+   0.333,
+   0.515,
+   0.217,
+   0.567
+  ],
+  "adv_Dprime": [
+   0.466,
+   0.347,
+   0.63,
+   0.208,
+   0.741
+  ],
+  "adv_Dprime_loo": [
+   0.446,
+   0.489
+  ],
+  "plate_D": [
+   0.125,
+   0.09,
+   0.147,
+   0.007,
+   0.203
+  ],
+  "plate_Dprime": [
+   -0.005,
+   -0.009,
+   0.001,
+   -0.017,
+   0.007
+  ],
+  "drug_share": [
+   0.392,
+   0.068,
+   0.617,
+   -0.058,
+   0.744
+  ],
+  "shared_well_share": [
+   0.393,
+   0.241,
+   0.612
+  ],
+  "own_well_share": 0.215,
+  "perm": {
+   "observed": 0.474,
+   "perm_q": [
+    -0.036,
+    0.037
+   ],
+   "perm_max": 0.055,
+   "p": 0.000999000999000999
+  },
+  "delta": {
+   "n": 1056,
+   "observed_median": 0.722,
+   "null_median": 0.008,
+   "share_above_null95": 1.0
+  }
+ },
+ "diffpos | salt only": {
+  "n_records": 2688,
+  "n_pairs": 56,
+  "n_compounds": 18,
+  "fixed_plates": [],
+  "dvia_median": 0.256,
+  "cross_D": 0.231,
+  "cross_Dprime": 0.134,
+  "ceiling": 0.818,
+  "adv_D": [
+   0.46,
+   0.401,
+   0.527,
+   0.357,
+   0.577
+  ],
+  "adv_Dprime": [
+   0.564,
+   0.485,
+   0.65,
+   0.428,
+   0.728
+  ],
+  "adv_Dprime_loo": [
+   0.542,
+   0.596
+  ],
+  "plate_D": [
+   0.135,
+   0.117,
+   0.154,
+   0.057,
+   0.192
+  ],
+  "plate_Dprime": [
+   -0.002,
+   -0.004,
+   0.001,
+   -0.01,
+   0.004
+  ],
+  "drug_share": [
+   0.276,
+   0.061,
+   0.483,
+   -0.017,
+   0.553
+  ],
+  "shared_well_share": [
+   0.48,
+   0.34,
+   0.627
+  ],
+  "own_well_share": 0.244,
+  "perm": {
+   "observed": 0.571,
+   "perm_q": [
+    -0.03,
+    0.028
+   ],
+   "perm_max": 0.045,
+   "p": 0.000999000999000999
+  },
+  "delta": {
+   "n": 2688,
+   "observed_median": 0.725,
+   "null_median": 0.002,
+   "share_above_null95": 1.0
+  }
+ },
+ "diffpos | exact names only": {
+  "n_records": 432,
+  "n_pairs": 9,
+  "n_compounds": 3,
+  "fixed_plates": [],
+  "dvia_median": 0.324,
+  "cross_D": 0.46,
+  "cross_Dprime": 0.437,
+  "ceiling": 0.911,
+  "adv_D": [
+   0.374,
+   0.299,
+   0.492,
+   0.191,
+   0.572
+  ],
+  "adv_Dprime": [
+   0.435,
+   0.291,
+   0.665,
+   0.204,
+   0.925
+  ],
+  "adv_Dprime_loo": [
+   0.374,
+   0.5
+  ],
+  "plate_D": [
+   0.112,
+   0.098,
+   0.121,
+   0.051,
+   0.17
+  ],
+  "plate_Dprime": [
+   -0.01,
+   -0.015,
+   -0.002,
+   -0.038,
+   -0.0
+  ],
+  "drug_share": [
+   0.483,
+   0.023,
+   0.621,
+   -0.124,
+   0.723
+  ],
+  "shared_well_share": [
+   0.34,
+   0.22,
+   0.686
+  ],
+  "own_well_share": 0.176,
+  "perm": {
+   "observed": 0.446,
+   "perm_q": [
+    -0.053,
+    0.052
+   ],
+   "perm_max": 0.09,
+   "p": 0.000999000999000999
+  },
+  "delta": {
+   "n": 432,
+   "observed_median": 0.726,
+   "null_median": 0.002,
+   "share_above_null95": 1.0
+  }
+ },
+ "sameplate": {
+  "n_records": 1152,
+  "n_pairs": 24,
+  "n_compounds": 7,
+  "fixed_plates": [],
+  "dvia_median": 0.268,
+  "cross_D": 0.456,
+  "cross_Dprime": -0.014,
+  "ceiling": 0.822,
+  "adv_D": [
+   0.378,
+   0.304,
+   0.439,
+   0.274,
+   0.478
+  ],
+  "adv_Dprime": [
+   0.691,
+   0.594,
+   0.781,
+   0.526,
+   0.857
+  ],
+  "adv_Dprime_loo": [
+   0.646,
+   0.712
+  ],
+  "plate_D": [
+   0.109,
+   0.09,
+   0.136,
+   0.073,
+   0.161
+  ],
+  "plate_Dprime": [
+   -0.002,
+   -0.005,
+   0.002,
+   -0.009,
+   0.008
+  ],
+  "drug_share": [
+   0.013,
+   -0.167,
+   0.235,
+   -0.266,
+   0.32
+  ],
+  "shared_well_share": [
+   0.651,
+   0.511,
+   0.768
+  ],
+  "own_well_share": 0.336,
+  "perm": {
+   "observed": 0.703,
+   "perm_q": [
+    -0.062,
+    0.064
+   ],
+   "perm_max": 0.099,
+   "p": 0.000999000999000999
+  }
+ },
+ "G614": {
+  "n_records": 4320,
+  "n_pairs": 90,
+  "n_compounds": 87,
+  "fixed_plates": [
+   "plate6",
+   "plate14"
+  ],
+  "dvia_median": 0.22,
+  "cross_D": 0.585,
+  "cross_Dprime": 0.472,
+  "ceiling": 0.813,
+  "adv_D": [
+   0.194,
+   0.178,
+   0.21,
+   0.178,
+   0.21
+  ],
+  "adv_Dprime": [
+   0.241,
+   0.217,
+   0.269,
+   0.217,
+   0.269
+  ],
+  "adv_Dprime_loo": null,
+  "plate_D": [
+   0.086,
+   0.08,
+   0.092,
+   0.08,
+   0.092
+  ],
+  "plate_Dprime": [
+   -0.005,
+   -0.007,
+   -0.003,
+   -0.007,
+   -0.003
+  ],
+  "drug_share": [
+   0.702,
+   0.509,
+   0.817,
+   0.509,
+   0.817
+  ],
+  "shared_well_share": [
+   0.156,
+   0.098,
+   0.254
+  ],
+  "own_well_share": 0.142,
+  "perm": {
+   "observed": 0.243,
+   "perm_q": [
+    -0.01,
+    0.009
+   ],
+   "perm_max": 0.014,
+   "p": 0.000999000999000999
+  }
+ },
+ "G614 | dvia 0": {
+  "n_records": 1440,
+  "n_pairs": 30,
+  "n_compounds": 30,
+  "fixed_plates": [
+   "plate6",
+   "plate14"
+  ],
+  "dvia_median": 0.181,
+  "cross_D": 0.609,
+  "cross_Dprime": 0.497,
+  "ceiling": 0.802,
+  "adv_D": [
+   0.173,
+   0.148,
+   0.197,
+   0.148,
+   0.197
+  ],
+  "adv_Dprime": [
+   0.221,
+   0.18,
+   0.264,
+   0.18,
+   0.264
+  ],
+  "adv_Dprime_loo": null,
+  "plate_D": [
+   0.083,
+   0.075,
+   0.092,
+   0.075,
+   0.092
+  ],
+  "plate_Dprime": [
+   -0.001,
+   -0.003,
+   0.002,
+   -0.003,
+   0.002
+  ],
+  "drug_share": [
+   0.615,
+   0.542,
+   0.679,
+   0.542,
+   0.679
+  ],
+  "shared_well_share": [
+   0.215,
+   0.181,
+   0.256
+  ],
+  "own_well_share": 0.17,
+  "perm": {
+   "observed": 0.223,
+   "perm_q": [
+    -0.015,
+    0.015
+   ],
+   "perm_max": 0.025,
+   "p": 0.000999000999000999
+  }
+ },
+ "G614 | dvia 1": {
+  "n_records": 1440,
+  "n_pairs": 30,
+  "n_compounds": 29,
+  "fixed_plates": [
+   "plate6",
+   "plate14"
+  ],
+  "dvia_median": 0.22,
+  "cross_D": 0.579,
+  "cross_Dprime": 0.429,
+  "ceiling": 0.797,
+  "adv_D": [
+   0.207,
+   0.18,
+   0.235,
+   0.18,
+   0.235
+  ],
+  "adv_Dprime": [
+   0.256,
+   0.218,
+   0.297,
+   0.218,
+   0.297
+  ],
+  "adv_Dprime_loo": null,
+  "plate_D": [
+   0.092,
+   0.083,
+   0.101,
+   0.083,
+   0.101
+  ],
+  "plate_Dprime": [
+   -0.003,
+   -0.007,
+   -0.001,
+   -0.007,
+   -0.001
+  ],
+  "drug_share": [
+   0.556,
+   0.485,
+   0.62,
+   0.485,
+   0.62
+  ],
+  "shared_well_share": [
+   0.25,
+   0.213,
+   0.294
+  ],
+  "own_well_share": 0.194,
+  "perm": {
+   "observed": 0.258,
+   "perm_q": [
+    -0.017,
+    0.016
+   ],
+   "perm_max": 0.027,
+   "p": 0.000999000999000999
+  }
+ },
+ "G614 | dvia 2": {
+  "n_records": 1440,
+  "n_pairs": 30,
+  "n_compounds": 29,
+  "fixed_plates": [
+   "plate6",
+   "plate14"
+  ],
+  "dvia_median": 0.264,
+  "cross_D": 0.564,
+  "cross_Dprime": 0.485,
+  "ceiling": 0.843,
+  "adv_D": [
+   0.202,
+   0.174,
+   0.234,
+   0.174,
+   0.234
+  ],
+  "adv_Dprime": [
+   0.246,
+   0.2,
+   0.298,
+   0.2,
+   0.298
+  ],
+  "adv_Dprime_loo": null,
+  "plate_D": [
+   0.082,
+   0.072,
+   0.093,
+   0.072,
+   0.093
+  ],
+  "plate_Dprime": [
+   -0.01,
+   -0.014,
+   -0.005,
+   -0.014,
+   -0.005
+  ],
+  "drug_share": [
+   0.764,
+   0.429,
+   0.886,
+   0.429,
+   0.886
+  ],
+  "shared_well_share": [
+   0.116,
+   0.06,
+   0.277
+  ],
+  "own_well_share": 0.12,
+  "perm": {
+   "observed": 0.249,
+   "perm_q": [
+    -0.019,
+    0.017
+   ],
+   "perm_max": 0.026,
+   "p": 0.000999000999000999
+  }
+ },
+ "Ada": {
+  "n_records": 4368,
+  "n_pairs": 91,
+  "n_compounds": 1,
+  "fixed_plates": [],
+  "dvia_median": 0.193,
+  "cross_D": 0.438,
+  "cross_Dprime": 0.309,
+  "ceiling": 0.791,
+  "adv_D": [
+   0.218,
+   0.218,
+   0.218,
+   0.154,
+   0.283
+  ],
+  "adv_Dprime": [
+   0.374,
+   0.374,
+   0.374,
+   0.233,
+   0.479
+  ],
+  "adv_Dprime_loo": [
+   0.323,
+   0.393
+  ],
+  "plate_D": [
+   0.087,
+   0.087,
+   0.087,
+   0.052,
+   0.119
+  ],
+  "plate_Dprime": [
+   -0.003,
+   -0.003,
+   -0.003,
+   -0.009,
+   0.002
+  ],
+  "drug_share": [
+   0.364,
+   0.364,
+   0.364,
+   0.216,
+   0.602
+  ],
+  "shared_well_share": [
+   0.335,
+   0.335,
+   0.335
+  ],
+  "own_well_share": 0.301,
+  "perm": {
+   "observed": 0.378,
+   "perm_q": [
+    -0.017,
+    0.016
+   ],
+   "perm_max": 0.03,
+   "p": 0.000999000999000999
+  }
+ }
+}
