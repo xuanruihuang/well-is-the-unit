@@ -1,4 +1,4 @@
-# cell-lines-share-a-well
+# well-is-the-unit
 
 Analysis code and result files for the preprint *Cell lines that share a well are not independent observations in the
 Tahoe-100M drug screen* (Xuanrui Huang, Department of Biomedical Informatics, Yong Loo Lin School of Medicine, National
